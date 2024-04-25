@@ -64,7 +64,7 @@ Extra info:
 Difficulty: 7  
 Download: [Google Drive](https://drive.google.com/open?id=17uk5rAwOl5-dejIG63nPn-VtukO2gPBg)  
 Curator's notes:  
-The author is well known as an excellent boxel 3d player. To date, he is the only one to have beaten every Kackiest Kacky level. This level inspired the first obstacle of Kackiest Kacky #-1.  
+The author is well known as an excellent boxel 3d player. To date, he is the only one to have beaten every Kackiest Kacky level. This level inspired the first obstacle of Kackiest Kacky #-1. Doppler may be planning to add this level into the game.  
 Curator's description:  
 ```Don't get mad as you miss the size change block, and then repeatedly fail the last jump.```
 ### Course Of Stress
@@ -99,12 +99,32 @@ Description:
 ```A GD-like level where your cube is hidden most of the time (not very fun). Also includes tutorial.```  
 Extra info:  
 ```First level in boxel 3d to include hidden gameplay and tutorial (to my knowledge)```  
-Difficulty: 2  
+Difficulty: 3  
 Download: [Google Drive](https://drive.google.com/open?id=1uQzrYcRehP2aarHhDCI5OZcSLAinWW3A)  
 Curator's notes:  
 Due to not being able to see the player most of the level, the gameplay is annoying and not very fun. Includes very similar gameplay to `Something` by Kllixto. It is unknown who created this type of gameplay first.  
 Curator's description:  
 ```Enter through the head of a dragon and go through the obstacle maze inside, only knowing when to jump from handy arrows on the dragon's body. Exit through the top and complete a short platforming course to finish the level.```
+### Finished
+Author: Roblox_Blaster321  
+Description: None  
+Extra info: None  
+Difficulty: 2  
+Download: [Discord](https://cdn.discordapp.com/attachments/1233046204099723315/1233089427987763200/Finished.json?ex=662bd385&is=662a8205&hm=d459eec6f9c0c1ecc223b293024c6bc3452020901b95f241d5821664d5f1d008&)  
+Curator's notes:  
+Don't touch the second checkpoint.  
+Curator's description:  
+```Some jumps followed by a spider part into the finish.```
+### GB_first_level
+Author: Green_Bud  
+Description: None  
+Extra info: None   
+Difficulty: 1  
+Download: [Discord](https://cdn.discordapp.com/attachments/933865169182949417/1232750965241937940/GB_first_level.json?ex=662b410d&is=6629ef8d&hm=443e1fccd8e4e1888b691c44edcfe8594f5572fe039664ee9c7b44cf02591507&)  
+Curator's notes:  
+Upon release, the level gained near-instant popularity within the boxel community. Doppler may be planning to add this level into the game.  
+Curator's description:  
+```A very fun somewhat linear level that uses a great deal of verticality. It is highly recommended to play this platforming level.```
 ### Its Just Wonkers/Its Just Very Long
 Author: Justabox  
 Description:  
@@ -128,6 +148,39 @@ Curator's notes:
 An amateur level, shown by having many small blocks instead of large blocks, and unintuitive jumps. Don't blame yourself if you are annoyed at random slowdowns or speedups, or can't figure out how to make the jumps. Otherwise, this level could have been added into the game. Very similar to `Course of Stress` by the same author  
 Curator's description:  
 ```A linear level with some interesting platforming elements. Anticipate glitchy movement.```
+### MASHY_MASH
+Author: rubymaster13  
+Description:  
+```First level (that I know of)```  
+Extra info: None   
+Difficulty: 0  
+Download: [Discord](https://cdn.discordapp.com/attachments/856054119638499378/1232180237681557584/MASHY-MASH.json?ex=662bd085&is=662a7f05&hm=f2f64bffbcc797858663d2bb9123ded5c2210a6d5eeb3ed1dfc2f5507c0765e8&)  
+Download (2nd version): [Discord](https://cdn.discordapp.com/attachments/856054119638499378/1232195045994795110/MASHY-MASH_2.json?ex=662b3590&is=6629e410&hm=389c5b718651b52538471221e0804e7b2b9bd1f233ece4a1accc85d695141fce&)
+Curator's notes:  
+Mash your jump button into oblivion. Very similar to tippy-tap.  
+Curator's description:  
+```Spend a long time spamming to get the far finish, or quickly get the relatively easily accessible risky finish.```
+### My first level
+Author: Ayman_gx  
+Description:  
+```anyone who has enough mental power to try the first level i ever made ?```  
+Extra info: None  
+Difficulty: 1  
+Download: [Discord](https://cdn.discordapp.com/attachments/933865169182949417/1227973749106671718/My_first_level_xd.json?ex=662bac2c&is=662a5aac&hm=7da37a4bd8d9df5790fb6559a01ef0c77858cb3d7e056973ce084840554d8e37&)  
+Curator's notes:  
+You can clip through a ceiling and finish with sub 10.  
+Curator's description:  
+```Insert description.```
+### My Level
+Author: Roblox_Blaster321  
+Description: None  
+Extra info: None  
+Difficulty: 0  
+Download: [Discord](https://cdn.discordapp.com/attachments/856054119638499378/1232921982862102558/My_Level_2.json?ex=662b3793&is=6629e613&hm=2ec44174a0afe8524942b6c326584217fb48b6c177bed84ece8618f366ca0c3a&)  
+Curator's notes:  
+Pretty boring.  
+Curator's description:  
+```Go one way and then the other way.```
 ### Skittle-chan game
 Author: Skittle-chan  
 Description:  
@@ -151,6 +204,47 @@ Curator's notes:
 The author is an excellent level builder. This is a popular level, and multiple players have grinded for excellent times. As of 04/15/2024, this level has been added into the game. Source: [Discord link](https://discord.com/channels/855086881778827294/933865169182949417/1229450908946137239)  
 Curator's description:  
 ```Get into a small tube, where you must play through the main part of the level, similar to ball gameplay in Geometry Dash. Then try to not die on the troll spike at the end.```
+### Spider catastrobox
+Author: Unknown  
+Description: Unknown  
+Extra info: Unknown  
+Difficulty: 0  
+Download: No download link  
+Curator's notes:  
+This level has been lost. If you have any information concerning the whereabouts of this level, please contact me through the boxel discord.  
+Curator's description:  
+```A casual spider cube level.```
+### The bonce house
+Author: rubymaster13  
+Description: None  
+Extra info: None  
+Difficulty: 0  
+Download: [Discord](https://cdn.discordapp.com/attachments/856054119638499378/1232421872411345049/The_Bonce_House.json?ex=662b600f&is=662a0e8f&hm=53adaf47f676386218482d610dadb1867aa80a09030d2f87d8992f8585781b7a&)  
+Curator's notes:  
+Kargoh's bobsled on steroids. When released, this was peak RNG in a boxel 3d level.  
+Curator's description:  
+```A box, where you have almost no control.```
+### The Tower
+Author: OuterBound  
+Description: None  
+Extra info: None  
+Difficulty: 2  
+Download: [Discord](https://cdn.discordapp.com/attachments/856054119638499378/1231055988908359722/The_Tower_1.json?ex=662badfb&is=662a5c7b&hm=106a42fcc04778580ddcca628ba41383dca512064aa49c5c599e70822ea3a30e&)  
+Curator's notes:  
+A very long map.  
+Curator's description:  
+```A very long spider level, doable thanks to checkpoints.```
+### The Tower of Hell
+Author: OuterBound  
+Description: None  
+Extra info: None  
+Difficulty: 10  
+Download: [Discord](https://cdn.discordapp.com/attachments/856054119638499378/1231055988635996200/The_Tower_of_Hell_1.json?ex=662badfb&is=662a5c7b&hm=ff05dca89f38c45e247255692609898f68d1e2b36a139d42fad672a2cc541691&)  
+Curator's notes:  
+A harder version of `The Tower` by the same author. A very hard map. Charlieee1 should not have suggested the addition of spikes...  
+This level has 0 verifiers so far, and for good reason...  
+Curator's description:  
+```A mind-bogglingly hard spider level with a lot of spikes.```
 
 ## Kackiest Kacky
 Kackiest Kacky is an event hosted to this day by Charlieee1. It aims to collect the hardest levels and the most obscure glitches in boxel 3d. Can you beat all levels?
