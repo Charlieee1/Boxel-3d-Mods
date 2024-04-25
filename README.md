@@ -1,5 +1,6 @@
 # Boxel-3d-Mods
-A collection of mods for boxel 3d.
+A collection of mods for boxel 3d.  
+An extra bonus: [A detailed curated list of boxel 3d community levels](https://github.com/Charlieee1/Boxel-3d-Mods/blob/main/Boxel%203d%20Levels.md)
 
 ## How to Use
 ### Use my mods
