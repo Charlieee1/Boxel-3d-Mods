@@ -36,7 +36,16 @@ Extra info: None
 Difficulty: 0  
 Download: [Google Drive](https://drive.google.com/open?id=1hgA0SfDf0TnvKqCbPN7GShrPcofCIumq)  
 Curator's notes:  
-The author is an excellent level builder. This level is made trivial by multiple cheeses. The beginning of this level is very laggy, so beware of opening it on a weaker machine.
+The author is an excellent level builder. This level is made trivial by multiple cheeses. The beginning of this level is very laggy, so beware of opening it on a weaker device.
+### Boss Of The Memory part II
+Author: Kllixto  
+Description:  
+```Final part of it, less lags```  
+Extra info: None  
+Difficulty: 1  
+Download: [Google Drive](https://drive.google.com/open?id=1RxwD3Y4zpruxFEZHyj9lID4maXIE4BTk)  
+Curator's notes:  
+The author is an excellent level builder. This level is made easy by multiple cheeses. The beginning of this level relies somewhat on RNG.
 ### Box Escape
 Author: DonW15  
 Description:  
@@ -47,5 +56,39 @@ Difficulty: 7
 Download: [Google Drive](https://drive.google.com/open?id=17uk5rAwOl5-dejIG63nPn-VtukO2gPBg)  
 Curator's notes:  
 The author is well known as an excellent boxel 3d player. To date, he is the only one to have beaten every Kackiest Kacky level. This level inspired the first obstacle of Kackiest Kacky #-1.
+### Down, Up, Swing
+Author: Memesbro  
+Description:  
+```A short level which involves dropping down, floating up, and swinging to the finish!```  
+Extra info:  
+```While the difficulty is put down as 7, it could be harder or easier depending on who is playing```  
+```This is an updated version of Down, Up, Swing. I couldn't replace the JSON file in my previous response, so use this one please```  
+Difficulty: 8  
+Download: [Google Drive](https://drive.google.com/open?id=1_rDZwKhuTjDjxvrgV15p_3sPdX27OcZz)  
+Download (nerfed): [Google Drive](https://drive.google.com/open?id=1c94oA7rky224YJP95CsMCDnMaSb89qPk)  
+Curator's notes:  
+This level, when first released, was found by the community to have multiple shorcuts. After multiple patches, the final version got released. Above there is also the download for the nerfed version of the level. The unnerfed version is the official version.
+### Something
+Author: Kllixto  
+Description:  
+```Switch off rotation, or u'll get headaches```  
+Extra info: None  
+Difficulty: 3  
+Download: [Google Drive](https://drive.google.com/open?id=1E7YHlgRkM-XJqrJJcLH-UZzyahLdzn5W)  
+Curator's notes:  
+The author is an excellent level builder. This is a popular level, and multiple players have grinded for excellent times. As of 04/15/2024, this level has been added into the game. Source: [Discord link](https://discord.com/channels/855086881778827294/933865169182949417/1229450908946137239)
+
 ## Kackiest Kacky
 Kackiest Kacky is an event hosted to this day by Charlieee1. It aims to collect the hardest levels and the most obscure glitches in boxel 3d. Can you beat all levels?
+
+
+### Template
+Author: Name  
+Description:  
+```Description```  
+Extra info:  
+```Extra info```  
+Difficulty: 0  
+Download: [Google Drive]()  
+Curator's notes:  
+Level is ez lol
