@@ -247,15 +247,72 @@ Curator's description:
 ```A mind-bogglingly hard spider level with a lot of spikes.```
 
 ## Kackiest Kacky
-Kackiest Kacky is an event hosted to this day by Charlieee1. It aims to collect the hardest levels and the most obscure glitches in boxel 3d. Can you beat all levels?
+Kackiest Kacky is an event hosted to this day by Charlieee1. It aims to collect the hardest levels and the most obscure glitches in boxel 3d. Can you beat all levels?  
+Additional information that is included with some levels:
+- First verifier (where it is not the author)
+- Verifiers (only for the hardest levels)
+- Author time
+
+### Kackiest Kacky #-1
+Author: Charlieee1  
+First verifier: DonW15  
+Verifiers:
+- DonW15
+- Charlieee1  
+Author Time: 27.975  
+Difficulty: 10  
+Download: [Discord](https://cdn.discordapp.com/attachments/933865169182949417/1226900812496769124/Kackiest_Kacky_-1.json?ex=662bb96c&is=662a67ec&hm=ee89f245933032c1bd93ef5431f038a236b94b5fab2591f25d3cea3f72c65941&)  
+Curator's notes:  
+As the very first kackiest kacky map, this level set the standard for future kacky levels. It also introduced a new fancy endscreen that would become the standard for most kacky levels..\ The first obstacle is much harder than the rest of the level.  
+Curator's description:  
+```Hard.```
+### Kackiest Kacky #-2
+Author: Potato Man  
+Verifiers:
+- Potato Man
+- DonW15
+Author Time: N/A  
+Difficulty: 10  
+Download: [Discord](https://cdn.discordapp.com/attachments/933865169182949417/1226738543381053490/Kackiest_Kacky_-2_1.json?ex=662bcb0c&is=662a798c&hm=f64ac520245de895f1fda538a6bae58321d7032dd524b5864cf29a588d688379&)  
+Curator's notes:  
+This level is more fun than #-1, and DonW15, the only verifier of both levels, has deemed it harder.  
+Curator's description:  
+```A fast-paced level with precise timings and platforming, ending with a spider section.```
+### Kackiest Kacky #-4
+Author: Witticism.io  
+Author Time: 2.996  
+Difficulty: 4  
+Download: [Discord](https://cdn.discordapp.com/attachments/856054119638499378/1226640762893107231/Kackiest_Kacky_-4.json?ex=662b6ffb&is=662a1e7b&hm=f37923ce3d130d09acd2049f1d3f0f16b2ddfb0769e747e6b9c01a4431976b24&)  
+Curator's notes:  
+Instead of going for difficulty, this level showcases the double jump glitch. This means that it is possible to hunt for a low time, which some players have done.  
+Curator's description:  
+```A jump, followed by another jump.```
+### Kackiest Kacky #-6
+Author: Ayman_gx  
+First verifier: Charlieee1
+Author Time: 3.141 
+Difficulty: 5  
+Download: [Discord](https://cdn.discordapp.com/attachments/933865169182949417/1228368214015344700/Kackiest_Kacky_-6.json?ex=662bca0c&is=662a788c&hm=51ddbffc5398bdc4d2e50282758bc419e3b5c2b0b7361aae6ca63aad6f8b073f&)  
+Curator's notes:  
+Similar to #-4, this level showcases the double jump glitch, albeit a bit more difficultly  
+Curator's description:  
+```A jump, followed by another jump.```
+### Kackiest Kacky #-7
+Author: Jadonlllllllll  
+Author Time: 7.181
+Difficulty: 3  
+Download: [Discord](https://cdn.discordapp.com/attachments/933865169182949417/1228500770757017660/Kackiest_Kacky_-7.json?ex=662b9cc0&is=662a4b40&hm=9d3b5ae5aae9a3ecea0b6e1e2b332d1f113fc02a3f3c5e20f1ffe13da9d5d3a1&)  
+Curator's notes:  
+This showcases a glitch that is used for WR in `Gravity Spikes`. The glitch is not named yet.  
+Curator's description:  
+```Jumps and resets, get sub 1.```
+
 
 
 ### Template
 Author: Name  
-Description:  
-```Description```  
-Extra info:  
-```Extra info```  
+Verifiers:
+Author Time: 
 Difficulty: 0  
 Download: [Google Drive]()  
 Curator's notes:  
