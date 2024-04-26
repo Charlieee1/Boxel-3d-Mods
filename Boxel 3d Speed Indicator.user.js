@@ -11,7 +11,7 @@
 
 (function() {
     'use strict';
-  
+
     // Indicator
     let indicator = document.createElement("div");
     var text = document.createTextNode("0");
@@ -26,6 +26,9 @@
     appElement.appendChild(indicator);
 
     addUpdateFunction(function() {
-      text.textContent = getPlayerSpeed().toFixed(1).toString();
+      text.textContent = getPlayerSpeed().toFixed(3).toString();
     });
+
+    // Mod list
+    addModToList("speed indicator");
 })();
