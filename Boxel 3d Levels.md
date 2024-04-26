@@ -85,6 +85,7 @@ Description:
 Extra info:  
 ```While the difficulty is put down as 7, it could be harder or easier depending on who is playing```  
 ```This is an updated version of Down, Up, Swing. I couldn't replace the JSON file in my previous response, so use this one please```  
+Only verifier: Charlieee1  
 Difficulty: 8  
 Download: [Google Drive](https://drive.google.com/open?id=1_rDZwKhuTjDjxvrgV15p_3sPdX27OcZz)  
 Download (nerfed): [Google Drive](https://drive.google.com/open?id=1c94oA7rky224YJP95CsMCDnMaSb89qPk)  
