@@ -1,6 +1,6 @@
 # THIS FILE IS NOT COMPLETED
 # Boxel 3d Community Levels
-A curated list of community levels. Most levels has the following elements:
+A curated list of community levels. Most levels have the following elements:
 - Author(s)
 - Description
 - Extra Info
