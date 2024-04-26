@@ -271,7 +271,7 @@ Author: Potato Man
 Verifiers:
 - Potato Man
 - DonW15
-Author Time: N/A  
+Author Time: 26.118  
 Difficulty: 10  
 Download: [Discord](https://cdn.discordapp.com/attachments/933865169182949417/1226738543381053490/Kackiest_Kacky_-2_1.json?ex=662bcb0c&is=662a798c&hm=f64ac520245de895f1fda538a6bae58321d7032dd524b5864cf29a588d688379&)  
 Curator's notes:  
