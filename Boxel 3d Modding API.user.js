@@ -12,6 +12,7 @@
 var addUpdateFunction;
 var getPlayer = () => {return app.player};
 var getPlayerBody = () => {return app.player.body};
+var getPlayerSpeed = () => {return getPlayerBody().speed};
 var isDead = app.player.isFrozen();
 var canJump = () => {return app.player.allowJump};
 var getEngine = () => {return app.engine};
