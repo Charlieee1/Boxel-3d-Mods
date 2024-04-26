@@ -116,7 +116,7 @@ Don't touch the second checkpoint.
 Curator's description:  
 ```Some jumps followed by a spider part into the finish.```
 ### GB_first_level
-Author: Green_Bud  
+Author: Green_Bud4623  
 Description: None  
 Extra info: None   
 Difficulty: 1  
@@ -125,6 +125,16 @@ Curator's notes:
 Upon release, the level gained near-instant popularity within the boxel community. Doppler may be planning to add this level into the game.  
 Curator's description:  
 ```A very fun somewhat linear level that uses a great deal of verticality. It is highly recommended to play this platforming level.```
+### Green_Bud4623_lvl2
+Author: Green_Bud4623  
+Description: None  
+Extra info: None  
+Difficulty: 2  
+Download: [Discord](https://cdn.discordapp.com/attachments/933865169182949417/1233463317159477440/Green_Bud4623_lvl2_1.json?ex=662d2fbb&is=662bde3b&hm=b80576feeb2134c223d81fbd3ffc0e1c7dc49bf12687f20fc76d8a9f27380af8&)  
+Curator's notes:  
+Try not to be confused as this level tries to lead you away from the intended path, and has somewhat awkward jumps. A fun platforming challenge to kill some time.  
+Curator's description:  
+```The intended path is underneath the trick path, so follow it to the finish. Feel free to use the editor view to plan your jumps ahead of time.```
 ### Its Just Wonkers/Its Just Very Long
 Author: Justabox  
 Description:  
