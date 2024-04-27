@@ -5,12 +5,9 @@
 // @description  Adding a modding API to boxel 3d
 // @author       Charlieee1
 // @match        *dopplercreative.com/test/*
-// @match        *
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
-
-if (app.engine && document.getElementsByTagName("title")[0].text == "Boxel 3D") {
 
 var addUpdateFunction;
 var getPlayer = () => {return app.player};
@@ -95,5 +92,3 @@ var addModToList;
 
     addModToList("modding API");
 })();
-
-}
