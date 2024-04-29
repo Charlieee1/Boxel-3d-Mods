@@ -32,9 +32,15 @@ var right = 0;
         }
     });
 
+    function dot(v1, v2) {
+        return v1.x * v2.x + v1.y * v2.y;
+    }
+
     addUpdateFunction(function() {
         let velocity = getVelocity();
-        let vX = velocity.x;
+        let gravity = getGravity();
+        let direction = {x: gravity.y, y: -gravity.x};
+        let vX = dot(direction, velocity);
         let dx = 0;
         let force = .5 * (left + right);
         if (force > 0) {
@@ -42,7 +48,8 @@ var right = 0;
         } else {
             dx = Math.min(vX, Math.max(vX + force, -4)) - vX;
         }
-        addVelocity(dx, 0);
+        let d = {x: dx * direction.x, y: dx * direction.y};
+        addVelocity(d.x, d.y);
     });
 
     // Mod list
