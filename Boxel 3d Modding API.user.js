@@ -17,6 +17,7 @@ var isDead = app.player.isFrozen();
 var canJump = () => {return app.player.allowJump};
 var getEngine = () => {return app.engine};
 var getWorld = () => {return app.engine.world};
+var getGravity = () => {return app.engine.world.gravity};
 var getTimer = () => {return app.timer.toString()};
 var getVelocity = () => {return app.player.body.velocity};
 var setVelocity;
@@ -42,7 +43,7 @@ var addModToList;
 
         let pos = player.position;
         player.positionPrev.x = pos.x - vX;
-        player.positionPrev.y = pos.y + vY;
+        player.positionPrev.y = pos.y - vY;
     }
 
     setVelocityX = function(vX) {
@@ -58,7 +59,7 @@ var addModToList;
         player.velocity.y = vY;
 
         let pos = player.position;
-        player.positionPrev.y = pos.y + vY;
+        player.positionPrev.y = pos.y - vY;
     }
 
     addVelocity = function(dx, dy) {
