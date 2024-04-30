@@ -203,6 +203,16 @@ Curator's notes:
 This level is trivial with the well known shortcut. When this creator says "game", they mean "level". One text box is even more immature than the text box in `Awesome Parkour Twerk`.  
 Curator's description:  
 ```Jump off the beginning ramp to go backwards, upside down, to get an easy 4 second run.```
+### Slip to death
+Author: roblox_blaster321  
+Description: None  
+Extra info: None  
+Difficulty: 0  
+Download: [Discord](https://cdn.discordapp.com/attachments/855088039100809226/1234877033268641874/Slip_to_death.json?ex=6632545b&is=663102db&hm=01ffee8782e0fe2c4df3ab6ad694ec1693b35d827c230b7161b27143f5cea5a4&)  
+Curator's notes:  
+A quickly forgettable level.  
+Curator's description:  
+```A few jumps.```
 ### Something
 Author: Kllixto  
 Description:  
@@ -255,6 +265,16 @@ A harder version of `The Tower` by the same author. A very hard map. Charlieee1 
 This level has 0 verifiers so far, and for good reason...  
 Curator's description:  
 ```A mind-bogglingly hard spider level with a lot of spikes.```
+### Up Up And Away
+Author: mynameisluka  
+Description: None  
+Extra info: None  
+Difficulty: 1  
+Download: [Discord](https://cdn.discordapp.com/attachments/856054119638499378/1234820347648544869/Up_Up_And_Away.json?ex=66321f90&is=6630ce10&hm=b9d564557e78f58909db3d449cfb612b20ef22c486a2fda68361153a6b69fa2b&)  
+Curator's notes:  
+A level with a lot of bounce blocks, and a finish.  
+Curator's description:
+```A level where the author spammed bounce blocks and spikes, and you have to make your way to the finish.```
 
 ## Kackiest Kacky
 Kackiest Kacky is an event hosted to this day by Charlieee1. It aims to collect the hardest levels and the most obscure glitches in boxel 3d. Can you beat all levels?  
