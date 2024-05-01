@@ -20,6 +20,16 @@ Curator's notes:
 The author is an excellent level builder. This level is made trivial by multiple cheeses.  
 Curator's description:  
 ```Tricky platforming in an approximate a straight line, with multiple branching paths and Kllixto's signature ending model.```
+### ARGHHHHHH
+Author: firesparkrequirem_94493  
+Description: None  
+Extra info: None  
+Difficulty: 0  
+Download: [Discord](https://cdn.discordapp.com/attachments/856054119638499378/1235157064129581147/ARGHHHHHH.json?ex=66335928&is=663207a8&hm=dfb86850b70acd4000ff00a549b46d05326d8cbc2725c621012c8c214f525534&)  
+Curator's notes:  
+A controllable RNG level. You'll see what it means when you play the level.  
+Curator's description:  
+```An RNG box, with spider mode.```
 ### Awesome Parkour Twerk
 Author: Ter8  
 Description:  
