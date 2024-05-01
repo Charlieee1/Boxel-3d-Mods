@@ -324,6 +324,7 @@ Difficulty: 10
 Download: [Discord](https://cdn.discordapp.com/attachments/933865169182949417/1226900812496769124/Kackiest_Kacky_-1.json?ex=662bb96c&is=662a67ec&hm=ee89f245933032c1bd93ef5431f038a236b94b5fab2591f25d3cea3f72c65941&)  
 Curator's notes:  
 As the very first kackiest kacky map, this level set the standard for future kacky levels. It also introduced a new fancy endscreen that would become the standard for most kacky levels. The first obstacle is much harder than the rest of the level.  
+IMPORTANT: To verify this level, players must submit a recording, and using checkpoint respawn is BANNED from use in this level.  
 Curator's description:  
 ```Hard.```
 ### Kackiest Kacky #-2
