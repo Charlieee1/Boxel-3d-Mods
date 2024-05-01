@@ -201,6 +201,15 @@ Curator's notes:
 The first community level that uses the (at the time) new control block.  
 Curator's description:  
 ```Insert description.```
+### right 2
+Author: DragonBoy90  
+Description: None  
+Extra info: None  
+Difficulty: 1  
+Download: [Discord](https://cdn.discordapp.com/attachments/933865169182949417/1231323320671277159/right_2.json?ex=66333e74&is=6631ecf4&hm=515a8835dcffa3a4532925233f4ba5ac9f1bfb114bbe8470eca07a37848a19fc&)  
+Curator's notes: None  
+Curator's description:  
+```A pathfinding level with some difficulty jumps.```
 ### Skittle-chan game
 Author: Skittle-chan  
 Description:  
