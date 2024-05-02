@@ -10,6 +10,7 @@
 // ==/UserScript==
 
 var addUpdateFunction;
+var removeUpdateFunction;
 var getPlayer = () => {return app.player};
 var getPlayerBody = () => {return app.player.body};
 var getPlayerSpeed = () => {return getPlayerBody().speed};
@@ -35,6 +36,12 @@ var addModToList;
 
     addUpdateFunction = function(func) {
         app.engine.events.afterUpdate.push(func);
+    }
+
+    removeUpdateFunction = function(func) {
+        if (func in app.engine.events.afterUpdate) {
+            app.engine.events.afterUpdate.splice(app.engine.events.afterUpdate.indexOf(func), 1);
+        }
     }
 
     setVelocity = function(vX, vY) {
