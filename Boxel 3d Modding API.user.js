@@ -15,6 +15,7 @@ var getPlayerBody = () => {return app.player.body};
 var getPlayerSpeed = () => {return getPlayerBody().speed};
 var isDead = app.player.isFrozen();
 var canJump = () => {return app.player.allowJump};
+var getLevel = () => {return app.level};
 var getEngine = () => {return app.engine};
 var getWorld = () => {return app.engine.world};
 var getGravity = () => {return app.engine.world.gravity};
