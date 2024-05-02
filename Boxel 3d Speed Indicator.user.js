@@ -18,7 +18,7 @@
     indicator.appendChild(text);
     indicator.style.position = "absolute";
     indicator.style.bottom = 0;
-    indicator.style.left = 0;
+    indicator.style.left = "50px";
     indicator.style.paddingLeft = 0;
     indicator.style.paddingBottom = 0;
     indicator.style.fontSize = "20px";
