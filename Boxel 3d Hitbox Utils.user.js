@@ -11,9 +11,12 @@
 
 var showHitboxes;
 var showLevel;
+var hideLevelOnRestart;
 
 (function() {
     'use strict';
+
+    var levelHiddenOnRestart = false;
 
     showHitboxes = function(show=true) {
         app.level.traverse((obj) => {
@@ -29,6 +32,22 @@ var showLevel;
                 obj.visible = show;
             }
         });
+    }
+
+    function hideLevel() {
+        if (Number(app.timer.toString()) < .1) {
+            showLevel(false);
+        }
+    }
+
+    hideLevelOnRestart = function(show=false) {
+        if (show != levelHiddenOnRestart) return;
+        if (show) {
+            removeUpdateFunction(hideLevel);
+        } else {
+            addUpdateFunction(hideLevel);
+        }
+        levelHiddenOnRestart = !show;
     }
 
     // Mod list
