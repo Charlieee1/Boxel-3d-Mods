@@ -8,6 +8,16 @@ A curated list of community levels. Most levels have the following elements:
 - Curator's notes
 - Curator's description
 ## Normal Levels
+### 3 minute platformer level
+Author: Outerbound  
+Description: None  
+Extra info: None  
+Difficulty: 0  
+Download: [Discord](https://cdn.discordapp.com/attachments/933865169182949417/1235011794049826977/3_minute_platformer_level.json?ex=663574dd&is=6634235d&hm=13889bf899d9470e9d36f2af9fe93a7bc201b54af596c13cf1e10d6594db3ca6&)  
+Curator's notes:  
+This level was made to show Charlieee1 that outerbound could make a better platformer level in 3 minutes. Both players believe their own levels are better than the other's.  
+Curator's description:  
+```A series of bouncing spikes, probably inspired from Doppler's "Boxel Nomad" level, followed by a tight navigation through spikes. Or avoid all of it with the easy, obvious cheese of going underneath the level.```
 ### Acidity
 Author: Kllixto  
 Description:  
