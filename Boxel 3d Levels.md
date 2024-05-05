@@ -221,6 +221,16 @@ Curator's notes:
 The first community level that uses the (at the time) new control block.  
 Curator's description:  
 ```Insert description.```
+### Red
+Author: Rhedd  
+Description: None  
+Extra info: None  
+Difficulty: 1  
+Download: [Discord](https://cdn.discordapp.com/attachments/933865169182949417/1236506710127149097/Red_1.json?ex=6638eadc&is=6637995c&hm=65375579830838653adafdd3aea8b3abfea84e1a4348ab08e0fc246200733d6d&)  
+Curator's notes:  
+It may be hard to find a path to finish it.  
+Curator's description:  
+```A level with part normal mode, part platformer mode. Includes heavy decoration and a lot of blocks in a small space.```
 ### right 2
 Author: DragonBoy90  
 Description: None  
