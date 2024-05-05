@@ -135,6 +135,16 @@ Curator's notes:
 Don't touch the second checkpoint.  
 Curator's description:  
 ```Some jumps followed by a spider part into the finish.```
+### Futuristic Light
+Author: Defenders  
+Description: None  
+Extra info: None  
+Difficulty: 10  
+Download: [Discord](https://cdn.discordapp.com/attachments/933865169182949417/1236022451033473145/Futuristic_Light_V_1.1.json?ex=6639221c&is=6637d09c&hm=cca9de71221f4b3b6af3a87bfd3cc398d2e0a9ee8aff703a633f279f29b412d4&)  
+Curator's notes:  
+This level became the new #1 hardest level in the game when released, which makes sense as the author's main game is Geometry Dash.  
+Curator's description:  
+```Frame perfects everywhere, and jumps with unclear timings.```
 ### GB_first_level
 Author: Green_Bud4623  
 Description: None  
