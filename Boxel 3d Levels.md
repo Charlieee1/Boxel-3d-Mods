@@ -223,8 +223,8 @@ Curator's description:
 ```Go one way and then the other way.```
 ### Prelude
 Author: OuterBound  
-Description: None  
-Extra info: None  
+Description: A little level I made in a day.  
+Extra info: sigma  
 Difficulty: 2  
 Download: [Discord](https://cdn.discordapp.com/attachments/856054119638499378/1234613061151752233/Prelude.json?ex=66320743&is=6630b5c3&hm=ae056ebb219369b754167ec63d02987336ea944b7e3ab89dc6ef7881af391935&)  
 Curator's notes:  
@@ -233,14 +233,24 @@ Curator's description:
 ```Insert description.```
 ### Red
 Author: Rhedd  
-Description: None  
-Extra info: None  
+Description: my first boxel 3d level, very art carried.  
+Extra info: the difficulty my be way off because i am good at some stuff and bad at other stuff  
 Difficulty: 1  
 Download: [Discord](https://cdn.discordapp.com/attachments/933865169182949417/1236506710127149097/Red_1.json?ex=6638eadc&is=6637995c&hm=65375579830838653adafdd3aea8b3abfea84e1a4348ab08e0fc246200733d6d&)  
 Curator's notes:  
 It may be hard to find a path to finish it.  
 Curator's description:  
 ```A level with part normal mode, part platformer mode. Includes heavy decoration and a lot of blocks in a small space.```
+### Red II
+Author: Rhedd  
+Description: sequel to red the is meant to fix everything that i did wrong in red but still stay true to the original  
+Extra info: May be laggy on lower end devices  
+Difficulty: 0  
+Download: [Google Drive](https://drive.google.com/file/d/1sdjbfhsyxsbU2mC1bJMon8gNNtxnd-9p/view)  
+Curator's notes:  
+Do not open this on anything other than a supercomputer. Even then, it will lag.  
+Curator's description:  
+```A very short platformer level with a lot of decoration blocks.```
 ### right 2
 Author: DragonBoy90  
 Description: None  
@@ -305,8 +315,8 @@ Curator's description:
 ```A box, where you have almost no control.```
 ### The Tower
 Author: OuterBound  
-Description: None  
-Extra info: None  
+Description: Basically Spider Tower but better  
+Extra info: googoogaagaa  
 Difficulty: 2  
 Download: [Discord](https://cdn.discordapp.com/attachments/856054119638499378/1231055988908359722/The_Tower_1.json?ex=662badfb&is=662a5c7b&hm=106a42fcc04778580ddcca628ba41383dca512064aa49c5c599e70822ea3a30e&)  
 Curator's notes:  
@@ -315,8 +325,8 @@ Curator's description:
 ```A very long spider level, doable thanks to checkpoints.```
 ### The Tower of Hell
 Author: OuterBound  
-Description: None  
-Extra info: None  
+Description: The HARDEST (actually long) Boxel3D level EVER made.  
+Extra info: Googoogaagaa  
 Difficulty: 10  
 Download: [Discord](https://cdn.discordapp.com/attachments/856054119638499378/1231055988635996200/The_Tower_of_Hell_1.json?ex=662badfb&is=662a5c7b&hm=ff05dca89f38c45e247255692609898f68d1e2b36a139d42fad672a2cc541691&)  
 Curator's notes:  
