@@ -98,6 +98,16 @@ Curator's notes:
 An amateur level, shown by having many small blocks instead of large blocks, and unintuitive jumps. Don't blame yourself if you are annoyed at random slowdowns or speedups, or can't figure out how to make the jumps. Otherwise, this level could have been added into the game.  
 Curator's description:  
 ```A linear level with some interesting platforming elements. Anticipate glitchy movement.```
+### Dam hard no spikes
+Author: AriyaAirbusA380  
+Description: None  
+Extra info: None  
+Difficulty: 1  
+Download: [Discord](https://cdn.discordapp.com/attachments/1235396181056815175/1237596485663592448/Dam_hard_no_spikes.json?ex=663c390b&is=663ae78b&hm=fe01c8dfbba998fb3eed1aae71dc8623d20786f98414c0e9c1f98b0dae37f9ea&)  
+Curator's notes:  
+A spider level submitted to witticism.io's level jam in May of 2024.  
+Curator's description:  
+```A spider level where the only thing to grab on to are many floating blocks.```
 ### Down, Up, Swing
 Author: Memesbro  
 Description:  
@@ -155,6 +165,17 @@ Curator's notes:
 Upon release, the level gained near-instant popularity within the boxel community. Doppler may be planning to add this level into the game.  
 Curator's description:  
 ```A very fun somewhat linear level that uses a great deal of verticality. It is highly recommended to play this platforming level.```
+### Golf Ball POV
+Author: Memesbro  
+Description: None  
+Extra info:  
+```switch to golf ball skin for improved experience```  
+Difficulty: 1  
+Download: [Discord](https://cdn.discordapp.com/attachments/1235396181056815175/1237615817424769065/Golf_Ball_POV_1.json?ex=663c4b0c&is=663af98c&hm=db59a712b269eaa0c229ed520d198b70b8490ffca05077adecca6dc13af14e28&)  
+Curator's notes:  
+A level submitted to Witticism.io's level jam in May 2024.  
+Curator's description:  
+```TODO```
 ### Green_Bud4623_lvl2
 Author: Green_Bud4623  
 Description: None  
