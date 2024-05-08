@@ -327,11 +327,12 @@ Curator's description:
 Author: OuterBound  
 Description: The HARDEST (actually long) Boxel3D level EVER made.  
 Extra info: Googoogaagaa  
+Only verifier: OuterBound  
 Difficulty: 10  
 Download: [Discord](https://cdn.discordapp.com/attachments/856054119638499378/1231055988635996200/The_Tower_of_Hell_1.json?ex=662badfb&is=662a5c7b&hm=ff05dca89f38c45e247255692609898f68d1e2b36a139d42fad672a2cc541691&)  
 Curator's notes:  
 A harder version of `The Tower` by the same author. A very hard map. Charlieee1 should not have suggested the addition of spikes...  
-This level has 0 verifiers so far, and for good reason...  
+This level has only 1 verifier so far, and for good reason...  
 Curator's description:  
 ```A mind-bogglingly hard spider level with a lot of spikes.```
 ### Up Up And Away
