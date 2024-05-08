@@ -247,7 +247,7 @@ Author: OuterBound
 Description: A little level I made in a day.  
 Extra info: sigma  
 Difficulty: 2  
-Download: [Discord](https://cdn.discordapp.com/attachments/856054119638499378/1234613061151752233/Prelude.json?ex=66320743&is=6630b5c3&hm=ae056ebb219369b754167ec63d02987336ea944b7e3ab89dc6ef7881af391935&)  
+Download: [Google Drive](https://drive.google.com/open?id=1dAoooHyh_o6A1cjzoeMkXs6qdZg2KTzo)  
 Curator's notes:  
 The first community level that uses the (at the time) new control block.  
 Curator's description:  
