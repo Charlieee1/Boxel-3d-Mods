@@ -232,6 +232,18 @@ Curator's notes:
 Mash your jump button into oblivion. Very similar to tippy-tap.  
 Curator's description:  
 ```Spend a long time spamming to get the far finish, or quickly get the relatively easily accessible risky finish.```
+### Mountain Climb
+Author: Charlieee1  
+Description:  
+```Here is a mountain. Do you have what it takes to climb it?```  
+Extra info:  
+```Inspired by Celeste```  
+Difficulty: 6  
+Download: [Discord](https://cdn.discordapp.com/attachments/933865169182949417/1238529046355247134/Mountain_Climb.json?ex=663f9d8f&is=663e4c0f&hm=ec36ed8587baa80ab9d97cb9865d989001a7098933ca456ad86c9e206974f85f&)  
+Curator's notes:  
+The first ever trial map for Boxel 3d. When released, everyone who saw it was shocked at how **BIG** it is. At the time, it was the biggest level, beating `The Tower` in terms of size.  
+Curator's description:  
+```A very, VERY long level split into 6 sections (with checkpoints). The first 5 sections are platformer mode with a large variety of jumps ranging from easy to hard. The last section is spider mode with a little platformer mode. Don't try this level until you are good at the game, and it will take you several minutes to complete it for the first time.```
 ### My first level
 Author: Ayman_gx  
 Description:  
