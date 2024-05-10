@@ -367,6 +367,19 @@ A harder version of `The Tower` by the same author. A very hard map. Charlieee1 
 This level has only 1 verifier so far, and for good reason...  
 Curator's description:  
 ```A mind-bogglingly hard spider level with a lot of spikes.```
+### TheTrueGoo
+Author: TheTrueGoo  
+Description:  
+```A level with many paths and refrences to GD and other levels.```  
+Extra info:  
+```This level was made for the May level Jam. This level is much MUCH easier with hitboxes on, however hitboxes dont help with skill issues.```  
+Difficulty: 4  
+Download: [Discord](https://cdn.discordapp.com/attachments/933865169182949417/1238565019936096256/TheTrueGoo.json?ex=663fbf10&is=663e6d90&hm=c3a56db6a2bd6fbe516d24fd79f82420426d680b2c9647a6fb4cdc9fa9918d46&)  
+Curator's notes:  
+Hitboxes are a cheat if used for regular gameplay. Contrary to what the author says, hitboxes make the game easier. Only use hitboxes for testing, tassing, or other non-normal gameplay activities. No matter how much you struggle, do not give in and become a cheater. Stay strong!  
+This level is larger than mountain climb, but less dense with jumps. This level includes an easier finish than the obvious one.  
+Curator's description:  
+```A long level with "teleports" between sections. Includes checkpoints. Takes around 200 seconds to complete with respawning several times.```
 ### Up Up And Away
 Author: mynameisluka  
 Description: None  
