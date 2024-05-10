@@ -150,7 +150,7 @@ Author: Defenders
 Description: None  
 Extra info: None  
 Difficulty: 10  
-Download: [Discord](https://cdn.discordapp.com/attachments/933865169182949417/1236022451033473145/Futuristic_Light_V_1.1.json?ex=6639221c&is=6637d09c&hm=cca9de71221f4b3b6af3a87bfd3cc398d2e0a9ee8aff703a633f279f29b412d4&)  
+Download: [Discord](https://cdn.discordapp.com/attachments/933865169182949417/1238547791903723621/Futuristic_Light_V1.3.json?ex=663faf04&is=663e5d84&hm=53e2f835ffcd7600b4e9765a6b0d85aa59869058c3de1c8a1ef2f720ad0b5d07&)  
 Curator's notes:  
 This level became the new #1 hardest level in the game when released, which makes sense as the author's main game is Geometry Dash.  
 Curator's description:  
@@ -197,6 +197,17 @@ Curator's notes:
 An almost completely automatic level. It requires only easy jumps, for amateur block placement and a hole.  
 Curator's description:  
 ```Ramps and platforms going down to the finish.```
+### John Dark souls
+Author: Fae  
+Description: None  
+Extra info:  
+```I recommend playing with camera motion on```  
+Difficulty: 2  
+Download: [Discord](https://cdn.discordapp.com/attachments/933865169182949417/1238313746250862724/John_Dark_souls.json?ex=663f7dcb&is=663e2c4b&hm=4504401a0901fd05d4580c38e7118cc6f649c786a777079a6121cace3c667beb&)  
+Curator's notes:  
+3.6xx is possible  
+Curator's description:  
+```A very nice flowing level with gravity switches and spam.```
 ### Let bro cook
 Author: Justabox  
 Description:  
