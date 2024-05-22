@@ -430,7 +430,8 @@ Curator's description:
 Author: Potato Man  
 Verifiers:
 - Potato Man
-- DonW15  
+- DonW15
+- Defenders
 
 Author Time: 26.118  
 Difficulty: 10  
