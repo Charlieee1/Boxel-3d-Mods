@@ -416,6 +416,7 @@ First verifier: DonW15
 Verifiers:
 - DonW15
 - Charlieee1
+- Defenders
 
 Author Time: 27.975  
 Difficulty: 10  
