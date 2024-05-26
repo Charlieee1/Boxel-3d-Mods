@@ -111,6 +111,7 @@ var addModToList;
     modList.style.fontSize = "5px";
     appElement.appendChild(modList);
 
+    // Convention is to have the first letter of the mod name lowercase
     addModToList = function(text) {
         let newP = document.createElement("p");
         newP.style.margin = 0;
