@@ -46,20 +46,23 @@ var addModToList;
         }
     }
 
-    var jumpFunctions = [];
-    app.player.actualJump = app.player.jump;
+    var jumpFuncs = [];
+    app.player.jumpOriginal = app.player.jump;
     app.player.jump = function() {
-        app.player.actualJump();
-        jumpFunctions.forEach((func)=>{func();});
+        let canJump_ = canJump();
+        app.player.jumpOriginal();
+        if ((app.player.mode == 'jump' || app.player.mode == 'control') && canJump_) {
+            jumpFuncs.forEach((func) => {func();});
+        }
     }
 
     addJumpFunction = function(func) {
-        jumpFunctions.push(func);
+        jumpFuncs.push(func);
     }
 
     removeJumpFunction = function(func) {
-        if (func in jumpFunctions) {
-            jumpFunctions.splice(jumpFunctions.indexOf(func), 1);
+        if (func in jumpFuncs) {
+            jumpFuncs.splice(jumpFuncs.indexOf(func), 1);
         }
     }
 
@@ -111,7 +114,6 @@ var addModToList;
     modList.style.fontSize = "5px";
     appElement.appendChild(modList);
 
-    // Convention is to have the first letter of the mod name lowercase
     addModToList = function(text) {
         let newP = document.createElement("p");
         newP.style.margin = 0;
@@ -119,5 +121,6 @@ var addModToList;
         modList.appendChild(newP);
     }
 
+    // Convention is to have the first letter of the mod name lowercase
     addModToList("modding API");
 })();
