@@ -24,12 +24,14 @@ function setTime(time) {
 function addTime(time) {
     app.timer.playTime += time;
 }
+// TODO: actually make this pause and resume gameplay
 function pause() {
     app.timer.pause();
 }
 function resume() {
     app.timer.resume();
 }
+// TODO: add functions pauseTime and resumeTime, that only interact with the timer, and not the gameplay
 function resetTime() {
     app.timer.reset();
 }
