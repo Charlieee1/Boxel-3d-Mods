@@ -20,7 +20,7 @@ Follow these simple instructions:
 4. Voila! You can now make your own mods
 
 ## Which Order to run the Mods
-Most mods require other mods to run properly. Here is the dependency tree:
+Most mods require other mods to run properly. Here is the dependency tree [TODO: Update]:
 - Modding API
   - Platforming Mod
     - Dash Mod
