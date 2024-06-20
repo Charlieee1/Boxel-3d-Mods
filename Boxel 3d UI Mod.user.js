@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Boxel 3d UI Mod
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  A mod that ads a UI panel in the bottom left of the scren
 // @author       Charlieee1
 // @match        *dopplercreative.com/test/*
@@ -56,7 +56,6 @@ var addUIElement;
         div.style.paddingLeft = "10px";
         div.style.paddingRight = "10px";
         btn.style.backgroundColor = "#eb2b6d";
-        //btn.style.backgroundColor = "white";
         btn.style.boxShadow = "0 .25em #00000040";
         btn.style.minWidth = "100px";
         btn.style.minHeight = ".5em";
@@ -68,6 +67,7 @@ var addUIElement;
         btn.style.textShadow = "0em .125em 0em rgba(0,0,0,.25)";
         btn.style.padding = ".5em .5em .5em .5em";
         btn.style.align = "center";
+        btn.style.cursor = "pointer";
 
         div.appendChild(btn);
         panel.appendChild(div);
