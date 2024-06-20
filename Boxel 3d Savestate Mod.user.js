@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Boxel 3d Savestate Mod
 // @namespace    http://tampermonkey.net/
-// @version      alpha 1.0
+// @version      alpha 1.1
 // @description  A mod that allows for retrieving and setting savestates
 // @author       Charlieee1
 // @match        *dopplercreative.com/test/*
