@@ -46,5 +46,15 @@ var setSaveState;
         resume();
     }
 
+    // Requires UI Mod
+    addUIButton("Get savestate", function(event) {
+        navigator.clipboard.writeText(JSON.stringify(getSaveState()));
+        alert("Savestate copied to clipboard!");
+    });
+
+    //addUIButton("Set savestate", function(event) {
+    //    setSaveState(JSON.parse(prompt("Enter savestate:")));
+    //});
+
     addModToList("savestate");
 })();
