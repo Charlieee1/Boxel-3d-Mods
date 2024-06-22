@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Boxel 3d Time Manipulator
 // @namespace    http://tampermonkey.net/
-// @version      v1.0
+// @version      v1.1
 // @description  Time manipulator library for boxel 3d
 // @author       Charlieee1
 // @match        *dopplercreative.com/test/*
@@ -24,14 +24,18 @@ function setTime(time) {
 function addTime(time) {
     app.timer.playTime += time;
 }
-// TODO: actually make this pause and resume gameplay
 function pause() {
-    app.timer.pause();
+    app.pauseLevel();
 }
 function resume() {
+    app.resumeLevel();
+}
+function pauseTime() {
+    app.timer.pause();
+}
+function resumeTime() {
     app.timer.resume();
 }
-// TODO: add functions pauseTime and resumeTime, that only interact with the timer, and not the gameplay
 function resetTime() {
     app.timer.reset();
 }
