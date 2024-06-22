@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Boxel 3d Savestate Mod
 // @namespace    http://tampermonkey.net/
-// @version      alpha 1.1
+// @version      b1.0
 // @description  A mod that allows for retrieving and setting savestates
 // @author       Charlieee1
 // @match        *dopplercreative.com/test/*
@@ -26,7 +26,8 @@ var setSaveState;
                     rotation: children[i].rotation.z,
                     scale: {x: children[i].scale.x, y: children[i].scale.y, z: children[i].scale.z},
                     velocity: children[i].getVelocity(),
-                    angularVelocity: children[i].body.angularVelocity
+                    angularVelocity: children[i].body.angularVelocity,
+                    visible: children[i].visible
                 };
             }
         }
@@ -34,6 +35,17 @@ var setSaveState;
             x: app.engine.world.gravity.x,
             y: app.engine.world.gravity.y
         };
+        savestate.camera = app.camera.rotation.z;
+        savestate.player = {
+            mode: app.player.mode,
+            force: app.player.force
+        };
+        if (app.player.checkpoint) {
+            savestate.player.checkpoint = {
+                x: app.player.checkpoint.x,
+                y: app.player.checkpoint.y
+            };
+        }
 
         return savestate;
     }
