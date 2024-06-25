@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Boxel 3d Modding API
 // @namespace    http://tampermonkey.net/
-// @version      v1.1
+// @version      v1.2
 // @description  Adding a modding API to boxel 3d
 // @author       Charlieee1
 // @match        *dopplercreative.com/test/*
@@ -11,6 +11,7 @@
 
 var addUpdateFunction;
 var removeUpdateFunction;
+var nextFrame;
 var addJumpFunction;
 var removeJumpFunction;
 var getPlayer = () => {return app.player};
@@ -41,10 +42,15 @@ var addModToList;
     }
 
     removeUpdateFunction = function(func) {
-        if (func in app.engine.events.afterUpdate) {
-            app.engine.events.afterUpdate.splice(app.engine.events.afterUpdate.indexOf(func), 1);
-        }
+        app.engine.events.afterUpdate.splice(app.engine.events.afterUpdate.indexOf(func), 1);
     }
+
+    nextFrame = function(func) {
+        addUpdateFunction(function() {
+            func();
+            removeUpdateFunction(func);
+        });
+    };
 
     var jumpFuncs = [];
     app.player.jumpOriginal = app.player.jump;
