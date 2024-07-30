@@ -13,8 +13,9 @@ for (let interface in networkInterfaces) {
 console.log(`IP address of server: ${ipAddress}`);
 
 // Web socket
+const port = 1044; // Can change
 const { WebSocketServer } = require("ws");
-const sockserver = new WebSocketServer({ port: 443 });
+const sockserver = new WebSocketServer({ port: port });
 
 var nextID = 0;
 
@@ -28,7 +29,7 @@ function sendDataToEachClient(data) {
 	});
 }
 function sendPosToEachClient(data, id) {
-	console.log(`Distributing position: ${data}`);
+	//console.log(`Distributing position: ${data}`);
 	sockserver.clients.forEach(client => {
 		if (client.id != id) {
 			client.send(`${data}`);
@@ -40,7 +41,7 @@ sockserver.on("connection", async ws => {
 	ws.id = nextID++;
 	console.log(`New client connected! Id: ${ws.id}`);
 	ws.send("id " + ws.id);
-	ws.send("player_pos " + JSON.stringify(playerPos));
+	ws.send("many_player_pos " + JSON.stringify(playerPos));
 	sendPosToEachClient("new_player " + ws.id, ws.id);
 	ws.on("close", () => {
 		console.log(`Client has disconnected! ID: ${ws.id}`);
@@ -53,8 +54,13 @@ sockserver.on("connection", async ws => {
 		sendDataToEachClient(`disconnect ${ws.id}`);
 	}
     ws.on("message", message => {
-		message = JSON.parse(message);
-		playerPos[ws.id] = message;
-		sendPosToEachClient(message, ws.id);
+		message = message.toString();
+		//console.log(message);
+		message = message.split(" ");
+		if (message[0] == "player_pos") {
+			sendPosToEachClient(message.join(" ") + " " + ws.id, ws.id);
+			message = JSON.parse(message[1]);
+			playerPos[ws.id] = message;
+		}
 	});
 });

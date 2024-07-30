@@ -1,0 +1,71 @@
+{
+    "functions": {
+        "myFunction": {
+            "arguments": [
+                "event"
+            ],
+            "execution": [
+            {
+                "addToolButton": [
+                "line build",
+                [
+                {
+                    "buildLine": [
+                    {
+                        "getClickFromUserOnLevelEditor": []
+                    },
+                    {
+                        "getClickFromUserOnLevelEditor": []
+                    }
+                    ]
+                }
+                ]
+                ]
+            }
+            ]
+        },
+        "buildLine": {
+            "arguments": [
+                "point1",
+                "point2"
+            ],
+            "execution": [
+            {
+                "createVariable": {
+                    "name": "maxDist",
+                    "type": "Number",
+                    "value": "${max(abs(point2.x - point1.x), abs(point2.y - point1.y))}"
+                }
+            },
+            {
+                "iterationLoop": {
+                    "variable": "i",
+                    "start": 0,
+                    "end": 1,
+                    "step": "${16 / maxDist}",
+                    "execution": [
+                    {
+                        "createBlockInLevelEditor": [
+                        "spike",
+                        {
+                            "x": "${point1.x * i + point2.x * (1 - i)}",
+                            "y": "${point1.y * i + point2.y * (1 - i)}"
+                        },
+                        0,
+                        {
+                            "x": 16,
+                            "y": 16,
+                            "z": 16
+                        }
+                        ]
+                    }
+                    ]
+                }
+            }
+            ]
+        }
+    },
+    "events": {
+        "onLevelEditorLevelOpen": "myFunction"
+    }
+}
