@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Boxel 3d Savestate Mod
 // @namespace    http://tampermonkey.net/
-// @version      v1.0
+// @version      v1.0.1
 // @description  A mod that allows for retrieving and setting savestates
 // @author       Charlieee1
 // @match        *dopplercreative.com/test/*
@@ -54,7 +54,7 @@ var setSaveState;
         }
         savestate.time = app.timer.getPlayTime();
 
-        return savestate;
+        return JSON.parse(JSON.stringify(savestate));
     }
 
     setSaveState = function(savestate) {
