@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Boxel 3d Savestate Mod
 // @namespace    http://tampermonkey.net/
-// @version      b2.0
+// @version      1.0
 // @description  A mod that allows for retrieving and setting savestates
 // @author       Charlieee1
 // @match        *dopplercreative.com/test/*
@@ -23,10 +23,10 @@ var setSaveState;
         for (let i = 0; i < children.length; i++) {
             if (!children[i].isStatic()) {
                 savestate.objects[i] = {
-                    position: {x: children[i].position.x, y: children[i].position.y},
-                    rotation: children[i].rotation.z,
+                    position: {x: children[i].body.position.x, y: children[i].body.position.y},
+                    rotation: children[i].body.angle,
                     scale: {x: children[i].scale.x, y: children[i].scale.y, z: children[i].scale.z},
-                    velocity: children[i].getVelocity(),
+                    velocity: children[i].body.velocity,
                     angularVelocity: children[i].body.angularVelocity
                 };
             }
@@ -70,26 +70,13 @@ var setSaveState;
 
             let saved = savestate.objects[key];
             let original = app.level.children[key];
-            original.positionOrigin.x = saved.position.x;
-            original.positionOrigin.y = saved.position.y;
-            original.rotationOrigin = saved.rotation;
-            original.scaleOrigin = saved.scale;
+            Matter.Body.setPosition(original.body, saved.position, false);
+            Matter.Body.setAngle(original.body, saved.rotation, false);
+            original.setScale(saved.scale);
+            Matter.Body.setVelocity(original.body, saved.velocity, false);
+            Matter.Body.setAngularVelocity(original.body, saved.angularVelocity, false);
         });
-        //app.player.setMode("control");
-
-        resume();
-        app.level.resetLevel();
-        pause();
-
-        Object.keys(savestate.objects).forEach((key) => {
-            key = Number(key);
-
-            let saved = savestate.objects[key];
-            let original = app.level.children[key];
-            original.body.positionPrev.x = saved.position.x - saved.velocity.x;
-            original.body.positionPrev.y = -saved.position.y - saved.velocity.y;
-            original.body.anglePrev = -saved.rotation - saved.angularVelocity;
-        });
+        
         Object.keys(savestate.tips).forEach((key) => {
             key = Number(key);
             app.level.children[key].hide();
@@ -100,14 +87,13 @@ var setSaveState;
         app.camera.rotation.z = savestate.camera;
         app.player.force = savestate.player.force;
         app.player.allowJump = savestate.player.allowJump;
+        app.player.mode = savestate.player.mode;
         if (savestate.player.checkpoint) {
             app.player.checkpoint = savestate.player.checkpoint;
         }
         setTime(savestate.time / 1e3);
 
         resume();
-        app.player.body.veloctiy = savestate.objects[0].velocity;
-        //nextFrame(()=>app.player.setMode(savestate.player.mode));
     }
 
     // Requires UI Mod
@@ -117,10 +103,14 @@ var setSaveState;
             alert("Savestate copied to clipboard!");
         });
 
-        //addUIButton("Set savestate", function(event) {
-        //    setSaveState(JSON.parse(prompt("Enter savestate:")));
-        //});
+        addUIButton("Set savestate", function(event) {
+            setSaveState(JSON.parse(prompt("Enter savestate:")));
+        });
     } catch {}
+
+    // In case UI mod isn't in use
+    document.head.innerHTML=document.head.innerHTML+"<style>.text{font-size:1.1em !important;}</style>"
+    document.head.innerHTML=document.head.innerHTML+"<style>.wrapper{font-size:110% !important;}</style>"
 
     addModToList("savestate");
 })();
