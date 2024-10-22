@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Boxel 3d Input Recorder
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  A mod that records all inputs in a run for boxel 3d
 // @author       Charlieee1
 // @match        *dopplercreative.com/test/*
@@ -15,13 +15,14 @@ var getInputs;
     'use strict';
 
     var inputs = [];
-    getInputs = () => {return inputs;}
+    getInputs = () => {return [...inputs];}
 
     var aLock = false;
     var dLock = false;
+    var grappleReleaseEnabled = false;
 
     var time = 0;
-    afterLevelStart.push(function() {
+    afterLevelRestart.push(function() {
         time = 0;
         inputs = [];
         aLock = false;
@@ -54,6 +55,25 @@ var getInputs;
         inputs.push(time);
         time = 0;
         inputs.push("j");
+    });
+
+    addGrappleFunction(function(pos) {
+        inputs.push(time);
+        time = 0;
+        
+        let dx = pos.x - app.player.position.x;
+        let dy = pos.y - app.player.position.y;
+        let angle = Math.atan2(dy, dx) * 180 / Math.PI;
+        inputs.push("g" + angle);
+    });
+
+    addGrappleReleaseFunction(function() {
+        grappleReleaseEnabled = !grappleReleaseEnabled
+        if (grappleReleaseEnabled) return;
+
+        inputs.push(time);
+        time = 0;
+        inputs.push("G");
     });
 
     addModToList("input recorder");
