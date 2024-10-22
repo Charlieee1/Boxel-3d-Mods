@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Boxel 3d Accurate Timer
 // @namespace    http://tampermonkey.net/
-// @version      v1.1
+// @version      v1.2
 // @description  (not so) Accurate timer for boxel 3d
 // @author       Charlieee1
 // @match        *dopplercreative.com/test/*
@@ -9,10 +9,16 @@
 // @grant        none
 // ==/UserScript==
 
+var getFrameCount;
+
 (function() {
     'use strict';
 
     var frameCount = 0;
+	
+	getFrameCount = function() {
+		return frameCount;
+	}
 
     function reset() {
         frameCount = 0;
