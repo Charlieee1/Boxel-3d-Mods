@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Boxel 3d Modding API
 // @namespace    http://tampermonkey.net/
-// @version      v1.3
+// @version      v1.3.1
 // @description  Adding a modding API to boxel 3d
 // @author       Charlieee1
 // @match        *dopplercreative.com/test/*
@@ -81,7 +81,7 @@ var addModToList;
     app.player.addRope = function(pos) {
         app.player.grappleOriginal(pos);
         if (app.player.mode == 'grapple') {
-            grappleFuncs.forEach((func) => {func();});
+            grappleFuncs.forEach((func) => {func(pos);});
         }
     }
 
