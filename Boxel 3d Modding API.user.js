@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Boxel 3d Modding API
 // @namespace    http://tampermonkey.net/
-// @version      v1.2.1
+// @version      v1.3
 // @description  Adding a modding API to boxel 3d
 // @author       Charlieee1
 // @match        *dopplercreative.com/test/*
@@ -14,6 +14,10 @@ var removeUpdateFunction;
 var nextFrameUpdateFunction;
 var addJumpFunction;
 var removeJumpFunction;
+var addGrappleFunction;
+var removeGrappleFunction;
+var addGrappleReleaseFunction;
+var removeGrappleReleaseFunction;
 var getPlayer = () => {return app.player};
 var getPlayerBody = () => {return app.player.body};
 var getPlayerSpeed = () => {return getPlayerBody().speed};
@@ -69,6 +73,44 @@ var addModToList;
     removeJumpFunction = function(func) {
         if (func in jumpFuncs) {
             jumpFuncs.splice(jumpFuncs.indexOf(func), 1);
+        }
+    }
+
+    var grappleFuncs = [];
+    app.player.grappleOriginal = app.player.addRope;
+    app.player.addRope = function(pos) {
+        app.player.grappleOriginal(pos);
+        if (app.player.mode == 'grapple') {
+            grappleFuncs.forEach((func) => {func();});
+        }
+    }
+
+    addGrappleFunction = function(func) {
+        grappleFuncs.push(func);
+    }
+
+    removeGrappleFunction = function(func) {
+        if (func in grappleFuncs) {
+            grappleFuncs.splice(grappleFuncs.indexOf(func), 1);
+        }
+    }
+
+    var grappleReleaseFuncs = [];
+    app.player.grappleReleaseOriginal = app.player.removeRope;
+    app.player.removeRope = function() {
+        app.player.grappleReleaseOriginal();
+        if (app.player.mode == 'grapple') {
+            grappleReleaseFuncs.forEach((func) => {func();});
+        }
+    }
+
+    addGrappleReleaseFunction = function(func) {
+        grappleReleaseFuncs.push(func);
+    }
+
+    removeGrappleReleaseFunction = function(func) {
+        if (func in grappleReleaseFuncs) {
+            grappleReleaseFuncs.splice(grappleReleaseFuncs.indexOf(func), 1);
         }
     }
 
