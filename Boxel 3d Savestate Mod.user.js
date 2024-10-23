@@ -76,7 +76,7 @@ var setSaveState;
             Matter.Body.setVelocity(original.body, saved.velocity, false);
             Matter.Body.setAngularVelocity(original.body, saved.angularVelocity, false);
         });
-        
+
         Object.keys(savestate.tips).forEach((key) => {
             key = Number(key);
             app.level.children[key].hide();
