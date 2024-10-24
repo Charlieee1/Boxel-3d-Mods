@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Boxel 3d Savestate Mod
 // @namespace    http://tampermonkey.net/
-// @version      v1.1
+// @version      v1.1.1
 // @description  A mod that allows for retrieving and setting savestates
 // @author       Charlieee1
 // @match        *dopplercreative.com/test/*
@@ -72,10 +72,12 @@ var setSaveState;
             let original = app.level.children[key];
             Matter.Body.setPosition(original.body, saved.position, false);
             Matter.Body.setAngle(original.body, saved.rotation, false);
+            rotationOrigin=original.rotationOrigin;
             original.body.angle = saved.rotation;
             original.body.anglePrev = saved.rotation;
             original.setRotation(-saved.rotation);
             original.rotation.z = -saved.rotation;
+            original.rotationOrigin=rotationOrigin;
             original.setScale(saved.scale);
             Matter.Body.setVelocity(original.body, saved.velocity, false);
             Matter.Body.setAngularVelocity(original.body, saved.angularVelocity, false);
