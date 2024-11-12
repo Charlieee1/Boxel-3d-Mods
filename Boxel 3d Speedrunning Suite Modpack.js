@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Boxel 3d Modding API
 // @namespace    http://tampermonkey.net/
-// @version      v1.3.1
+// @version      v1.3.2
 // @description  Adding a modding API to boxel 3d
 // @author       Charlieee1
 // @match        *dopplercreative.com/test/*
@@ -116,28 +116,17 @@ var addModToList;
 
     setVelocity = function(vX, vY) {
         let player = getPlayerBody();
-        player.velocity.x = vX;
-        player.velocity.y = vY;
-
-        let pos = player.position;
-        player.positionPrev.x = pos.x - vX;
-        player.positionPrev.y = pos.y - vY;
+        Matter.Body.setVelocity(player, {x: vX, y: vY});
     }
 
     setVelocityX = function(vX) {
-        let player = getPlayerBody();
-        player.velocity.x = vX;
-
-        let pos = player.position;
-        player.positionPrev.x = pos.x - vX;
+        let vY = getVelocity().y;
+        setVelocity(vX, vY);
     }
 
     setVelocityY = function(vY) {
-        let player = getPlayerBody();
-        player.velocity.y = vY;
-
-        let pos = player.position;
-        player.positionPrev.y = pos.y - vY;
+        let vX = getVelocity().x;
+        setVelocity(vX, vY);
     }
 
     addVelocity = function(dx, dy) {
