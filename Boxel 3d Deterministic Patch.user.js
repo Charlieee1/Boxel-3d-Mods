@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Boxel 3d Deterministic Patch
 // @namespace    http://tampermonkey.net/
-// @version      v1.0
+// @version      v1.0.1
 // @description  A failed attempt at making boxel 3d deterministic
 // @author       Charlieee1
 // @match        *dopplercreative.com/test/*
@@ -72,4 +72,6 @@ const originalDateNow = Date.now;
         var e = originalDateNow() - app.timer.startTime - app.timer.playTime;
         return e
     };
+
+    addModToList("input recorder");
 })();
