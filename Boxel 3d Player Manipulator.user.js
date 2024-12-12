@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Boxel 3d Player Manipulator
 // @namespace    http://tampermonkey.net/
-// @version      v1.0
+// @version      v1.1
 // @description  A library mod for player manipulations and creation in boxel 3d
 // @author       Charlieee1
 // @match        *dopplercreative.com/test/*
@@ -14,9 +14,10 @@ var createPlayer;
 (function() {
     'use strict';
 
-    createPlayer = function(isStatic=true) {
+    createPlayer = function(isStatic=true, skinUrl="../../png/pink.png") {
         let newPlayer = app.level.entityFactory.createObject("player");
         newPlayer.setStatic(isStatic);
+        newPlayer.addTexture({url: skinUrl});
         newPlayer.setPositionLib = function(pos) {
             if (!pos.x) {
                 pos.x = newPlayer.position.x;
@@ -31,12 +32,15 @@ var createPlayer;
             newPlayer.positionOrigin = pos;
         }
         newPlayer.addToGame = function(x=0, y=0, tangible=false) {
-            if (!tangible) {
-                newPlayer.setPositionLib({z: -1});
-            }
             app.level.addObject(newPlayer, app);
+            if (!tangible) {
+                newPlayer.body.collisionFilter.category = 0;
+            }
             newPlayer.setPositionLib({x: x, y: y});
         }
+        newPlayer.removeFromGame = () => {
+            app.level.removeObject(newPlayer, app, true);
+        };
         return newPlayer;
     }
 
