@@ -70,5 +70,6 @@
         pos.position = getPlayer().position;
     });
 
+    // Mod list
     addModToList("multiplayer");
 })();
