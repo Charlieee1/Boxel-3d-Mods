@@ -118,5 +118,6 @@ var setSaveState;
     document.head.innerHTML=document.head.innerHTML+"<style>.text{font-size:1.1em !important;}</style>"
     document.head.innerHTML=document.head.innerHTML+"<style>.wrapper{font-size:110% !important;}</style>"
 
+    // Mod list
     addModToList("savestate");
 })();
