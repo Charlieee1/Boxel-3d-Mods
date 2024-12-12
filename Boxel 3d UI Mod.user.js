@@ -79,5 +79,6 @@ var addUIElement;
         panel.appendChild(element);
     }
 
+    // Mod list
     addModToList("ui mod");
 })();
