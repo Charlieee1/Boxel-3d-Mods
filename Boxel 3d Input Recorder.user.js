@@ -76,5 +76,6 @@ var getInputs;
         inputs.push("G");
     });
 
+    // Mod list
     addModToList("input recorder");
 })();
