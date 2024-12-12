@@ -40,5 +40,6 @@ var createPlayer;
         return newPlayer;
     }
 
+    // Mod list
     addModToList("player manipulator");
 })();
