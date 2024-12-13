@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Boxel 3d Replay Mod
 // @namespace    http://tampermonkey.net/
-// @version      v1.0
+// @version      v2.0
 // @description  A mod that records runs in boxel 3d (position, rotation, scale, inputs)
 // @author       Charlieee1
 // @match        *dopplercreative.com/test/*
@@ -12,13 +12,25 @@
 var getPrevReplay;
 var getReplay;
 var watchReplay;
+var loadReplay;
+var deleteReplay;
+var clearReplays;
+var getReplays;
 
 (function() {
+    // Recording replays
     var prevReplay;
     var currReplay = {positions:[]};
     var lastScale = {};
     var lastAngle = {};
+
+    // Playing back a replay
     var replayBeingWatched;
+    var watchingReplay = false;
+
+    // Playing alongside replays
+    var currReplayIndex = 0; // The index for the next replay to add
+    var replays = {}; // Object instead of array so keys don't change (unlike indices) when elements are removed
 
     getPrevReplay = () => {return prevReplay;};
     getReplay = () => {return currReplay;};
@@ -26,6 +38,7 @@ var watchReplay;
         app.level.retryLevel();
         pause();
         replayBeingWatched = replay;
+        watchingReplay = true;
         app.level.children.forEach((child) => {
             Matter.Body.setStatic(child.body, true);
         });
@@ -51,6 +64,41 @@ var watchReplay;
         addUpdateFunction(playReplayBack);
     }
 
+    loadReplay = function(replay, skin="../../png/pink.png") {
+        // Discard everything but the player's position, rotation, and scale
+        let newReplay = {positions: {}};
+        for (let i = 0; i < replay.positions.length; i++) {
+            newReplay.positions[i] = replay.positions[i][0];
+        }
+        replays[currReplayIndex] = newReplay;
+
+        // Create new player for this replay
+        newReplay.player = createPlayer(true, skin);
+        newReplay.player.addToGame(0, 0, false);
+        newReplay.player.light.visible = false;
+        newReplay.player.setPositionLib({z: -1});
+        return currReplayIndex++;
+    };
+
+    deleteReplay = function(idx) {
+        if (!replays.hasOwnProperty(idx)) return;
+        replays[idx].player.removeFromGame();
+        delete replays[idx];
+    };
+
+    clearReplays = function() {
+        Object.keys(replays).forEach((key) => {
+            let replay = replays[key];
+            replay.player.removeFromGame();
+        });
+        replays = {};
+        currReplayIndex = 0;
+    };
+
+    getReplays = function() {
+        return replays;
+    }
+
     // Before the replay positions and inputs are cleared, store them
     beforeLevelStart.push(() => {
         prevReplay = {};
@@ -63,6 +111,14 @@ var watchReplay;
             positions: [],
             inputs: []
         };
+        watchingReplay = false;
+    });
+
+    // Ensure the fake players remain intangible (this code should probably be in player manipulator. ah well)
+    afterLevelStart.push(() => {
+        Object.keys(replays).forEach((key) => {
+            replays[key].player.body.collisionFilter.category = 0;
+        });
     });
 
     // During the level playing, record the positions (inputs are being recorded by input recorder)
@@ -110,6 +166,23 @@ var watchReplay;
         currReplay.positions.push(newPosition);
     });
 
+    // Update the positions of the fake players in the loaded replays
+    addUpdateFunction(() => {
+        Object.keys(replays).forEach((key) => {
+            let replay = replays[key];
+            let positions = replay.positions;
+            if (!positions.hasOwnProperty(getFrameCount())) return;
+            let position = positions[getFrameCount()];
+            if (position.hasOwnProperty("scale")) {
+                replay.player.setScale(position.scale, false);
+            }
+            replay.player.setPositionLib({x: position.x, y: -position.y});
+            if (position.hasOwnProperty("angle")) {
+                replay.player.setRotation(-position.angle, false);
+            }
+        });
+    });
+
     // After the level finishes, store the inputs
     afterFinish.push(() => {
         currReplay.inputs = getInputs();
@@ -117,6 +190,7 @@ var watchReplay;
     });
 
     afterFinish.push(async function() {
+        if (!watchingReplay) return;
         setTimeout(function() {
             let textBox;
             if (document.getElementsByClassName("popup").length > 0) {
