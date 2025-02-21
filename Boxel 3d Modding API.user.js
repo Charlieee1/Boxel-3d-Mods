@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Boxel 3d Modding API
 // @namespace    http://tampermonkey.net/
-// @version      v1.3.2
+// @version      v1.3.3
 // @description  Adding a modding API to boxel 3d
 // @author       Charlieee1
 // @match        *dopplercreative.com/boxel-3d/play/*
@@ -139,6 +139,8 @@ var addModToList;
             setVelocity(v.x + dx, v.y + dy);
         }
     }
+    
+    document.head.innerHTML += "<style>.ui-bubble .popup .container .content .title {font-size: 1em;} .ui-bubble .popup .container .content .title span {font-size: 2em;}</style>";
 
     // Mod list
     var modList = document.createElement("div");
