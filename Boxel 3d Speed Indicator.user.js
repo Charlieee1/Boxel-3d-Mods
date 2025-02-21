@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Boxel 3d Speed Indicator
 // @namespace    http://tampermonkey.net/
-// @version      v1.0
+// @version      v1.0.1
 // @description  Adding a speed indicator to boxel 3d
 // @author       Charlieee1
-// @match        https://www.dopplercreative.com/test/
+// @match        *dopplercreative.com/boxel-3d/play/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
