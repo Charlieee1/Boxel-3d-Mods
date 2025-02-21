@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Boxel 3d Player Manipulator
 // @namespace    http://tampermonkey.net/
-// @version      v1.1
+// @version      v1.1.1
 // @description  A library mod for player manipulations and creation in boxel 3d
 // @author       Charlieee1
-// @match        *dopplercreative.com/test/*
+// @match        *dopplercreative.com/boxel-3d/play/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
