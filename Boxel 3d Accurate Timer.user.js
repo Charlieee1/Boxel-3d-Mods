@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Boxel 3d Accurate Timer
 // @namespace    http://tampermonkey.net/
-// @version      v1.3.2
-// @description  (not so) Accurate timer for boxel 3d
+// @version      v1.3.3
+// @description  Accurate timer for boxel 3d
 // @author       Charlieee1
-// @match        *dopplercreative.com/test/*
+// @match        *dopplercreative.com/boxel-3d/play*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
