@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Boxel 3d Replay Mod
 // @namespace    http://tampermonkey.net/
-// @version      v2.0
-// @description  A mod that records runs in boxel 3d (position, rotation, scale, inputs)
+// @version      v2.0.1
+// @description  A mod that records and plays back runs in boxel 3d (position, rotation, scale, inputs)
 // @author       Charlieee1
-// @match        *dopplercreative.com/test/*
+// @match        *dopplercreative.com/boxel-3d/play/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
 // @grant        none
 // ==/UserScript==
