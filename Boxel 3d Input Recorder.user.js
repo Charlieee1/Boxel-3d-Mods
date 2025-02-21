@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Boxel 3d Input Recorder
 // @namespace    http://tampermonkey.net/
-// @version      v1.2.1
+// @version      v1.2.2
 // @description  A mod that records all inputs in a run for boxel 3d
 // @author       Charlieee1
-// @match        *dopplercreative.com/test/*
+// @match        *dopplercreative.com/boxel-3d/play/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
 // @grant        none
 // ==/UserScript==
