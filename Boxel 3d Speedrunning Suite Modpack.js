@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Boxel 3d Modding API
 // @namespace    http://tampermonkey.net/
-// @version      v1.3.2
+// @version      v1.3.3
 // @description  Adding a modding API to boxel 3d
 // @author       Charlieee1
-// @match        *dopplercreative.com/test/*
+// @match        *dopplercreative.com/boxel-3d/play/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
@@ -139,6 +139,8 @@ var addModToList;
             setVelocity(v.x + dx, v.y + dy);
         }
     }
+    
+    document.head.innerHTML += "<style>.ui-bubble .popup .container .content .title {font-size: 1em;} .ui-bubble .popup .container .content .title span {font-size: 2em;}</style>";
 
     // Mod list
     var modList = document.createElement("div");
@@ -164,10 +166,10 @@ var addModToList;
 // ==UserScript==
 // @name         Boxel 3d Speed Indicator
 // @namespace    http://tampermonkey.net/
-// @version      v1.0
+// @version      v1.0.1
 // @description  Adding a speed indicator to boxel 3d
 // @author       Charlieee1
-// @match        https://www.dopplercreative.com/test/
+// @match        *dopplercreative.com/boxel-3d/play/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
@@ -198,10 +200,10 @@ var addModToList;
 // ==UserScript==
 // @name         Boxel 3d Time Manipulator
 // @namespace    http://tampermonkey.net/
-// @version      v1.2
+// @version      v1.2.1
 // @description  Time manipulator library for boxel 3d
 // @author       Charlieee1
-// @match        *dopplercreative.com/test/*
+// @match        *dopplercreative.com/boxel-3d/play/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
@@ -290,34 +292,10 @@ function resetTime() {
         }
     }
 
+    let originalFinish = app.player.finish;
     app.player.finish = function() {
         beforeFinish.forEach((func) => func());
-
-        // START Doppler's code
-        var e = app.level.name,
-            t = app.timer.toString(),
-            n = app.storage.saveScore(e, t),
-            s = "Finished!<br>Score: " + t;
-        app.timer.render(t), n == true && (s += "<br><em>New record!</em>"), app.play = false, window.dispatchEvent(new CustomEvent("openPopup", {
-            detail: {
-                text: s,
-                inputs: [{
-                    value: "Retry",
-                    type: "button",
-                    callback: function() {
-                        app.level.retryLevel(app), window.dispatchEvent(new CustomEvent("closePopup"))
-                    }
-                }, {
-                    value: "Continue",
-                    type: "button",
-                    callback: function() {
-                        app.level.exitLevel(app), window.dispatchEvent(new CustomEvent("closePopup"))
-                    }
-                }]
-            }
-        }))
-        // END Doppler's code
-
+        originalFinish();
         afterFinish.forEach((func) => func());
     }
 
@@ -327,10 +305,10 @@ function resetTime() {
 // ==UserScript==
 // @name         Boxel 3d Accurate Timer
 // @namespace    http://tampermonkey.net/
-// @version      v1.3.2
-// @description  (not so) Accurate timer for boxel 3d
+// @version      v1.3.3
+// @description  Accurate timer for boxel 3d
 // @author       Charlieee1
-// @match        *dopplercreative.com/test/*
+// @match        *dopplercreative.com/boxel-3d/play*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
@@ -380,10 +358,10 @@ var setFrameCount;
 // ==UserScript==
 // @name         Boxel 3d Input Recorder
 // @namespace    http://tampermonkey.net/
-// @version      v1.2.1
+// @version      v1.2.2
 // @description  A mod that records all inputs in a run for boxel 3d
 // @author       Charlieee1
-// @match        *dopplercreative.com/test/*
+// @match        *dopplercreative.com/boxel-3d/play/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
 // @grant        none
 // ==/UserScript==
@@ -439,7 +417,7 @@ var getInputs;
     addGrappleFunction(function(pos) {
         inputs.push(time);
         time = 0;
-
+        
         let dx = pos.x - app.player.position.x;
         let dy = pos.y - app.player.position.y;
         let angle = Math.atan2(dy, dx) * 180 / Math.PI;
@@ -461,10 +439,10 @@ var getInputs;
 // ==UserScript==
 // @name         Boxel 3d Player Manipulator
 // @namespace    http://tampermonkey.net/
-// @version      v1.1
+// @version      v1.1.1
 // @description  A library mod for player manipulations and creation in boxel 3d
 // @author       Charlieee1
-// @match        *dopplercreative.com/test/*
+// @match        *dopplercreative.com/boxel-3d/play/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
@@ -510,10 +488,10 @@ var createPlayer;
 // ==UserScript==
 // @name         Boxel 3d Replay Mod
 // @namespace    http://tampermonkey.net/
-// @version      v2.0
-// @description  A mod that records runs in boxel 3d (position, rotation, scale, inputs)
+// @version      v2.0.1
+// @description  A mod that records and plays back runs in boxel 3d (position, rotation, scale, inputs)
 // @author       Charlieee1
-// @match        *dopplercreative.com/test/*
+// @match        *dopplercreative.com/boxel-3d/play/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
 // @grant        none
 // ==/UserScript==
