@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Boxel 3d Replay Mod
 // @namespace    http://tampermonkey.net/
-// @version      v2.0.1
+// @version      v2.0.2
 // @description  A mod that records and plays back runs in boxel 3d (position, rotation, scale, inputs)
 // @author       Charlieee1
 // @match        *dopplercreative.com/boxel-3d/play/*
@@ -126,6 +126,7 @@ var getReplays;
         let newPosition = {};
         for (let i = 0; i < app.level.children.length; i++) {
             let child = app.level.children[i];
+            if (!child.body) continue;
             if (child.body.isStatic) continue;
             let angleChanged = false;
             let scaleChanged = false;
