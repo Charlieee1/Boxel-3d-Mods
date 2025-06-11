@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:2;">
+    <g id="background-pack-tropic" transform="matrix(1,0,0,1,-270,-180)">
+        <g id="background-pack-zacks-levels">
+            <g id="background-pack-tropic1" serif:id="background-pack-tropic">
+                <clipPath id="_clip1">
+                    <rect x="270" y="180" width="100" height="100"/>
+                </clipPath>
+                <g clip-path="url(#_clip1)">
+                    <g id="Background" transform="matrix(0.412391,0,0,0.682116,192.277,102.697)">
+                        <rect x="188.469" y="113.328" width="242.489" height="146.603" style="fill:url(#_Linear2);"/>
+                    </g>
+                    <g transform="matrix(1.16122,0,0,1.16122,-68.612,-16.9571)">
+                        <g transform="matrix(1.53633,0,0,1.73907,-133.243,-2114.33)">
+                            <ellipse cx="327.768" cy="1359" rx="19.232" ry="10" style="fill:rgb(1,215,255);"/>
+                        </g>
+                        <g transform="matrix(1.29577,0,0,1.33643,-54.3954,-1568)">
+                            <ellipse cx="327.768" cy="1359" rx="19.232" ry="10" style="fill:rgb(0,235,249);"/>
+                        </g>
+                        <g transform="matrix(1,0,0,1,41.995,-1111.77)">
+                            <ellipse cx="327.768" cy="1359" rx="19.232" ry="10" style="fill:rgb(243,233,224);"/>
+                        </g>
+                        <g transform="matrix(0.79201,0,0,0.7,110.167,-707.072)">
+                            <ellipse cx="327.768" cy="1359" rx="19.232" ry="10" style="fill:rgb(253,249,247);"/>
+                        </g>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-5,4.45159)">
+                        <g transform="matrix(0.838638,0.107151,-0.111746,0.874603,-590.303,-78.9863)">
+                            <path d="M1100,252.402L1100,258.598C1100,260.475 1098.41,262 1096.45,262L1053.55,262C1051.59,262 1050,260.475 1050,258.598L1050,252.402C1050,250.525 1051.59,249 1053.55,249L1096.45,249C1098.41,249 1100,250.525 1100,252.402Z" style="fill:rgb(243,233,224);"/>
+                        </g>
+                        <g transform="matrix(0.838638,0.107151,-0.0337538,0.264181,-609.723,73.0088)">
+                            <path d="M1100,255.5C1100,259.087 1099.08,262 1097.95,262L1052.05,262C1050.92,262 1050,259.087 1050,255.5C1050,251.913 1050.92,249 1052.05,249L1097.95,249C1099.08,249 1100,251.913 1100,255.5Z" style="fill:rgb(253,249,247);"/>
+                        </g>
+                    </g>
+                    <g transform="matrix(1,0,0,1,2.72217,-7.49093)">
+                        <g transform="matrix(1.53633,0,0,1.73907,-148.113,-2164.34)">
+                            <ellipse cx="327.768" cy="1359" rx="19.232" ry="10" style="fill:rgb(1,215,255);"/>
+                        </g>
+                        <g transform="matrix(1.29577,0,0,1.33643,-69.2651,-1618.02)">
+                            <ellipse cx="327.768" cy="1359" rx="19.232" ry="10" style="fill:rgb(0,235,249);"/>
+                        </g>
+                        <g transform="matrix(1,0,0,1,27.7529,-1161.02)">
+                            <ellipse cx="327.768" cy="1359" rx="19.232" ry="10" style="fill:rgb(243,233,224);"/>
+                        </g>
+                        <g transform="matrix(0.79201,0,0,0.7,95.9253,-756.316)">
+                            <ellipse cx="327.768" cy="1359" rx="19.232" ry="10" style="fill:rgb(253,249,247);"/>
+                        </g>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-5,4.45159)">
+                        <g transform="matrix(0.25147,0.0321297,-0.126738,0.991936,50.8369,-37.8909)">
+                            <path d="M1100,252L1100,259C1100,260.656 1094.7,262 1088.17,262L1061.83,262C1055.3,262 1050,260.656 1050,259L1050,252C1050,250.344 1055.3,249 1061.83,249L1088.17,249C1094.7,249 1100,250.344 1100,252Z" style="fill:rgb(255,203,76);"/>
+                        </g>
+                        <g transform="matrix(0.25147,0.0321297,-0.0389962,0.305211,28.9892,133.104)">
+                            <path d="M1100,255.5C1100,259.087 1096.46,262 1092.11,262L1057.89,262C1053.54,262 1050,259.087 1050,255.5C1050,251.913 1053.54,249 1057.89,249L1092.11,249C1096.46,249 1100,251.913 1100,255.5Z" style="fill:rgb(255,138,76);"/>
+                        </g>
+                    </g>
+                    <g transform="matrix(0.777365,0,0,0.814424,60.3823,24.3522)">
+                        <g transform="matrix(1.63489,0,0,2.00503,-264.647,-2509.55)">
+                            <ellipse cx="327.768" cy="1359" rx="19.232" ry="10" style="fill:rgb(1,215,255);"/>
+                        </g>
+                        <g transform="matrix(1.37889,0,0,1.54081,-180.741,-1879.68)">
+                            <ellipse cx="327.768" cy="1359" rx="19.232" ry="10" style="fill:rgb(0,235,249);"/>
+                        </g>
+                        <g transform="matrix(1.12801,0,0,1.12801,-98.5087,-1319.63)">
+                            <ellipse cx="327.768" cy="1359" rx="19.232" ry="10" style="fill:rgb(243,233,224);"/>
+                        </g>
+                        <g transform="matrix(0.893395,0,0,0.789606,-21.6096,-863.125)">
+                            <ellipse cx="327.768" cy="1359" rx="19.232" ry="10" style="fill:rgb(253,249,247);"/>
+                        </g>
+                    </g>
+                    <g id="Palm-Tree" serif:id="Palm Tree" transform="matrix(1,0,0,1,40,-10)">
+                        <g transform="matrix(1,0,0,1,10,-1137.02)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(34,183,13);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(0.913911,0.405915,-0.405915,0.913911,582.742,-1156.24)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(28,155,9);stroke-width:4px;"/>
+                        </g>
+                    </g>
+                    <g id="Palm-Tree1" serif:id="Palm Tree" transform="matrix(0.843897,0,0,0.843897,-7.17371,12.0821)">
+                        <g transform="matrix(1,0,0,1,10,-1137.02)">
+                            <path d="M326,1353C326,1353 326.051,1351.36 326.642,1348.94" style="fill:none;stroke:rgb(245,156,1);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(1,0,0,1,10,-1137.02)">
+                            <path d="M326.642,1348.94C326.922,1347.79 327.323,1346.47 327.898,1345.07" style="fill:none;stroke:rgb(220,120,1);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(1,0,0,1,10,-1137.02)">
+                            <path d="M327.898,1345.07C328.434,1343.76 329.121,1342.38 330,1341" style="fill:none;stroke:rgb(172,52,10);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(1,0,0,1,10,-1137.02)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(34,183,13);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(0.913911,0.405915,-0.405915,0.913911,582.742,-1156.24)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(28,155,9);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(0.913911,0.405915,-0.405915,0.913911,590.459,-1153.6)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(28,155,9);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(0.636078,0.771625,-0.771625,0.636078,1169.5,-898.096)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(34,183,13);stroke-width:4px;"/>
+                        </g>
+                    </g>
+                    <g id="Palm-Tree2" serif:id="Palm Tree" transform="matrix(0.773127,0,0,0.773127,107.709,17.5273)">
+                        <g transform="matrix(-1,0,0,1,644.797,-1128.12)">
+                            <path d="M326,1353C326,1353 326.051,1351.36 326.642,1348.94" style="fill:none;stroke:rgb(245,156,1);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(-1,0,0,1,644.797,-1128.12)">
+                            <path d="M326.642,1348.94C326.922,1347.79 327.323,1346.47 327.898,1345.07" style="fill:none;stroke:rgb(220,120,1);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(-1,0,0,1,644.797,-1128.12)">
+                            <path d="M327.898,1345.07C328.434,1343.76 329.121,1342.38 330,1341" style="fill:none;stroke:rgb(172,52,10);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(-1,0,0,1,644.797,-1128.12)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(34,183,13);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(-0.913911,0.405915,0.405915,0.913911,72.0556,-1147.35)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(28,155,9);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(-0.913911,0.405915,0.405915,0.913911,64.3384,-1144.71)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(28,155,9);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(-0.636078,0.771625,0.771625,0.636078,-514.703,-889.204)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(34,183,13);stroke-width:4px;"/>
+                        </g>
+                    </g>
+                    <g id="Palm-Tree3" serif:id="Palm Tree" transform="matrix(-0.714217,0,0,0.714217,587.555,36.6197)">
+                        <g transform="matrix(-1,0,0,1,644.797,-1128.12)">
+                            <path d="M326,1353C326,1353 326.051,1351.36 326.642,1348.94" style="fill:none;stroke:rgb(245,156,1);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(-1,0,0,1,644.797,-1128.12)">
+                            <path d="M326.642,1348.94C326.922,1347.79 327.323,1346.47 327.898,1345.07" style="fill:none;stroke:rgb(220,120,1);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(-1,0,0,1,644.797,-1128.12)">
+                            <path d="M327.898,1345.07C328.434,1343.76 329.121,1342.38 330,1341" style="fill:none;stroke:rgb(172,52,10);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(-1,0,0,1,644.797,-1128.12)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(34,183,13);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(-0.913911,0.405915,0.405915,0.913911,72.0556,-1147.35)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(28,155,9);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(-0.913911,0.405915,0.405915,0.913911,64.3384,-1144.71)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(28,155,9);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(-0.636078,0.771625,0.771625,0.636078,-514.703,-889.204)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(34,183,13);stroke-width:4px;"/>
+                        </g>
+                    </g>
+                    <g id="Palm-Tree4" serif:id="Palm Tree" transform="matrix(1.21005,0,0,1.21005,-23.9542,-9.99203)">
+                        <g transform="matrix(-1,0,0,1,644.797,-1128.12)">
+                            <path d="M326,1353C326,1353 326.051,1351.36 326.642,1348.94" style="fill:none;stroke:rgb(245,156,1);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(-1,0,0,1,644.797,-1128.12)">
+                            <path d="M326.642,1348.94C326.922,1347.79 327.323,1346.47 327.898,1345.07" style="fill:none;stroke:rgb(220,120,1);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(-1,0,0,1,644.797,-1128.12)">
+                            <path d="M327.898,1345.07C328.434,1343.76 329.121,1342.38 330,1341" style="fill:none;stroke:rgb(172,52,10);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(-1,0,0,1,644.797,-1128.12)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(34,183,13);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(-0.913911,0.405915,0.405915,0.913911,72.0556,-1147.35)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(28,155,9);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(-0.913911,0.405915,0.405915,0.913911,64.3384,-1144.71)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(28,155,9);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(-0.636078,0.771625,0.771625,0.636078,-514.703,-889.204)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(34,183,13);stroke-width:4px;"/>
+                        </g>
+                    </g>
+                    <g id="Rock" transform="matrix(1,0,0,1,5.03037,-22)">
+                        <g transform="matrix(1,0,0,1,-5.27501e-05,-1130.02)">
+                            <path d="M272,1355.21L276,1358L281,1357L284,1355.21L280,1349L276,1349L272,1355.21Z" style="fill:rgb(226,103,67);"/>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-5.27501e-05,-1130.02)">
+                            <path d="M273.088,1353.52L276,1356L280,1355.21L282.83,1353.39L280,1349L276,1349L273.088,1353.52Z" style="fill:rgb(230,116,75);"/>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-5.27501e-05,-1130.02)">
+                            <path d="M274.609,1351.16L276.99,1353L280,1352.21L281.378,1351.14L280,1349L276,1349L274.609,1351.16Z" style="fill:rgb(240,139,90);"/>
+                        </g>
+                    </g>
+                    <g id="Rock1" serif:id="Rock" transform="matrix(-0.566656,0,0,0.566656,491.315,60.441)">
+                        <g transform="matrix(1,0,0,1,-5.27501e-05,-1130.02)">
+                            <path d="M272,1355.21L276,1358L281,1357L284,1355.21L280,1349L276,1349L272,1355.21Z" style="fill:rgb(226,103,67);"/>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-5.27501e-05,-1130.02)">
+                            <path d="M273.088,1353.52L276,1356L280,1355.21L282.83,1353.39L280,1349L276,1349L273.088,1353.52Z" style="fill:rgb(230,116,75);"/>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-5.27501e-05,-1130.02)">
+                            <path d="M274.609,1351.16L276.99,1353L280,1352.21L281.378,1351.14L280,1349L276,1349L274.609,1351.16Z" style="fill:rgb(240,139,90);"/>
+                        </g>
+                    </g>
+                    <g id="Rock2" serif:id="Rock" transform="matrix(1.11589,0,0,1.11589,37.018,17.7151)">
+                        <g transform="matrix(1,0,0,1,-5.27501e-05,-1130.02)">
+                            <path d="M272,1355.21L276,1358L281,1357L284,1355.21L280,1349L276,1349L272,1355.21Z" style="fill:rgb(226,103,67);"/>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-5.27501e-05,-1130.02)">
+                            <path d="M273.088,1353.52L276,1356L280,1355.21L282.83,1353.39L280,1349L276,1349L273.088,1353.52Z" style="fill:rgb(230,116,75);"/>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-5.27501e-05,-1130.02)">
+                            <path d="M274.609,1351.16L276.99,1353L280,1352.21L281.378,1351.14L280,1349L276,1349L274.609,1351.16Z" style="fill:rgb(240,139,90);"/>
+                        </g>
+                    </g>
+                    <g id="Rock3" serif:id="Rock" transform="matrix(0.560053,0,0,0.560053,198.107,149.479)">
+                        <g transform="matrix(1,0,0,1,-5.27501e-05,-1130.02)">
+                            <path d="M272,1355.21L276,1358L281,1357L284,1355.21L280,1349L276,1349L272,1355.21Z" style="fill:rgb(226,103,67);"/>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-5.27501e-05,-1130.02)">
+                            <path d="M273.088,1353.52L276,1356L280,1355.21L282.83,1353.39L280,1349L276,1349L273.088,1353.52Z" style="fill:rgb(230,116,75);"/>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-5.27501e-05,-1130.02)">
+                            <path d="M274.609,1351.16L276.99,1353L280,1352.21L281.378,1351.14L280,1349L276,1349L274.609,1351.16Z" style="fill:rgb(240,139,90);"/>
+                        </g>
+                    </g>
+                    <g id="Palm-Tree5" serif:id="Palm Tree" transform="matrix(1.12801,0,0,1.12801,-95.8658,-20.3278)">
+                        <g transform="matrix(-1,0,0,1,644.797,-1128.12)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(34,183,13);stroke-width:4px;"/>
+                        </g>
+                        <g transform="matrix(-0.913911,0.405915,0.405915,0.913911,72.0556,-1147.35)">
+                            <path d="M322,1342C322,1342 325.112,1338.93 330,1341" style="fill:none;stroke:rgb(28,155,9);stroke-width:4px;"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.46413e-14,-144.56,239.111,8.85177e-15,309.714,259.93)"><stop offset="0" style="stop-color:rgb(1,215,255);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(71,139,254);stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>

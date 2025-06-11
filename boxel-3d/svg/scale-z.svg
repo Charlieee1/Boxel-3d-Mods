@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="26" viewBox="0 0 20 26">
+  <g id="scale-z-2" transform="translate(134 399.2) rotate(180)">
+    <path id="Path_86" data-name="Path 86" d="M14,0h2l3,8-3,8H4L1,8,4,0H6" transform="translate(114 382.2)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Polygon_22" data-name="Polygon 22" d="M3,0,6,3H0Z" transform="translate(121 374.2)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_87" data-name="Path 87" d="M0,10V20" transform="translate(124 395.2) rotate(-180)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_88" data-name="Path 88" d="M1.5-.5h16" transform="translate(133.5 389.7) rotate(-180)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+  </g>
+</svg>

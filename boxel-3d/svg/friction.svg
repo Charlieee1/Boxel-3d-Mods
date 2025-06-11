@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+  <g id="friction" transform="translate(-111 -383.2)">
+    <rect id="Rectangle_63" data-name="Rectangle 63" width="6" height="6" transform="translate(117 389.2)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_73" data-name="Path 73" d="M2-1V1" transform="translate(117 398.2) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_78" data-name="Path 78" d="M2-1V1" transform="translate(117 382.2) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_77" data-name="Path 77" d="M2,1V-1" transform="translate(123 398.2) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_79" data-name="Path 79" d="M2,1V-1" transform="translate(123 382.2) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_80" data-name="Path 80" d="M2-1V1" transform="translate(126 395.2)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_81" data-name="Path 81" d="M2-1V1" transform="translate(110 395.2)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_82" data-name="Path 82" d="M2,1V-1" transform="translate(126 389.2)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_83" data-name="Path 83" d="M2,1V-1" transform="translate(110 389.2)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+  </g>
+</svg>

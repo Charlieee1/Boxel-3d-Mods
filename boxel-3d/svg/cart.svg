@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+  <g id="cart" transform="translate(138 397.2) rotate(180)">
+    <path id="cube" d="M0,0H18L14,8H4Z" transform="translate(134 394.2) rotate(180)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_89" data-name="Path 89" d="M118,388.2l-3,5h15" transform="translate(248 774.4) rotate(180)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <circle id="Ellipse_8" data-name="Ellipse 8" cx="2" cy="2" r="2" transform="translate(134 378.2) rotate(180)" fill="#fff"/>
+    <circle id="Ellipse_9" data-name="Ellipse 9" cx="2" cy="2" r="2" transform="translate(120 378.2) rotate(180)" fill="#fff"/>
+    <path id="Path_90" data-name="Path 90" d="M114.07,380.341,113,378.2h-2" transform="translate(248 774.4) rotate(180)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

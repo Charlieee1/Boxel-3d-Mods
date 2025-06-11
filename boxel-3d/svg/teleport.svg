@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="32px" height="32px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;">
+    <g id="coin-square" transform="matrix(-1,-7.65714e-16,7.65714e-16,-1,142,401.201)">
+        <g id="Rectangle_66" transform="matrix(0.707107,-0.707107,0.707107,0.707107,116.101,385.2)">
+            <rect x="0" y="0" width="14" height="14" style="fill:none;stroke:white;stroke-width:2px;"/>
+        </g>
+        <g id="Rectangle_67" transform="matrix(0.707107,-0.707107,0.707107,0.707107,121.757,385.2)">
+            <rect x="0" y="0" width="6" height="6" style="fill:none;stroke:white;stroke-width:2px;"/>
+        </g>
+    </g>
+</svg>

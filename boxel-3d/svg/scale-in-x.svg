@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="14" viewBox="0 0 26 14">
+  <g id="scale-in-x" transform="translate(-111 -381.2)">
+    <path id="Polygon_2" data-name="Polygon 2" d="M3,0,6,4H0Z" transform="translate(120 385.2) rotate(90)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Polygon_3" data-name="Polygon 3" d="M3,0,6,4H0Z" transform="translate(128 391.2) rotate(-90)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_12" data-name="Path 12" d="M0,12v8" transform="translate(132 388.2) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_21" data-name="Path 21" d="M0,10v8" transform="translate(146 388.2) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_22" data-name="Path 22" d="M0,3V15" transform="translate(124 397.2) rotate(180)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+  </g>
+</svg>

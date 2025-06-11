@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26.409" height="18" viewBox="0 0 26.409 18">
+  <g id="eye" transform="translate(-602.795 -495)">
+    <path id="lids" d="M12,4c6.627,0,12,8,12,8s-5.373,8-12,8S0,12,0,12,5.373,4,12,4Z" transform="translate(604 492)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <circle id="pupil" cx="3" cy="3" r="3" stroke-width="2" transform="translate(613 501)" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+</svg>

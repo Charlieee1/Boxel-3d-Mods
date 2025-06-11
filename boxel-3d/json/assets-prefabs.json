@@ -1,0 +1,84 @@
+{
+  "bounce": {
+    "className": "Bounce",
+    "model": {
+      "name": "cube-bounce"
+    }
+  },
+  "checkpoint": {
+    "className": "Checkpoint",
+    "model": {
+      "name": "cube-checkpoint"
+    }
+  },
+  "control": {
+    "className": "Control",
+    "model": {
+      "name": "cube-control"
+    }
+  },
+  "cube": {
+    "className": "Cube",
+    "color": "#FFCB4C",
+    "enabledRotations": { "x": false, "y": false, "z": true },
+    "enabledTranslations": { "x": true, "y": true, "z": false },
+    "model": {
+      "name": "cube-cube"
+    },
+    "status": 1
+  },
+  "direction": {
+    "className": "Direction",
+    "model": {
+      "name": "cube-direction"
+    }
+  },
+  "finish": {
+    "className": "Finish",
+    "model": {
+      "name": "cube-finish"
+    }
+  },
+  "grapple": {
+    "className": "Grapple",
+    "model": {
+      "name": "cube-grapple"
+    }
+  },
+  "gravity": {
+    "className": "Gravity",
+    "model": {
+      "name": "cube-gravity"
+    }
+  },
+  "player": {
+    "className": "Player",
+    "model": {
+      "name": "cube-player"
+    }
+  },
+  "reset": {
+    "className": "Reset",
+    "model": {
+      "name": "cube-reset"
+    }
+  },
+  "resize": {
+    "className": "Resize",
+    "model": {
+      "name": "cube-resize"
+    }
+  },
+  "spike": {
+    "className": "Spike",
+    "model": {
+      "name": "cube-spike"
+    }
+  },
+  "tip": {
+    "className": "Tip",
+    "model": {
+      "name": "cube-tip"
+    }
+  }
+}

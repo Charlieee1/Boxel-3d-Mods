@@ -1,0 +1,698 @@
+[
+  {
+    "version": "0.0.1",
+    "revisions": [
+      "10 levels",
+      "8 block types",
+      "3D Level Editor"
+    ]
+  },
+  {
+    "version": "0.0.2",
+    "revisions": [
+      "Added timer to campaign"
+    ]
+  },
+  {
+    "version": "0.0.3",
+    "revisions": [
+      "Added score saving system"
+    ]
+  },
+  {
+    "version": "0.0.4",
+    "revisions": [
+      "Added lighting for player"
+    ]
+  },
+  {
+    "version": "0.0.5 ",
+    "revisions": [
+      "Added background artwork"
+    ]
+  },
+  {
+    "version": "0.0.6",
+    "revisions": [
+      "Added speedometer",
+      "Updated time format from 12:34 to 12.345"
+    ]
+  },
+  {
+    "version": "0.0.7",
+    "revisions": [
+      "Added level sharing (file only)",
+      "Added level downloading (file only)",
+      "Added level 11",
+      "Fixed level 6 wall glitch",
+      "Fixed old score value from preventing new records"
+    ]
+  },
+  {
+    "version": "0.1.0",
+    "revisions": [
+      "Added \"MySkins\" shop",
+      "Added 3 skins"
+    ]
+  },
+  {
+    "version": "0.1.1",
+    "revisions": [
+      "Added keyboard shortcuts (ex: R to restart, ESC to pause/return)"
+    ]
+  },
+  {
+    "version": "0.1.5",
+    "revisions": [
+      "Added theme music",
+      "Updated skin render behavior"
+    ]
+  },
+  {
+    "version": "0.1.6",
+    "revisions": [
+      "Updated Tip cube behavior - now disappears when selected",
+      "Updated level 1, 5, 12 & 14",
+      "Added final level dialog"
+    ]
+  },
+  {
+    "version": "0.1.7",
+    "revisions": [
+      "Added resize block",
+      "Remove shrink block",
+      "Remove grow block"
+    ]
+  },
+  {
+    "version": "0.1.8",
+    "revisions": [
+      "Added option to backup data",
+      "Added option to restore data"
+    ]
+  },
+  {
+    "version": "0.1.9",
+    "revisions": [
+      "Added gravity cube (experimental)"
+    ]
+  },
+  {
+    "version": "0.2.0",
+    "revisions": [
+      "Added gravity cube",
+      "Added 5 new levels"
+    ]
+  },
+  {
+    "version": "0.2.1",
+    "revisions": [
+      "Added custom skin option to shop"
+    ]
+  },
+  {
+    "version": "0.2.2",
+    "revisions": [
+      "All skins are now free"
+    ]
+  },
+  {
+    "version": "0.3.0",
+    "revisions": [
+      "Added tester license for everyone",
+      "Added Google integration (backup, restore, etc.)"
+    ]
+  },
+  {
+    "version": "1.0.0",
+    "revisions": [
+      "Remove licenses, everything is free",
+      "Updated logo"
+    ]
+  },
+  {
+    "version": "1.1.0",
+    "revisions": [
+      "Added grappling hook",
+      "Added alpha testing levels"
+    ]
+  },
+  {
+    "version": "1.1.3",
+    "revisions": [
+      "Fixed jump bug when pressing 'r'",
+      "Fixed duplicate ropes",
+      "Updated level 25 finish line",
+      "Improved performance",
+      "Simplified background artwork"
+    ]
+  },
+  {
+    "version": "1.1.4",
+    "revisions": [
+      "Fixed ESC key exploit when finishing level",
+      "Updated background"
+    ]
+  },
+  {
+    "version": "1.1.4.1",
+    "revisions": [
+      "Added 2 new test levels"
+    ]
+  },
+  {
+    "version": "1.1.4.2",
+    "revisions": [
+      "Fixed rope attaching to invisible blocks"
+    ]
+  },
+  {
+    "version": "1.1.4.4",
+    "revisions": [
+      "Fixed menu height issue",
+      "Updated manifest version from 2 to 3"
+    ]
+  },
+  {
+    "version": "1.1.5",
+    "revisions": [
+      "Added level 35",
+      "Added shortcuts to Level Maker (Undo, Redo, Save, Rotate, Scale, Delete)"
+    ]
+  },
+  {
+    "version": "1.1.5.1",
+    "revisions": [
+      "Fixed level 27 slip glitch"
+    ]
+  },
+  {
+    "version": "1.1.5.2",
+    "revisions": [
+      "Upgraded physics engine (matter.js) from 0.14.2 to v0.18.0. This can improve performance up to 40%"
+    ]
+  },
+  {
+    "version": "1.1.6",
+    "revisions": [
+      "Added level 36",
+      "Added free Boxel Golf skin",
+      "Fixed level name editor"
+    ]
+  },
+  {
+    "version": "1.1.6.1",
+    "revisions": [
+      "Added 5 new community levels"
+    ]
+  },
+  {
+    "version": "1.1.7",
+    "revisions": [
+      "Added new \"Reset Cube\", this resets your scale, gravity direction, and removes the rope mode when touched",
+      "Added 3 new community levels",
+      "Updated minimum scale from 16 to 8 (small cubes)"
+    ]
+  },
+  {
+    "version": "1.1.7.2",
+    "revisions": [
+      "Added new community levels"
+    ]
+  },
+  {
+    "version": "1.1.8",
+    "revisions": [
+      "Added camera rotation when the gravity cube is triggered",
+      "Added camera motion option (default on)"
+    ]
+  },
+  {
+    "version": "1.1.9",
+    "revisions": [
+      "Added tab buttons for campaign and community levels"
+    ]
+  },
+  {
+    "version": "1.1.9.1",
+    "revisions": [
+      "Added new community levels"
+    ]
+  },
+  {
+    "version": "1.1.9.2",
+    "revisions": [
+      "Added the option to upload custom skins (.jpg, .png, .webp)"
+    ]
+  },
+  {
+    "version": "1.2.0",
+    "revisions": [
+      "Added 3D background",
+      "Updated 3D Engine from r116 to r156 (3 years old)",
+      "Updated level editor",
+      "Updated rope design (white)",
+      "Updated all game files",
+      "Removed FPS limit"
+    ]
+  },
+  {
+    "version": "1.2.0.1",
+    "revisions": [
+      "Updated level editor background"
+    ]
+  },
+  {
+    "version": "1.2.0.2",
+    "revisions": [
+      "Reset cube now resets the player direction"
+    ]
+  },
+  {
+    "version": "1.2.0.3",
+    "revisions": [
+      "Added \"z-axis\" option to level editor"
+    ]
+  },
+  {
+    "version": "1.2.0.4",
+    "revisions": [
+      "Added camera rotation to level editor (right-click)",
+      "Added shortcut to reset selected object z-axis (\"0\" key)"
+    ]
+  },
+  {
+    "version": "1.2.1",
+    "revisions": [
+      "Added a new community level",
+      "Added a new community Discord link",
+      "Updated render logic"
+    ]
+  },
+  {
+    "version": "1.3.0",
+    "revisions": [
+      "Added FPS option",
+      "Updated skins page",
+      "Updated audio system",
+      "Updated new UI framework (Vue.js)",
+      "Removed old UI framework (jQuery)"
+    ]
+  },
+  {
+    "version": "1.3.1",
+    "revisions": [
+      "Fixed escape shortcut"
+    ]
+  },
+  {
+    "version": "2.0.0",
+    "revisions": [
+      "Added new UI",
+      "Added option to switch to old UI"
+    ]
+  },
+  {
+    "version": "2.1.0",
+    "revisions": [
+      "Added 7 new environments for each level pack",
+      "Fixed community level scores"
+    ]
+  },
+  {
+    "version": "2.1.1",
+    "revisions": [
+      "Added community level credit",
+      "Added community Discord link",
+      "Updated level backgrounds"
+    ]
+  },
+  {
+    "version": "2.1.2",
+    "revisions": [
+      "Added a new level (Ping Pong)",
+      "Fixed the Level Editor tip bug"
+    ]
+  },
+  {
+    "version": "2.1.3",
+    "revisions": [
+      "Added a new community level (Kllixto)",
+      "Fixed a level picker bug"
+    ]
+  },
+  {
+    "version": "2.1.4",
+    "revisions": [
+      "Added the original background artwork"
+    ]
+  },
+  {
+    "version": "2.1.5",
+    "revisions": [
+      "Added custom mods",
+      "Added controls cube (credit: Charlieee1)",
+      "Added new alpha level",
+      "Fixed timer showing incorrect time"
+    ]
+  },
+  {
+    "version": "2.1.6",
+    "revisions": [
+      "Added buttons for controls",
+      "Added debug mode"
+    ]
+  },
+  {
+    "version": "2.1.7",
+    "revisions": [
+      "Added shortcut \"C\" to restart from checkpoint"
+    ]
+  },
+  {
+    "version": "2.1.8",
+    "revisions": [
+      "Added 3 new community levels",
+      "Updated rope collisions"
+    ]
+  },
+  {
+    "version": "2.1.9",
+    "revisions": [
+      "Updated community level \"The Box Escape\""
+    ]
+  },
+  {
+    "version": "2.1.9.1",
+    "revisions": [
+      "Fixed invisible rope",
+      "Fixed muted audio quietly playing"
+    ]
+  },
+  {
+    "version": "2.2.0",
+    "revisions": [
+      "Added multiplayer"
+    ]
+  },
+  {
+    "version": "2.2.1",
+    "revisions": [
+      "Improved network performance"
+    ]
+  },
+  {
+    "version": "2.2.2",
+    "revisions": [
+      "Added level links to multiplayer chat",
+      "Added basic HTML tags to multiplayer chat (ex: h1, strong etc.)",
+      "Updated background material",
+      "Fixed new record visual bug"
+    ]
+  },
+  {
+    "version": "2.2.3",
+    "revisions": [
+      "Added fullscreen button to home screen"
+    ]
+  },
+  {
+    "version": "2.2.4",
+    "revisions": [
+      "Added global Matter.js variables for modding",
+      "Fixed level export bug"
+    ]
+  },
+  {
+    "version": "2.2.5",
+    "revisions": [
+      "Added 5 new community levels",
+      "Fixed \"The Arcadium\" community level",
+      "Fixed high score UI bug"
+    ]
+  },
+  {
+    "version": "2.2.6",
+    "revisions": [
+      "Added new Alpha Testing level",
+      "Added more snap options to level editor",
+      "Updated resize cube to resize any cube"
+    ]
+  },
+  {
+    "version": "2.2.7",
+    "revisions": [
+      "Added new home page",
+      "Updated community levels"
+    ]
+  },
+  {
+    "version": "2.2.8",
+    "revisions": [
+      "Renamed \"Alpha\" levels to \"Blue City\"",
+      "Added 5 new community levels"
+    ]
+  },
+  {
+    "version": "2.2.9",
+    "revisions": [
+      "Added \"R\" shortcut after finishing a level",
+      "Updated community level \"Wallclimb Ascension\"",
+      "Fixed missing level numbers for Old UI"
+    ]
+  },
+  {
+    "version": "2.3.0",
+    "revisions": [
+      "Added new music and sound effects"
+    ]
+  },
+  {
+    "version": "2.3.1",
+    "revisions": [
+      "Added multiplayer shortcut to home page"
+    ]
+  },
+  {
+    "version": "2.3.2",
+    "revisions": [
+      "Added music selector (currently 3 songs)"
+    ]
+  },
+  {
+    "version": "2.3.3",
+    "revisions": [
+      "Added Boxel 1 music",
+      "Added Boxel Golf music"
+    ]
+  },
+  {
+    "version": "2.3.4",
+    "revisions": [
+      "Added Spanish translation (credit: outerbound)"
+    ]
+  },
+  {
+    "version": "2.3.5",
+    "revisions": [
+      "Added Persian/Farsi translation (credit: Zeta)",
+      "Added loading animation to home screen"
+    ]
+  },
+  {
+    "version": "2.3.6",
+    "revisions": [
+      "Added new level selector menu",
+      "Added Korean translation (credit: SangSang2)",
+      "Fixed chat font"
+    ]
+  },
+  {
+    "version": "2.3.7",
+    "revisions": [
+      "Added input buffer option",
+      "Updated level selector",
+      "Updated Korean translations",
+      "Fixed crash caused by finishing the last level"
+    ]
+  },
+  {
+    "version": "2.3.8",
+    "revisions": [
+      "Added speedrun verification badge (appears when input buffer is 0ms and the debug mode is disabled)",
+      "Updated translations"
+    ]
+  },
+  {
+    "version": "2.3.9",
+    "revisions": [
+      "Added optional themes for custom levels"
+    ]
+  },
+  {
+    "version": "2.4.0",
+    "revisions": [
+      "Updated multiplayer menu options",
+      "Updated level editor rotation behavior (press \"R\" twice to unlock x/y axis)"
+    ]
+  },
+  {
+    "version": "2.4.1",
+    "revisions": [
+      "Added theme selector to Level Editor",
+      "Added Steam Overlay (Steam only)",
+      "Added window size/position preferences (Steam only)"
+    ]
+  },
+  {
+    "version": "2.4.2",
+    "revisions": [
+      "Added player coordinates (Settings > Graphics > Show FPS > then click FPS while playing)",
+      "Updated max time from 16 minutes to 11 days"
+    ]
+  },
+  {
+    "version": "2.5.0",
+    "revisions": [
+      "Added Steam Workshop (Steam only)",
+      "Added Workshop UI for publishing levels to Steam",
+      "Fixed multiplayer bugs",
+      "Fixed Level Editor axis rotation bug"
+    ]
+  },
+  {
+    "version": "2.5.1",
+    "revisions": [
+      "Added theme selector to Level Editor",
+      "Added skins to Workshop (Steam only)",
+      "Added mods to Workshop (Steam only)",
+      "Updated Steam Workshop UI"
+    ]
+  },
+  {
+    "version": "2.5.2",
+    "revisions": [
+      "Added screenshots to completed levels",
+      "Updated Workshop UI",
+      "Updated Levels UI",
+      "Updated Mods UI",
+      "Fixed Level Editor bugs"
+    ]
+  },
+  {
+    "version": "2.5.3",
+    "revisions": [
+      "Fixed Steam Errors"
+    ]
+  },
+  {
+    "version": "2.5.4",
+    "revisions": [
+      "Added Workshop links"
+    ]
+  },
+  {
+    "version": "2.5.5",
+    "revisions": [
+      "Added thumbnails to backup files",
+      "Improved performance"
+    ]
+  },
+  {
+    "version": "2.5.6",
+    "revisions": [
+      "Fixed multiplayer bug"
+    ]
+  },
+  {
+    "version": "2.5.7",
+    "revisions": [
+      "Added 5 new community levels",
+      "Update volume for sound effects"
+    ]
+  },
+  {
+    "version": "2.5.8",
+    "revisions": [
+      "Added option to enable or disable Steam Workshop items",
+      "Fixed Dungeon Escape high score bug",
+      "Fixed shortcuts"
+    ]
+  },
+  {
+    "version": "2.5.9",
+    "revisions": [
+      "Updated Workshop",
+      "Fixed author names"
+    ]
+  },
+  {
+    "version": "2.6.0",
+    "revisions": [
+      "Fixed Discord link"
+    ]
+  },
+  {
+    "version": "2.6.1",
+    "revisions": [
+      "Added UI scale option",
+      "Updated controller buttons"
+    ]
+  },
+  {
+    "version": "2.6.2",
+    "revisions": [
+      "Added Android support",
+      "Added controller settings",
+      "Updated gameplay UI",
+      "Fixed Level Editor camera",
+      "Fixed file saving"
+    ]
+  },
+  {
+    "version": "2.6.3",
+    "revisions": [
+      "Added French translation (credit: R - G - C™)",
+      "Updated translations"
+    ]
+  },
+  {
+    "version": "2.6.4",
+    "revisions": [
+      "Updated translations",
+      "Fixed Old UI controls"
+    ]
+  },
+  {
+    "version": "2.6.5",
+    "revisions": [
+      "Added Checkpoint button",
+      "Fixed multiplayer bugs",
+      "Improved performance on Mac (credit: Onionfist)"
+    ]
+  },
+  {
+    "version": "2.6.6",
+    "revisions": [
+      "Added \"Power\" cube",
+      "Added \"Repeat Duplication\" feature to level editor. Hold Shift while dragging an object to duplicate, then press \"D\" to repeat duplication.",
+      "Fixed input buffer",
+      "Fixed popup shortcuts"
+    ]
+  },
+  {
+    "version": "2.6.7",
+    "revisions": [
+      "Fixed Level Editor shortcuts"
+    ]
+  },
+  {
+    "version": "2.6.8",
+    "revisions": [
+      "Added cube color option",
+      "Added \"Teleport\" cube",
+      "Added jump bug (removed in 2.6.6)",
+      "Fixed UI shortcuts"
+    ]
+  }
+]

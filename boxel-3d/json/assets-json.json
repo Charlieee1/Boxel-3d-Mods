@@ -1,0 +1,8 @@
+{
+  "prefabs": {
+    "url": "../json/assets-prefabs.json"
+  },
+  "boxel-3d-sandbox": {
+    "url": "../json/levels/boxel-3d-sandbox.json"
+  }
+}

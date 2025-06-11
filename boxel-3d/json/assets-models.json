@@ -1,0 +1,83 @@
+{
+  "background-island": {
+    "url": "../glb/background-island.glb"
+  },
+  "cube-bounce": {
+    "url": "../glb/cube-bounce.glb",
+    "userData": {
+      "className": "Bounce"
+    }
+  },
+  "cube-checkpoint": {
+    "url": "../glb/cube-checkpoint.glb",
+    "userData": {
+      "className": "Checkpoint"
+    }
+  },
+  "cube-control": {
+    "url": "../glb/cube-control.glb",
+    "userData": {
+      "className": "Control"
+    }
+  },
+  "cube-cube": {
+    "url": "../glb/cube-cube.glb",
+    "userData": {
+      "className": "Cube"
+    }
+  },
+  "cube-direction": {
+    "url": "../glb/cube-direction.glb",
+    "userData": {
+      "className": "Direction"
+    }
+  },
+  "cube-finish": {
+    "url": "../glb/cube-finish.glb",
+    "userData": {
+      "className": "Finish"
+    }
+  },
+  "cube-grapple": {
+    "url": "../glb/cube-grapple.glb",
+    "userData": {
+      "className": "Grapple"
+    }
+  },
+  "cube-gravity": {
+    "url": "../glb/cube-gravity.glb",
+    "userData": {
+      "className": "Gravity"
+    }
+  },
+  "cube-player": {
+    "url": "../glb/cube-player.glb",
+    "userData": {
+      "className": "Player"
+    }
+  },
+  "cube-reset": {
+    "url": "../glb/cube-reset.glb",
+    "userData": {
+      "className": "Reset"
+    }
+  },
+  "cube-resize": {
+    "url": "../glb/cube-resize.glb",
+    "userData": {
+      "className": "Resize"
+    }
+  },
+  "cube-spike": {
+    "url": "../glb/cube-spike.glb",
+    "userData": {
+      "className": "Spike"
+    }
+  },
+  "cube-tip": {
+    "url": "../glb/cube-tip.glb",
+    "userData": {
+      "className": "Tip"
+    }
+  }
+}
