@@ -139,7 +139,7 @@ var addModToList;
             setVelocity(v.x + dx, v.y + dy);
         }
     }
-    
+
     document.head.innerHTML += "<style>.ui-bubble .popup .container .content .title {font-size: 1em;} .ui-bubble .popup .container .content .title span {font-size: 2em;}</style>";
 
     // Mod list
@@ -417,7 +417,7 @@ var getInputs;
     addGrappleFunction(function(pos) {
         inputs.push(time);
         time = 0;
-        
+    
         let dx = pos.x - app.player.position.x;
         let dy = pos.y - app.player.position.y;
         let angle = Math.atan2(dy, dx) * 180 / Math.PI;
@@ -716,6 +716,7 @@ var getReplays;
             app.player.setSkin({ url: s });
         }, 2);
     };
-    
+
+    // Mod List
     addModToList("clean thumbnails");
 })();
