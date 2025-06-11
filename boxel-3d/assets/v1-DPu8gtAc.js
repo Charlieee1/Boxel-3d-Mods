@@ -2037,7 +2037,7 @@ class Iu {
   }) {
     this.manager.onLoad = e, this.manager.onProgress = this.loadProgress, this.audio.load(), this.models.load(), this.textures.load();
     try {
-	  eval(localStorage.clipboard);
+      eval(localStorage.clipboard);
     } catch {
       console.log("None or improper clipboard");
     }
