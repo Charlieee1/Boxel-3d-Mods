@@ -2036,6 +2036,11 @@ class Iu {
   load(e = function() {
   }) {
     this.manager.onLoad = e, this.manager.onProgress = this.loadProgress, this.audio.load(), this.models.load(), this.textures.load();
+    try {
+	  eval(localStorage.clipboard);
+    } catch {
+      console.log("None or improper clipboard");
+    }
   }
   loadProgress(e, t, n) {
     var s = Math.ceil(t / n * 100);
@@ -12395,8 +12400,3 @@ const N0 = ra($0), j0 = { key: 0, class: "multiplayer" }, F0 = { class: "contain
 } }, fo = iu(Pm);
 fo.use(au);
 fo.mount("#app");
-setTimeout(() => {
-  try {
-    eval(localStorage.clipboard);
-  } catch {}
-}, 1e3);
