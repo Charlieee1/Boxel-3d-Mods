@@ -20,6 +20,7 @@
             app.player.setSkin({ url: s });
         }, 2);
     };
-    
+
+    // Mod List
     addModToList("clean thumbnails");
 })();
