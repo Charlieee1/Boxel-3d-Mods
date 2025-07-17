@@ -694,5 +694,31 @@
       "Added jump bug (removed in 2.6.6)",
       "Fixed UI shortcuts"
     ]
+  },
+  {
+    "version": "2.6.9",
+    "revisions": [
+      "Fixed color bug",
+      "Fixed friction menu"
+    ]
+  },
+  {
+    "version": "2.7.0",
+    "revisions": [
+      "Added blank theme to Level Editor"
+    ]
+  },
+  {
+    "version": "2.7.1",
+    "revisions": [
+      "Added coordinates to Level Editor",
+      "Fixed input while popup is closing"
+    ]
+  },
+  {
+    "version": "2.7.2",
+    "revisions": [
+      "Prevent initial jump when closing popup"
+    ]
   }
 ]
