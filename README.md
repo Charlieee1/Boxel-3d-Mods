@@ -1,6 +1,7 @@
 # Boxel-3d-Mods
 A collection of mods for boxel 3d.  
-An extra bonus: [A detailed curated list of boxel 3d community levels](https://github.com/Charlieee1/Boxel-3d-Mods/blob/main/Boxel%203d%20Levels.md) [OUTDATED]
+An extra bonus: [Boxel 3d's semi-official webpage](https://charlieee1.github.io/Boxel-3d-Mods/boxel-3d/v1/index.html)
+Why it's semi-official: Doppler allows and supports this webpage, and it is linked in `#links-and-resources` in the official Discord server, but it is not official.
 
 ## How to Use
 ### Use my mods

@@ -4,7 +4,7 @@
 // @version      v2.0.2
 // @description  A mod that records and plays back runs in boxel 3d (position, rotation, scale, inputs)
 // @author       Charlieee1
-// @match        *dopplercreative.com/boxel-3d/play/*
+// @match        *charlieee1.github.io/Boxel-3d-Mods/boxel-3d/v1/index.html*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
 // @grant        none
 // ==/UserScript==

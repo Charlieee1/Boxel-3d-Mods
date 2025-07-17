@@ -4,7 +4,7 @@
 // @version      v1.0
 // @description  A mod that rebinds jumping to "c" and allows pressing "x" to dash in any of the 8 directions in platformer mode
 // @author       Charlieee1
-// @match        *dopplercreative.com/boxel-3d/play/*
+// @match        *charlieee1.github.io/Boxel-3d-Mods/boxel-3d/v1/index.html*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
 // @grant        none
 // ==/UserScript==

@@ -4,7 +4,7 @@
 // @version      1.1
 // @description  A mod that ads a UI panel in the bottom left of the scren
 // @author       Charlieee1
-// @match        *dopplercreative.com/test/*
+// @match        *charlieee1.github.io/Boxel-3d-Mods/boxel-3d/v1/index.html*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==

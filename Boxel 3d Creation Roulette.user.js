@@ -4,7 +4,7 @@
 // @version      v1.0.1
 // @description  Changes the level and skin selectors to position items in a circle instead of a line
 // @author       Charlieee1
-// @match        *dopplercreative.com/boxel-3d/play/*
+// @match        *charlieee1.github.io/Boxel-3d-Mods/boxel-3d/v1/index.html*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==

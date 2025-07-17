@@ -4,7 +4,7 @@
 // @version      v2.2
 // @description  Adding platformer physics to boxel 3d
 // @author       Charlieee1
-// @match        *dopplercreative.com/test/*
+// @match        *charlieee1.github.io/Boxel-3d-Mods/boxel-3d/v1/index.html*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==

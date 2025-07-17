@@ -4,7 +4,7 @@
 // @version      v1.0.2
 // @description  A failed attempt at making boxel 3d deterministic
 // @author       Charlieee1
-// @match        *dopplercreative.com/test/*
+// @match        *charlieee1.github.io/Boxel-3d-Mods/boxel-3d/v1/index.html*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==

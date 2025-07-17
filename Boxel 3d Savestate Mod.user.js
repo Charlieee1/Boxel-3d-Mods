@@ -4,7 +4,7 @@
 // @version      v1.1.2
 // @description  A mod that allows for retrieving and setting savestates
 // @author       Charlieee1
-// @match        *dopplercreative.com/test/*
+// @match        *charlieee1.github.io/Boxel-3d-Mods/boxel-3d/v1/index.html*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==

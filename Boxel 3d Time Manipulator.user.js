@@ -4,7 +4,7 @@
 // @version      v1.2.1
 // @description  Time manipulator library for boxel 3d
 // @author       Charlieee1
-// @match        *dopplercreative.com/boxel-3d/play*
+// @match        *charlieee1.github.io/Boxel-3d-Mods/boxel-3d/v1/index.html*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==

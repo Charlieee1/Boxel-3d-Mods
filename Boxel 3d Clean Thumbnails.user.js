@@ -4,7 +4,7 @@
 // @version      v1.0
 // @description  A mod that temporarily sets the player skin to pink when saving thumbnails
 // @author       Charlieee1
-// @match        *dopplercreative.com/boxel-3d/play/*
+// @match        *charlieee1.github.io/Boxel-3d-Mods/boxel-3d/v1/index.html*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
 // @grant        none
 // ==/UserScript==

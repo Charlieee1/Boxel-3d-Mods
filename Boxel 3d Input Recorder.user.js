@@ -4,7 +4,7 @@
 // @version      v1.2.2
 // @description  A mod that records all inputs in a run for boxel 3d
 // @author       Charlieee1
-// @match        *dopplercreative.com/boxel-3d/play/*
+// @match        *charlieee1.github.io/Boxel-3d-Mods/boxel-3d/v1/index.html*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
 // @grant        none
 // ==/UserScript==
