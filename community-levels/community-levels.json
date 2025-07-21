@@ -2,12 +2,12 @@
   "levels": [
     {
       "author": "unknown1",
-      "name": "My Level",
+      "title": "faster than a bullet",
       "path": "json/faster than a bullet.json"
     },
     {
       "author": "unknown2",
-      "name": "Tornado",
+      "title": "Tornado",
       "path": "json/Tornado_2.json"
     }
   ]
