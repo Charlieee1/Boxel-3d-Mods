@@ -1,0 +1,1 @@
+{"name":"5-1 minimized","children":[{"class":"player","position":{"x":-8,"y":-63.999999999999986,"z":0},"rotation":{"x":0,"y":0,"z":0},"scale":{"x":16,"y":16,"z":16},"isStatic":false,"friction":0},{"class":"finish","position":{"x":-8,"y":144,"z":0},"rotation":{"x":0,"y":0,"z":0},"scale":{"x":"16","y":"16","z":16},"isStatic":false,"friction":0}]}
