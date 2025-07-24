@@ -1,19 +1,14 @@
 {
   "levels": [
     {
-      "title": "Beans",
+      "title": "Bounce Factory",
       "author": "Unknown",
-      "path": "json/Beans.json"
+      "path": "json/Bounce Factory (1).json"
     },
     {
-      "title": "auto",
+      "title": "Boxel Course #2",
       "author": "Unknown",
-      "path": "json/auto.json"
-    },
-    {
-      "title": "Aerodynamic",
-      "author": "Unknown",
-      "path": "json/Aerodynamic.json"
+      "path": "json/Boxel Course #2.json"
     }
   ]
 }
