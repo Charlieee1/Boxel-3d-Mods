@@ -1,9 +1,19 @@
 {
   "levels": [
     {
-      "title": "none yet in this pack",
+      "title": "Beans",
       "author": "Unknown",
-      "path": "json/none.json"
+      "path": "json/Beans.json"
+    },
+    {
+      "title": "auto",
+      "author": "Unknown",
+      "path": "json/auto.json"
+    },
+    {
+      "title": "Aerodynamic",
+      "author": "Unknown",
+      "path": "json/Aerodynamic.json"
     }
   ]
 }

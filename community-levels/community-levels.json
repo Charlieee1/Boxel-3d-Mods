@@ -26,6 +26,11 @@
       "path": "json/antigrav test 3.json"
     },
     {
+      "title": "Bird Hopper",
+      "author": "Green",
+      "path": "json/Bird Hopper.json"
+    },
+    {
       "title": "5 minute level",
       "author": "Charlieee1",
       "path": "json/5 minute level.json"
@@ -36,6 +41,16 @@
       "path": "json/5 minute level 2.json"
     },
     {
+      "title": "be a stick",
+      "author": "Unknown",
+      "path": "json/be a stick.json"
+    },
+    {
+      "title": "Banana Jam",
+      "author": "jadonlllll",
+      "path": "json/Banana Jam.json"
+    },
+    {
       "title": "AFTER DEATH",
       "author": "Unknown",
       "path": "json/AFTER DEATH (6).json"
@@ -43,7 +58,7 @@
     {
       "title": "Baby Steps",
       "author": "Charlieee1",
-      "path": "json/AFTER DEATH (6).json"
+      "path": "json/Baby Steps.json"
     },
     {
       "title": "ang3ls cave",
