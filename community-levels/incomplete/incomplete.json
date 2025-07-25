@@ -19,6 +19,11 @@
       "title": "Aerodynamic",
       "author": "Unknown",
       "path": "json/Aerodynamic.json"
+    },
+    {
+      "title": "chaos theory",
+      "author": "Unknown",
+      "path": "json/chaos theory.json"
     }
   ]
 }
