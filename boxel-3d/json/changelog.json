@@ -720,5 +720,18 @@
     "revisions": [
       "Prevent initial jump when closing popup"
     ]
+  },
+  {
+    "version": "2.7.3",
+    "revisions": [
+      "Added Level Packs (Settings > Data > Level Packs)"
+    ]
+  },
+  {
+    "version": "2.7.4",
+    "revisions": [
+      "Added theme option to level packs",
+      "Update level pack default theme"
+    ]
   }
 ]
