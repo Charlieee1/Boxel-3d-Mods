@@ -156,6 +156,11 @@
       "path": "json/A dusty block.json"
     },
     {
+      "title": "Cheese",
+      "author": "Unknown",
+      "path": "json/Cheese.json"
+    },
+    {
       "title": "ARGHHHHHH",
       "author": "Unknown",
       "path": "json/ARGHHHHHH.json"
@@ -174,6 +179,11 @@
       "title": "(Not so) Endless tower",
       "author": "Unknown",
       "path": "json/(Not so) Endless tower.json"
+    },
+    {
+      "title": "Camping",
+      "author": "Carl Tuệ",
+      "path": "json/Camping.json"
     },
     {
       "title": "a normal lvl",

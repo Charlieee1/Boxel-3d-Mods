@@ -1,9 +1,14 @@
 {
   "levels": [
     {
-      "title": "none yet in this pack",
-      "author": "Unknown",
-      "path": "json/none.json"
+      "title": "claustrophobia",
+      "author": "CEO of Dislike",
+      "path": "json/claustrophobia.json"
+    },
+    {
+      "title": "Climb and slide",
+      "author": "Majesticcss",
+      "path": "json/Climb and slide.json"
     }
   ]
 }
