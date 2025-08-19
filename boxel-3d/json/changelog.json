@@ -733,5 +733,17 @@
       "Added theme option to level packs",
       "Update level pack default theme"
     ]
+  },
+  {
+    "version": "2.7.5",
+    "revisions": [
+      "Added Hindi translations (credit: Ash (ADL))"
+    ]
+  },
+  {
+    "version": "2.7.6",
+    "revisions": [
+      "Added new community level"
+    ]
   }
 ]

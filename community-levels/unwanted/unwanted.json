@@ -1,0 +1,44 @@
+{
+  "levels": [
+    {
+      "title": "Blender",
+      "author": "Unknown",
+      "path": "json/Blender.json"
+    },
+    {
+      "title": "Challenge",
+      "author": "Unknown",
+      "path": "json/Challenge.json"
+    },
+    {
+      "title": "Camping",
+      "author": "Carl Tuệ",
+      "path": "json/Camping.json"
+    },
+    {
+      "title": "ang3l's level",
+      "author": "Ang3l",
+      "path": "json/ang3l's level.json"
+    },
+    {
+      "title": "Coil",
+      "author": "Unknown",
+      "path": "json/Coil.json"
+    },
+    {
+      "title": "Blind V2",
+      "author": "Unknown",
+      "path": "json/Blind V2.json"
+    },
+    {
+      "title": "Bounce Block Abuse",
+      "author": "Charlieee1",
+      "path": "json/Bounce Block Abuse.json"
+    },
+    {
+      "title": "Blind",
+      "author": "Unknown",
+      "path": "json/Blind.json"
+    }
+  ]
+}

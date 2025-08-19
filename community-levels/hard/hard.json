@@ -6,9 +6,19 @@
       "path": "json/claustrophobia.json"
     },
     {
+      "title": "Curves & Gravity",
+      "author": "Unknown",
+      "path": "json/Curves & Gravity.json"
+    },
+    {
       "title": "Climb and slide",
       "author": "Majesticcss",
       "path": "json/Climb and slide.json"
+    },
+    {
+      "title": "Crumbling Temple v1",
+      "author": "Unknown",
+      "path": "json/Crumbling Temple v1.json"
     }
   ]
 }
