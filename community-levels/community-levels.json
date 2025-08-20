@@ -81,6 +81,16 @@
       "path": "json/be a stick.json"
     },
     {
+      "title": "Deathcore lvl.1",
+      "author": "Unknown",
+      "path": "json/Deathcore lvl (1).json"
+    },
+    {
+      "title": "Deathcore lvl.3",
+      "author": "Unknown",
+      "path": "json/Deathcore lvl (3).json"
+    },
+    {
       "title": "built diffrent",
       "author": "Unknown",
       "path": "json/built diffrent (2).json"
@@ -181,9 +191,9 @@
       "path": "json/Cheese.json"
     },
     {
-      "title": "ARGHHHHHH",
-      "author": "Unknown",
-      "path": "json/ARGHHHHHH.json"
+      "title": "Damp Caves",
+      "author": "Fisher & Jerry",
+      "path": "json/Damp Caves.json"
     },
     {
       "title": "Level 37",
@@ -196,8 +206,13 @@
       "path": "json/Charlie cube.json"
     },
     {
-      "title": "coaster downhill",
+      "title": "ARGHHHHHH",
       "author": "Unknown",
+      "path": "json/ARGHHHHHH.json"
+    },
+    {
+      "title": "coaster downhill",
+      "author": "CEO of Dislike",
       "path": "json/coaster downhill.json"
     },
     {
@@ -216,9 +231,19 @@
       "path": "json/a normal lvl (1).json"
     },
     {
+      "title": "Dare Devil",
+      "author": "Unknown",
+      "path": "json/Dare Devil.json"
+    },
+    {
       "title": "awesome parkore",
       "author": "Unknown",
       "path": "json/awesome parkore.json"
+    },
+    {
+      "title": "Dancing on nothing",
+      "author": "Charlieee1",
+      "path": "json/Dancing on nothing.json"
     }
   ]
 }
