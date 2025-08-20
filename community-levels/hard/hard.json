@@ -1,6 +1,11 @@
 {
   "levels": [
     {
+      "title": "Deep Dip Floor",
+      "author": "Charlieee1",
+      "path": "json/Deep Dip Floor.json"
+    },
+    {
       "title": "claustrophobia",
       "author": "CEO of Dislike",
       "path": "json/claustrophobia.json"
