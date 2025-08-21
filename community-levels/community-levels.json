@@ -186,6 +186,11 @@
       "path": "json/A dusty block.json"
     },
     {
+      "title": "Dont Move",
+      "author": "Majesticcss",
+      "path": "json/Dont Move Complete.json"
+    },
+    {
       "title": "Cheese",
       "author": "Unknown",
       "path": "json/Cheese.json"
@@ -199,6 +204,11 @@
       "title": "Level 37",
       "author": "epicbobman",
       "path": "json/Modded Campaign Level 37.json"
+    },
+    {
+      "title": "Doom",
+      "author": "Unknown",
+      "path": "json/Doom.json"
     },
     {
       "title": "Charlie cube",
@@ -231,19 +241,14 @@
       "path": "json/a normal lvl (1).json"
     },
     {
-      "title": "Dare Devil",
-      "author": "Unknown",
-      "path": "json/Dare Devil.json"
-    },
-    {
       "title": "awesome parkore",
       "author": "Unknown",
       "path": "json/awesome parkore.json"
     },
     {
-      "title": "Dancing on nothing",
+      "title": "Dancing on nothing tutorial",
       "author": "Charlieee1",
-      "path": "json/Dancing on nothing.json"
+      "path": "json/Dancing on nothing tutorial.json"
     }
   ]
 }
