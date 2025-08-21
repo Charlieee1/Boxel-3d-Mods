@@ -29,6 +29,11 @@
       "title": "Crumbling Temple v1",
       "author": "Unknown",
       "path": "json/Crumbling Temple v1.json"
+    },
+    {
+      "title": "Down, Up, Swing",
+      "author": "Unknown",
+      "path": "json/Down, Up, Swing.json"
     }
   ]
 }
