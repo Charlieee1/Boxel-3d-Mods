@@ -1,9 +1,24 @@
 {
   "levels": [
     {
+      "title": "Futuristic Light",
+      "author": "Defenders",
+      "path": "json/Futuristic_Light_V1.3.json"
+    },
+    {
       "title": "Claustrophobia",
       "author": "Defenders",
       "path": "json/Claustrophobia (V1.0) (1).json"
+    },
+    {
+      "title": "Get A Life",
+      "author": "Defenders",
+      "path": "json/Get_A_Life.json"
+    },
+    {
+      "title": "Gravity Circle 3",
+      "author": "Majesticcss",
+      "path": "json/Gravity Circle 3.json"
     }
   ]
 }

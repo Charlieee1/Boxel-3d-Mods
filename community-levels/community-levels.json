@@ -36,14 +36,39 @@
       "path": "json/Bounce Block Goofiness.json"
     },
     {
+      "title": "Fire Ritual",
+      "author": "Charlieee1 & .noobus",
+      "path": "json/Fire Ritual.json"
+    },
+    {
+      "title": "Creation Tiles",
+      "author": "Ember, TheTrueGoo, BoxelBug, triptc, yaan, Charlieee1, Majesticcss, Ang3l, Defenders, AMiner, CEO of Dislike, Karbyn, & cy139",
+      "path": "json/Creation Tiles Ultimate.json"
+    },
+    {
+      "title": "Flips and Bounces",
+      "author": "Charlieee1",
+      "path": "json/Flips and Bounces.json"
+    },
+    {
       "title": "Bloxes",
-      "author": "Unknown",
+      "author": "Green",
       "path": "json/Bloxes.json"
+    },
+    {
+      "title": "A hint of nostalgia",
+      "author": "Green",
+      "path": "json/A hint of nostalgia final.json"
     },
     {
       "title": "first level",
       "author": "Unknown",
       "path": "json/boxel level.json"
+    },
+    {
+      "title": "Floodgates",
+      "author": "Ember",
+      "path": "json/Floodgates.json"
     },
     {
       "title": "Collapse",
@@ -91,6 +116,21 @@
       "path": "json/Deathcore lvl (3).json"
     },
     {
+      "title": "everything",
+      "author": "Unknown",
+      "path": "json/everything (1).json"
+    },
+    {
+      "title": "FRSR",
+      "author": "Charlieee1",
+      "path": "json/FRSR.json"
+    },
+    {
+      "title": "Easy model of Lightning",
+      "author": "Zeta",
+      "path": "json/Easy model of Lightning.json"
+    },
+    {
       "title": "built diffrent",
       "author": "Unknown",
       "path": "json/built diffrent (2).json"
@@ -106,9 +146,19 @@
       "path": "json/AFTER DEATH (6).json"
     },
     {
-      "title": "Consistency",
-      "author": "outerbound",
-      "path": "json/Consistency.json"
+      "title": "Finished",
+      "author": "Unknown",
+      "path": "json/Finished (1).json"
+    },
+    {
+      "title": "Experiments in Plider",
+      "author": "Charlieee1",
+      "path": "json/Experiments in Plider.json"
+    },
+    {
+      "title": "Easy???",
+      "author": "Unknown",
+      "path": "json/Easy___.json"
     },
     {
       "title": "Bird Hopper",
@@ -121,14 +171,59 @@
       "path": "json/Baby Steps.json"
     },
     {
+      "title": "Consistency",
+      "author": "outerbound",
+      "path": "json/Consistency.json"
+    },
+    {
+      "title": "faemazejson",
+      "author": "Fae",
+      "path": "json/faemazejson.json"
+    },
+    {
+      "title": "GB_first_level",
+      "author": "Green_Bud4623",
+      "path": "json/GB_first_level.json"
+    },
+    {
+      "title": "Green_Bud4623_lvl2",
+      "author": "Green_Bud4623",
+      "path": "json/Green_Bud4623_lvl2.json"
+    },
+    {
+      "title": "Halfpipe Hopper",
+      "author": "Green",
+      "path": "json/Halfpipe Hopper.json"
+    },
+    {
       "title": "But..., But..., Chicken Butt",
       "author": "Poktoshi",
       "path": "json/But..., But...json"
     },
     {
+      "title": "Gun",
+      "author": "Junsie",
+      "path": "json/Gun_1.json"
+    },
+    {
       "title": "ang3ls cave",
       "author": "Ang3l",
       "path": "json/ang3ls cave.json"
+    },
+    {
+      "title": "3d",
+      "author": "triptc",
+      "path": "json/3d_1.json"
+    },
+    {
+      "title": "Fae_old",
+      "author": "Fae",
+      "path": "json/Fae_old.json"
+    },
+    {
+      "title": "Extranomadx - deco test",
+      "author": "outerbound",
+      "path": "json/Extranomadx - deco test.json"
     },
     {
       "title": "100 Seconds",
@@ -141,14 +236,14 @@
       "path": "json/Dragon-01.json"
     },
     {
+      "title": "Exploding Bottle",
+      "author": "Unknown",
+      "path": "json/Exploding Bottle.json"
+    },
+    {
       "title": "ang3l1c",
       "author": "Ang3l",
       "path": "json/ang3l1c 2.json"
-    },
-    {
-      "title": "3d",
-      "author": "triptc",
-      "path": "json/3d_1.json"
     },
     {
       "title": "Course Of Stress",
@@ -181,6 +276,11 @@
       "path": "json/Chain reactions.json"
     },
     {
+      "title": "Getting thru it",
+      "author": "Unknown",
+      "path": "json/Getting thru it.json"
+    },
+    {
       "title": "acent",
       "author": "Fisher",
       "path": "json/acent.json"
@@ -201,9 +301,19 @@
       "path": "json/Cheese.json"
     },
     {
+      "title": "Goal Kick",
+      "author": "Ember",
+      "path": "json/Goal Kick.json"
+    },
+    {
       "title": "Damp Caves",
       "author": "Fisher & Jerry",
       "path": "json/Damp Caves.json"
+    },
+    {
+      "title": "Glitch Fall",
+      "author": "Unknown",
+      "path": "json/Glitch Fall (2).json"
     },
     {
       "title": "Level 37",
@@ -229,6 +339,26 @@
       "title": "coaster downhill",
       "author": "CEO of Dislike",
       "path": "json/coaster downhill.json"
+    },
+    {
+      "title": "Gravity Circle",
+      "author": "Majesticcss",
+      "path": "json/Gravity Circle.json"
+    },
+    {
+      "title": "Gravity Spider",
+      "author": "Unknown",
+      "path": "json/Gravity Spider (1).json"
+    },
+    {
+      "title": "Gravity Spider - Distortion",
+      "author": "Unknown",
+      "path": "json/Gravity Spider - Distortion.json"
+    },
+    {
+      "title": "Gravity Switch",
+      "author": "Unknown",
+      "path": "json/Gravity Switch.json"
     },
     {
       "title": "3 minute platformer level",
