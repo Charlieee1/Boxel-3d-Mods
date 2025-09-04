@@ -71,6 +71,11 @@
       "path": "json/Floodgates.json"
     },
     {
+      "title": "Inclement Weather",
+      "author": "Ember",
+      "path": "json/Inclement Weather.json"
+    },
+    {
       "title": "Collapse",
       "author": "greenissam",
       "path": "json/Collapse.json"
@@ -281,6 +286,11 @@
       "path": "json/Getting thru it.json"
     },
     {
+      "title": "High Contrast",
+      "author": "Unknown",
+      "path": "json/High Contrast.json"
+    },
+    {
       "title": "acent",
       "author": "Fisher",
       "path": "json/acent.json"
@@ -334,6 +344,11 @@
       "title": "ARGHHHHHH",
       "author": "Unknown",
       "path": "json/ARGHHHHHH.json"
+    },
+    {
+      "title": "Hells Layers",
+      "author": "Majesticcss",
+      "path": "json/Hells Layers.json"
     },
     {
       "title": "coaster downhill",
