@@ -102,7 +102,7 @@
     },
     {
       "title": "Boxel Course",
-      "author": "Unknown",
+      "author": "CEO of Dislike",
       "path": "json/Boxel Course.json"
     },
     {
@@ -196,6 +196,31 @@
       "path": "json/Green_Bud4623_lvl2.json"
     },
     {
+      "title": "Just don't move #1",
+      "author": "Unknown",
+      "path": "json/Just_dont_move_1.json"
+    },
+    {
+      "title": "Jumperman Hard",
+      "author": "Unknown",
+      "path": "json/Jumperman Hard.json"
+    },
+    {
+      "title": "Jump Park",
+      "author": "Unknown",
+      "path": "json/Jump Park.json"
+    },
+    {
+      "title": "Jumper 3,000",
+      "author": "Unknown",
+      "path": "json/Jumper 3,000 (1).json"
+    },
+    {
+      "title": "Infinite speed",
+      "author": "Majesticcss",
+      "path": "json/Infinite speed.json"
+    },
+    {
       "title": "Halfpipe Hopper",
       "author": "Green",
       "path": "json/Halfpipe Hopper.json"
@@ -226,6 +251,16 @@
       "path": "json/Fae_old.json"
     },
     {
+      "title": "jump to 3000 (deco)",
+      "author": "Ember",
+      "path": "json/jump to 3000 (deco).json"
+    },
+    {
+      "title": "jump to 3000 (no deco)",
+      "author": "Ember",
+      "path": "json/jump to 3000 (no deco).json"
+    },
+    {
       "title": "Extranomadx - deco test",
       "author": "outerbound",
       "path": "json/Extranomadx - deco test.json"
@@ -246,9 +281,24 @@
       "path": "json/Exploding Bottle.json"
     },
     {
+      "title": "Its Just Very Long",
+      "author": "Unknown",
+      "path": "json/Its Just Very Long.json"
+    },
+    {
+      "title": "JP002FR",
+      "author": "Unknown",
+      "path": "json/JP002FR (1).json"
+    },
+    {
       "title": "ang3l1c",
       "author": "Ang3l",
       "path": "json/ang3l1c 2.json"
+    },
+    {
+      "title": "John Dark souls",
+      "author": "Unknown",
+      "path": "json/John Dark souls.json"
     },
     {
       "title": "Course Of Stress",
@@ -322,7 +372,7 @@
     },
     {
       "title": "Glitch Fall",
-      "author": "Unknown",
+      "author": "CEO of Dislike",
       "path": "json/Glitch Fall (2).json"
     },
     {
@@ -372,7 +422,7 @@
     },
     {
       "title": "Gravity Switch",
-      "author": "Unknown",
+      "author": "CEO of Dislike",
       "path": "json/Gravity Switch.json"
     },
     {
@@ -394,6 +444,11 @@
       "title": "awesome parkore",
       "author": "Unknown",
       "path": "json/awesome parkore.json"
+    },
+    {
+      "title": "Joe Level",
+      "author": "Unknown",
+      "path": "json/Joe_Level.json"
     },
     {
       "title": "Dancing on nothing tutorial",
