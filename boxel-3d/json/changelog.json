@@ -745,5 +745,12 @@
     "revisions": [
       "Added new community level"
     ]
+  },
+  {
+    "version": "2.7.7",
+    "revisions": [
+      "Added level editor color shortcut: \"Shift\" + \"Click\" to copy color from selected cube",
+      "Fixed level pack 404 errors"
+    ]
   }
 ]

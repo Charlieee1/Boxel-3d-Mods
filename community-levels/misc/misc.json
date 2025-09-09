@@ -16,6 +16,11 @@
       "path": "json/Boxel Course #2.json"
     },
     {
+      "title": "Exploding Bottle",
+      "author": "Unknown",
+      "path": "json/Exploding Bottle.json"
+    },
+    {
       "title": "HourGlass",
       "author": "Unknown",
       "path": "json/HourGlass.json"

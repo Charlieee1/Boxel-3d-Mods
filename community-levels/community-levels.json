@@ -276,11 +276,6 @@
       "path": "json/Dragon-01.json"
     },
     {
-      "title": "Exploding Bottle",
-      "author": "Unknown",
-      "path": "json/Exploding Bottle.json"
-    },
-    {
       "title": "Its Just Very Long",
       "author": "Unknown",
       "path": "json/Its Just Very Long.json"
@@ -331,14 +326,14 @@
       "path": "json/Chain reactions.json"
     },
     {
-      "title": "Getting thru it",
-      "author": "Unknown",
-      "path": "json/Getting thru it.json"
-    },
-    {
       "title": "High Contrast",
       "author": "Unknown",
       "path": "json/High Contrast.json"
+    },
+    {
+      "title": "Getting thru it",
+      "author": "Unknown",
+      "path": "json/Getting thru it.json"
     },
     {
       "title": "acent",
@@ -389,11 +384,6 @@
       "title": "Charlie cube",
       "author": "Unknown",
       "path": "json/Charlie cube.json"
-    },
-    {
-      "title": "ARGHHHHHH",
-      "author": "Unknown",
-      "path": "json/ARGHHHHHH.json"
     },
     {
       "title": "Hells Layers",
