@@ -16,11 +16,6 @@
       "path": "json/Tornado_2.json"
     },
     {
-      "title": "bloopers",
-      "author": "Ember",
-      "path": "json/bloopers.json"
-    },
-    {
       "title": "Break in",
       "author": "Green",
       "path": "json/Break in FINAL.json"
@@ -251,16 +246,6 @@
       "path": "json/Fae_old.json"
     },
     {
-      "title": "jump to 3000 (deco)",
-      "author": "Ember",
-      "path": "json/jump to 3000 (deco).json"
-    },
-    {
-      "title": "jump to 3000 (no deco)",
-      "author": "Ember",
-      "path": "json/jump to 3000 (no deco).json"
-    },
-    {
       "title": "Extranomadx - deco test",
       "author": "outerbound",
       "path": "json/Extranomadx - deco test.json"
@@ -356,21 +341,6 @@
       "path": "json/Cheese.json"
     },
     {
-      "title": "Goal Kick",
-      "author": "Ember",
-      "path": "json/Goal Kick.json"
-    },
-    {
-      "title": "Damp Caves",
-      "author": "Fisher & Jerry",
-      "path": "json/Damp Caves.json"
-    },
-    {
-      "title": "Glitch Fall",
-      "author": "CEO of Dislike",
-      "path": "json/Glitch Fall (2).json"
-    },
-    {
       "title": "Level 37",
       "author": "epicbobman",
       "path": "json/Modded Campaign Level 37.json"
@@ -384,16 +354,6 @@
       "title": "Charlie cube",
       "author": "Unknown",
       "path": "json/Charlie cube.json"
-    },
-    {
-      "title": "Hells Layers",
-      "author": "Majesticcss",
-      "path": "json/Hells Layers.json"
-    },
-    {
-      "title": "coaster downhill",
-      "author": "CEO of Dislike",
-      "path": "json/coaster downhill.json"
     },
     {
       "title": "Gravity Circle",

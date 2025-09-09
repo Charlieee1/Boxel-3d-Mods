@@ -1,9 +1,44 @@
 {
   "levels": [
     {
-      "title": "Bounce Factory",
-      "author": "Unknown",
-      "path": "json/Bounce Factory (1).json"
+      "title": "Blockage",
+      "author": "Ember",
+      "path": "json/Blockage Decorated.json"
+    },
+    {
+      "title": "bloopers",
+      "author": "Ember",
+      "path": "json/bloopers.json"
+    },
+    {
+      "title": "coaster downhill",
+      "author": "CEO of Dislike",
+      "path": "json/coaster downhill.json"
+    },
+    {
+      "title": "Damp Caves",
+      "author": "Fisher & Jerry",
+      "path": "json/Damp Caves.json"
+    },
+    {
+      "title": "Goal Kick",
+      "author": "Ember",
+      "path": "json/Goal Kick.json"
+    },
+    {
+      "title": "Glitch Fall",
+      "author": "CEO of Dislike",
+      "path": "json/Glitch Fall (2).json"
+    },
+    {
+      "title": "jump to 3000 (deco)",
+      "author": "Ember",
+      "path": "json/jump to 3000 (deco).json"
+    },
+    {
+      "title": "jump to 3000 (no deco)",
+      "author": "Ember",
+      "path": "json/jump to 3000 (no deco).json"
     },
   ]
 }
