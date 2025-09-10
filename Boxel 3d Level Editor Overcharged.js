@@ -1,0 +1,545 @@
+// IN BETA
+// Probably requires speedrunner suite mods. Load them just to be safe.
+
+// Basic utility functions
+// https://stackoverflow.com/a/32922084
+function deepEqual(x, y) {
+    const ok = Object.keys, tx = typeof x, ty = typeof y;
+    return x && y && tx === 'object' && tx === ty ? (
+        ok(x).length === ok(y).length &&
+        ok(x).every(key => deepEqual(x[key], y[key]))
+    ) : (x === y);
+}
+
+var buttons = [];
+
+function addButton(title, callback) {
+    let newButton = document.createElement("a");
+    newButton.className = "item";
+    newButton.title = title;
+    newButton.addEventListener("click", callback);
+
+    let icon = document.createElement("img");
+    icon.src = "../svg/cube.svg";
+
+    newButton.appendChild(icon);
+    buttons.push(newButton);
+}
+function getCoords(object) {
+    return {
+        x: object.position.x,
+        y: object.position.y,
+        z: object.position.z,
+        rx: object.rotation.x,
+        ry: object.rotation.y,
+        rz: object.rotation.z,
+        sx: object.scale.x,
+        sy: object.scale.y,
+        sz: object.scale.z
+    };
+}
+
+function updateObject(obj) {
+    app.levelEditor.updateRender();
+
+    // START Modified Doppler's code
+    var e = obj;
+    app.levelEditor.keys.ShiftLeft ? app.levelEditor.controlsTransform.offset.copy(e.position).sub(e.position0) : app.levelEditor.controlsTransform.offset.set(0, 0, 0), e.position.z == 0 ? e.body.collisionFilter.mask = -1 : e.body.collisionFilter.mask = 0, e.setPosition(e.getPosition());
+    var t = e.rotation.z;
+    e.setRotation(0, false), e.setBodyScale(e.scale.x / e.scale0?.x || 1, e.scale.y / e.scale0?.y || 1), e.setRotation(t, false), e.setScale(e.getScale()), e.setRotation(e.getRotation()), app.levelHistory.save("Object updated", app);
+    // END Modified Doppler's code
+
+    window.dispatchEvent(new CustomEvent("objectChange", { detail: obj }));
+    app.levelEditor.controlsTransform.dispatchEvent(new CustomEvent("change"));
+}
+function fullUpdateObject(obj) {
+    app.levelEditor.updateRender();
+    let selected = app.selectedObject;
+
+    app.selectedObject = obj;
+    app.levelEditor.updateSelectedObject();
+
+    app.selectedObject = selected;
+
+    window.dispatchEvent(new CustomEvent("objectChange", { detail: obj }));
+    app.levelEditor.controlsTransform.dispatchEvent(new CustomEvent("change"));
+
+    obj.setBodyScale(
+        obj.scale.x / (obj.body.vertices[0].x - obj.body.vertices[2].x),
+        obj.scale.y / (obj.body.vertices[0].y - obj.body.vertices[2].y)
+    );
+}
+
+function deselectObject() {
+    app.level.deselectLevel(app);
+    app.levelEditor.controlsTransform.detach();
+    window.dispatchEvent(new CustomEvent("setSelectedObject"));
+    app.mouse.mode = app.mouse.prevMode;
+}
+
+// Animate selection objects to make them easier to spot and also to look cool
+// Whether to animate control blocks or not
+if (!Object.keys(localStorage).includes("controlBlockColour")) {
+    localStorage.controlBlockColour = "animated";
+}
+var animatedObjects = [];
+function removeAnimatedObject(obj) {
+    if (!(obj in animatedObjects)) return;
+    animatedObjects.splice(animatedObjects.indexOf(obj), 1);
+}
+var prevAnimationUpdate = 0;
+var SCALE = Math.PI / 1500;
+if (localStorage.controlBlockColour == "animated") {
+    function animate() {
+        if (Date.now() - prevAnimationUpdate >= 100) {
+            let time = Date.now();
+            prevAnimationUpdate = time;
+            let colour = Math.round(127.5 * Math.sin(SCALE * time) + 127.5);
+            animatedObjects.forEach(object => {
+                object.setColors(`#ff${colour.toString(16).padStart(2, "0")}00`, true);
+            });
+        }
+        app.levelEditor.updateRender();
+        requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate);
+}
+
+function createControlBlock(x, y, z) {
+    let controlBlock = app.level.entityFactory.createObject("cube");
+    let colour = localStorage.controlBlockColour;
+    if (colour == "animated")
+        colour = `#ff${Math.round(127.5 * Math.sin(SCALE * Date.now()) + 127.5).toString(16).padStart(2, "0")}00`;
+    app.level.setObjectProperties(controlBlock, {
+        class: "cube",
+        color: colour,
+        isStatic: true,
+        position: {
+            x: x,
+            y: y,
+            z: z
+        },
+        rotation: {
+            x: 0,
+            y: 0,
+            z: 0
+        },
+        scale: {
+            x: .5 * app.BOX_SIZE,
+            y: .5 * app.BOX_SIZE,
+            z: .5 * app.BOX_SIZE
+        }
+    });
+    app.level.addObject(controlBlock, app);
+    animatedObjects.push(controlBlock);
+    updateObject(controlBlock);
+    return controlBlock;
+}
+// Make sure to call deselectObject() whenever using this
+function deleteControlBlock(block) {
+    removeAnimatedObject(block);
+    app.level.removeObject(block, app, true);
+}
+function listenForControlBlockUpdate(block, callback) {
+    let prev = getCoords(block);
+    let eventListenerFunc = () => {
+        let newCoords = getCoords(block);
+        if (!deepEqual(prev, newCoords)) {
+            prev = newCoords;
+            callback();
+            return;
+        }
+    };
+
+    window.addEventListener("objectChange", eventListenerFunc);
+    return () => {
+        window.removeEventListener("objectChange", eventListenerFunc);
+    };
+}
+function listenForControlBlocksUpdate(blocks, callback) {
+    let clearListenerFuncs = [];
+    if (Array.isArray(blocks)) {
+        blocks.forEach(block => {
+            clearListenerFuncs.push(listenForControlBlockUpdate(block, callback));
+        });
+    } else {
+        Object.keys(blocks).forEach(key => {
+            clearListenerFuncs.push(listenForControlBlockUpdate(blocks[key], callback));
+        });
+    }
+    return () => {
+        clearListenerFuncs.forEach(func => {
+            func();
+        });
+    };
+}
+
+// To ensure only one action is used at a time
+var actionEnabled = false;
+
+var confirmAction = () => { };
+var cancelAction = () => { };
+
+// TODO: Handle undo & redo (haha yeah right)
+
+// TODO:
+// Add button for multiselect
+// Handle selecting objects
+addButton("Multiselect", () => {
+    if (actionEnabled) return;
+    actionEnabled = "multiselect";
+    deselectObject();
+    let block1 = createControlBlock(app.camera.position.x - 16 * 5, app.camera.position.y - 16 * 5, -16);
+    let block2 = createControlBlock(app.camera.position.x + 16 * 5, app.camera.position.y + 16 * 5, 16);
+    app.levelEditor.updateRender();
+
+    let selectedObjects = [];
+    function findSelectedObjects(colour = true) {
+        let objs = [];
+        app.level.children.forEach(child => {
+            if (child.position.x < block1.position.x || child.position.x > block2.position.x) return;
+            if (child.position.y < block1.position.y || child.position.y > block2.position.y) return;
+            if (child.position.z < block1.position.z || child.position.z > block2.position.z) return;
+            if (child == block1 || child == block2 || child == app.player) return;
+            objs.push(child);
+            if (colour) {
+                child.originalColour = child.color;
+                if (child.color == "#ffffff")
+                    child.setColors("#000000");
+                else
+                    child.setColors("#ffffff");
+                updateObject(child);
+            }
+        });
+        return objs;
+    }
+    function clearObjects() {
+        selectedObjects.forEach(obj => {
+            if (!obj.originalColour) return;
+            obj.setColors(obj.originalColour);
+            delete obj.originalColour;
+        });
+        selectedObjects = [];
+    }
+
+    selectedObjects = findSelectedObjects();
+    let clearListener = listenForControlBlocksUpdate([block1, block2], () => {
+        clearObjects();
+        selectedObjects = findSelectedObjects();
+    });
+
+    confirmAction = () => {
+        clearListener();
+        deleteControlBlock(block1);
+        deleteControlBlock(block2);
+        deselectObject();
+        confirmAction = () => { };
+        cancelAction = () => { };
+        multiSelectStage2(selectedObjects, clearObjects); // Now it's getting serious
+    };
+
+    cancelAction = () => {
+        clearListener();
+        deleteControlBlock(block1);
+        deleteControlBlock(block2);
+        deselectObject();
+        confirmAction = () => { };
+        cancelAction = () => { };
+        actionEnabled = false;
+        clearObjects();
+    };
+});
+// Handle modifying objects
+function multiSelectStage2(smallBoiBlocks, clearObjects) {
+    let minX = Infinity;
+    let maxX = -Infinity;
+    let minY = Infinity;
+    let maxY = -Infinity;
+    let minZ = Infinity;
+    let maxZ = -Infinity;
+
+    originalStats = [];
+    smallBoiBlocks.forEach(smallBoi => {
+        if (smallBoi.position.x + .5 * Math.abs(smallBoi.scale.x) > maxX)
+            maxX = smallBoi.position.x + .5 * Math.abs(smallBoi.scale.x);
+        if (smallBoi.position.x - .5 * Math.abs(smallBoi.scale.x) < minX)
+            minX = smallBoi.position.x - .5 * Math.abs(smallBoi.scale.x);
+
+        if (smallBoi.position.y + .5 * Math.abs(smallBoi.scale.y) > maxY)
+            maxY = smallBoi.position.y + .5 * Math.abs(smallBoi.scale.y);
+        if (smallBoi.position.y - .5 * Math.abs(smallBoi.scale.y) < minY)
+            minY = smallBoi.position.y - .5 * Math.abs(smallBoi.scale.y);
+
+        if (smallBoi.position.z + .5 * Math.abs(smallBoi.scale.z) > maxZ)
+            maxZ = smallBoi.position.z + .5 * Math.abs(smallBoi.scale.z);
+        if (smallBoi.position.z - .5 * Math.abs(smallBoi.scale.z) < minZ)
+            minZ = smallBoi.position.z - .5 * Math.abs(smallBoi.scale.z);
+
+        originalStats.push(getCoords(smallBoi));
+    });
+
+    let midX = .5 * (minX + maxX);
+    let midY = .5 * (minY + maxY);
+    let midZ = .5 * (minZ + maxZ);
+    let scaleX = maxX - minX;
+    let scaleY = maxY - minY;
+    let scaleZ = maxZ - minZ;
+    let bigBoiBlock = createControlBlock(midX, midY, midZ);
+    bigBoiBlock.setScale({ x: scaleX, y: scaleY, z: scaleZ });
+    bigBoiBlock.shapes.setOpacities(.1);
+    bigBoiBlock.material.transparent = true;
+    app.levelEditor.updateRender();
+    window.addEventListener("setSelectedObject", () => {
+        bigBoiBlock.shapes.setOpacities(.1);
+        bigBoiBlock.material.transparent = true;
+        app.levelEditor.updateRender();
+    });
+
+    function updateSmallBoi(i) {
+        smallBoi = smallBoiBlocks[i];
+        original = originalStats[i];
+        smallBoi.positionOrigin.x = smallBoi.position.x = original.x + bigBoiBlock.position.x - midX;
+        smallBoi.positionOrigin.y = smallBoi.position.y = original.y + bigBoiBlock.position.y - midY;
+        smallBoi.positionOrigin.z = smallBoi.position.z = original.z + bigBoiBlock.position.z - midZ;
+        smallBoi.scaleOrigin.x = smallBoi.scale.x = original.sx * bigBoiBlock.scale.x / scaleX;
+        smallBoi.scaleOrigin.y = smallBoi.scale.y = original.sy * bigBoiBlock.scale.y / scaleY;
+        smallBoi.scaleOrigin.z = smallBoi.scale.z = original.sz * bigBoiBlock.scale.z / scaleZ;
+        smallBoi.rotationOrigin.x = smallBoi.rotation.x = original.rx + bigBoiBlock.rotation.x;
+        smallBoi.rotationOrigin.y = smallBoi.rotation.y = original.ry + bigBoiBlock.rotation.y;
+        smallBoi.rotationOrigin.z = smallBoi.rotation.z = original.rz + bigBoiBlock.rotation.z;
+        fullUpdateObject(smallBoi);
+    }
+
+    let clearListener = listenForControlBlockUpdate(bigBoiBlock, () => {
+        for (let i = 0; i < smallBoiBlocks.length; i++) {
+            updateSmallBoi(i);
+        }
+    });
+
+    confirmAction = () => {
+        clearListener();
+        deleteControlBlock(bigBoiBlock);
+        deselectObject();
+        confirmAction = () => { };
+        cancelAction = () => { };
+        actionEnabled = false;
+        clearObjects();
+    }
+
+    cancelAction = () => {
+        clearListener();
+
+        bigBoiBlock.positionOrigin = { x: midX, y: midY, z: midZ };
+        bigBoiBlock.setScale({ x: scaleX, y: scaleY, z: scaleZ });
+        bigBoiBlock.rotationOrigin = { x: 0, y: 0, z: 0 };
+        for (let i = 0; i < smallBoiBlocks.length; i++) {
+            updateSmallBoi(i);
+        }
+
+        deleteControlBlock(bigBoiBlock);
+        deselectObject();
+        confirmAction = () => { };
+        cancelAction = () => { };
+        actionEnabled = false;
+        clearObjects();
+    }
+}
+
+// TODO: make this work with rotation
+addButton("Single direction scaling", () => {
+    let obj = app.selectedObject;
+    if (!obj) return;
+    if (actionEnabled && actionEnabled != "multiselect") return;
+    let multiSelectEnabled = actionEnabled == "multiselect";
+    actionEnabled = "singledirectionscaling";
+    deselectObject();
+    var original = {
+        scale: {
+            x: obj.scaleOrigin.x,
+            y: obj.scaleOrigin.y,
+            z: obj.scaleOrigin.z
+        },
+        position: {
+            x: obj.positionOrigin.x,
+            y: obj.positionOrigin.y,
+            z: obj.positionOrigin.z
+        }
+    };
+
+    let controlBlocks = {
+        left: createControlBlock(obj.position.x - obj.scale.x * .5, obj.position.y, obj.position.z),
+        right: createControlBlock(obj.position.x + obj.scale.x * .5, obj.position.y, obj.position.z),
+        top: createControlBlock(obj.position.x, obj.position.y + obj.scale.y * .5, obj.position.z),
+        bottom: createControlBlock(obj.position.x, obj.position.y - obj.scale.y * .5, obj.position.z),
+        front: createControlBlock(obj.position.x, obj.position.y, obj.position.z + obj.scale.z * .5),
+        back: createControlBlock(obj.position.x, obj.position.y, obj.position.z - obj.scale.z * .5)
+    };
+
+    function getCoords() {
+        return {
+            left: controlBlocks.left.position.x,
+            right: controlBlocks.right.position.x,
+            top: controlBlocks.top.position.y,
+            bottom: controlBlocks.bottom.position.y,
+            front: controlBlocks.front.position.z,
+            back: controlBlocks.back.position.z,
+        };
+    }
+
+    function updateScale() {
+        let coords = getCoords();
+
+        let width = coords.right - coords.left;
+        let height = coords.top - coords.bottom;
+        let depth = coords.front - coords.back;
+        let x = .5 * (coords.left + coords.right);
+        let y = .5 * (coords.top + coords.bottom);
+        let z = .5 * (coords.front + coords.back);
+
+        obj.positionOrigin.x = x;
+        obj.position.x = x;
+        obj.scaleOrigin.x = width;
+        obj.scale.x = width;
+
+        obj.positionOrigin.y = y;
+        obj.position.y = y;
+        obj.scaleOrigin.y = height;
+        obj.scale.y = height;
+
+        obj.positionOrigin.z = z;
+        obj.position.z = z;
+        obj.scaleOrigin.z = depth;
+        obj.scale.z = depth;
+
+        updateObject(obj);
+
+        // Update the control block positions
+        (() => {
+            controlBlocks.left.positionOrigin.y = y;
+            controlBlocks.left.positionOrigin.z = z;
+            controlBlocks.left.position.y = y;
+            controlBlocks.left.position.z = z;
+
+            controlBlocks.right.positionOrigin.y = y;
+            controlBlocks.right.positionOrigin.z = z;
+            controlBlocks.right.position.y = y;
+            controlBlocks.right.position.z = z;
+
+            controlBlocks.top.positionOrigin.x = x;
+            controlBlocks.top.positionOrigin.z = z;
+            controlBlocks.top.position.x = x;
+            controlBlocks.top.position.z = z;
+
+            controlBlocks.bottom.positionOrigin.x = x;
+            controlBlocks.bottom.positionOrigin.z = z;
+            controlBlocks.bottom.position.x = x;
+            controlBlocks.bottom.position.z = z;
+
+            controlBlocks.front.positionOrigin.x = x;
+            controlBlocks.front.positionOrigin.y = y;
+            controlBlocks.front.position.x = x;
+            controlBlocks.front.position.y = y;
+
+            controlBlocks.back.positionOrigin.x = x;
+            controlBlocks.back.positionOrigin.y = y;
+            controlBlocks.back.position.x = x;
+            controlBlocks.back.position.y = y;
+        })();
+    }
+
+    let clearListener = listenForControlBlocksUpdate(controlBlocks, updateScale);
+
+    let prevConfirmAction = confirmAction;
+    let prevCancelAction = cancelAction;
+    if (!multiSelectEnabled) {
+        delete prevConfirmAction;
+        delete prevCancelAction;
+    }
+    confirmAction = () => {
+        clearListener();
+        Object.keys(controlBlocks).forEach(key => {
+            deleteControlBlock(controlBlocks[key]);
+        });
+        deselectObject();
+        confirmAction = () => { };
+        cancelAction = () => { };
+        actionEnabled = false;
+        fullUpdateObject(obj);
+        if (multiSelectEnabled) {
+            confirmAction = prevConfirmAction;
+            cancelAction = prevCancelAction;
+        }
+    };
+
+    cancelAction = () => {
+        clearListener();
+        Object.keys(controlBlocks).forEach(key => {
+            let block = controlBlocks[key];
+            removeAnimatedObject(block);
+            app.level.removeObject(block, app, true);
+        });
+        deselectObject();
+        confirmAction = () => { };
+        cancelAction = () => { };
+        actionEnabled = false;
+
+        obj.positionOrigin.x = original.position.x;
+        obj.position.x = original.position.x;
+        obj.scaleOrigin.x = original.scale.x;
+        obj.scale.x = original.scale.x;
+
+        obj.positionOrigin.y = original.position.y;
+        obj.position.y = original.position.y;
+        obj.scaleOrigin.y = original.scale.y;
+        obj.scale.y = original.scale.y;
+
+        obj.positionOrigin.z = original.position.z;
+        obj.position.z = original.position.z;
+        obj.scaleOrigin.z = original.scale.z;
+        obj.scale.z = original.scale.z;
+
+        fullUpdateObject(obj);
+
+        if (multiSelectEnabled)
+            cancelAction = prevCancelAction;
+    };
+});
+
+addButton("Toggle intagibility", () => {
+    let obj = app.selectedObject;
+    if (!obj) return;
+    if (obj.positionOrigin.z == 0) {
+        obj.positionOrigin.z = -1e-6;
+        obj.position.z = -1e-6;
+    } else if (obj.positionOrigin.z == -1e-6) {
+        obj.positionOrigin.z = 0;
+        obj.position.z = 0;
+    }
+
+    updateObject(obj);
+});
+
+// TODO: Add buttons for plugins
+addButton("Confirm action", () => {
+    confirmAction();
+});
+addButton("Cancel action", () => {
+    cancelAction();
+});
+// TODO: Add menu element for plugin input settings
+
+window.addEventListener("pageMounted", e => {
+    if (e.detail != "level-editor") return;
+    setTimeout(() => {
+        if (document.getElementsByClassName("item")[0].title != "Draw cubes") return;
+
+        // Now the code confirmed the user is in the level editor
+        let topBar = document.getElementsByClassName("options-level")[0];
+        let referenceElement = document.getElementsByClassName("item")[10];
+        buttons.reverse();
+        buttons.forEach(b => {
+            referenceElement.insertAdjacentElement("afterend", b);
+        });
+        buttons.reverse();
+    }, 0);
+});
