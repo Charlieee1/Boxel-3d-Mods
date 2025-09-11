@@ -64,9 +64,21 @@ function fullUpdateObject(obj) {
     window.dispatchEvent(new CustomEvent("objectChange", { detail: obj }));
     app.levelEditor.controlsTransform.dispatchEvent(new CustomEvent("change"));
 
+    // Calculate current body scale
+    let v1 = obj.body.vertices[2]; // Bottom left
+    let v2 = obj.body.vertices[3]; // Bottom right
+    let v3 = obj.body.vertices[1]; // Top left
+    let dx1 = v2.x - v1.x;
+    let dx2 = v3.x - v1.x;
+    let dy1 = v2.y - v1.y;
+    let dy2 = v3.y - v1.y;
+    let sx = Math.sqrt(dx1*dx1+dy1*dy1);
+    let sy = Math.sqrt(dx2*dx2+dy2*dy2);
+
+    // Set new body scale
     obj.setBodyScale(
-        obj.scale.x / (obj.body.vertices[0].x - obj.body.vertices[2].x),
-        obj.scale.y / (obj.body.vertices[0].y - obj.body.vertices[2].y)
+        obj.scale.x / sx,
+        obj.scale.y / sy
     );
 }
 
@@ -182,8 +194,7 @@ var cancelAction = () => { };
 
 // TODO: Handle undo & redo (haha yeah right)
 
-// TODO:
-// Add button for multiselect
+// TODO: Support rotation of multiple objects
 // Handle selecting objects
 addButton("Multiselect", () => {
     if (actionEnabled) return;
@@ -298,12 +309,15 @@ function multiSelectStage2(smallBoiBlocks, clearObjects) {
     function updateSmallBoi(i) {
         smallBoi = smallBoiBlocks[i];
         original = originalStats[i];
-        smallBoi.positionOrigin.x = smallBoi.position.x = original.x + bigBoiBlock.position.x - midX;
-        smallBoi.positionOrigin.y = smallBoi.position.y = original.y + bigBoiBlock.position.y - midY;
-        smallBoi.positionOrigin.z = smallBoi.position.z = original.z + bigBoiBlock.position.z - midZ;
-        smallBoi.scaleOrigin.x = smallBoi.scale.x = original.sx * bigBoiBlock.scale.x / scaleX;
-        smallBoi.scaleOrigin.y = smallBoi.scale.y = original.sy * bigBoiBlock.scale.y / scaleY;
-        smallBoi.scaleOrigin.z = smallBoi.scale.z = original.sz * bigBoiBlock.scale.z / scaleZ;
+        let factorX = bigBoiBlock.scale.x / scaleX;
+        let factorY = bigBoiBlock.scale.y / scaleY;
+        let factorZ = bigBoiBlock.scale.z / scaleZ;
+        smallBoi.positionOrigin.x = smallBoi.position.x = factorX * (original.x - midX) + bigBoiBlock.position.x;
+        smallBoi.positionOrigin.y = smallBoi.position.y = factorY * (original.y - midY) + bigBoiBlock.position.y;
+        smallBoi.positionOrigin.z = smallBoi.position.z = factorZ * (original.z - midZ) + bigBoiBlock.position.z;
+        smallBoi.scaleOrigin.x = smallBoi.scale.x = original.sx * factorX;
+        smallBoi.scaleOrigin.y = smallBoi.scale.y = original.sy * factorY;
+        smallBoi.scaleOrigin.z = smallBoi.scale.z = original.sz * factorZ;
         smallBoi.rotationOrigin.x = smallBoi.rotation.x = original.rx + bigBoiBlock.rotation.x;
         smallBoi.rotationOrigin.y = smallBoi.rotation.y = original.ry + bigBoiBlock.rotation.y;
         smallBoi.rotationOrigin.z = smallBoi.rotation.z = original.rz + bigBoiBlock.rotation.z;
