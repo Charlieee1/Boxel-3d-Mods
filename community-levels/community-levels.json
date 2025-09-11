@@ -241,6 +241,11 @@
       "path": "json/3d_1.json"
     },
     {
+      "title": "level 30",
+      "author": "Ember",
+      "path": "json/level 30 (1).json"
+    },
+    {
       "title": "Fae_old",
       "author": "Fae",
       "path": "json/Fae_old.json"
@@ -394,6 +399,11 @@
       "title": "a normal lvl",
       "author": "Defenders' friend",
       "path": "json/a normal lvl (1).json"
+    },
+    {
+      "title": "Let Bro Cook",
+      "author": "Unknown",
+      "path": "json/Let Bro Cook.json"
     },
     {
       "title": "awesome parkore",

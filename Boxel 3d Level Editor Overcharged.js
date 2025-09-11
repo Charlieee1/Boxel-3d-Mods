@@ -226,7 +226,7 @@ var actionEnabled = false;
 var confirmAction = () => { };
 var cancelAction = () => { };
 
-// TODO: Handle undo & redo (haha yeah right)
+// TODO: Handle undo & redo (haha yeah right) (technically the game already handles it as single object modifications, and who cares about polished features anyways?)
 
 // TODO: Support duplication and deletion
 // TODO: Add intermediary stage for finer object selection
@@ -592,6 +592,7 @@ addButton("Confirm action", () => {
 addButton("Cancel action", () => {
     cancelAction();
 });
+// TODO: Add keybinds
 // TODO: Add menu element for plugin input settings
 
 window.addEventListener("pageMounted", e => {
