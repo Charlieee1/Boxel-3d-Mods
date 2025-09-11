@@ -1,5 +1,4 @@
 // IN BETA
-// Probably requires speedrunner suite mods. Load them just to be safe.
 
 // Basic utility functions
 // https://stackoverflow.com/a/32922084
