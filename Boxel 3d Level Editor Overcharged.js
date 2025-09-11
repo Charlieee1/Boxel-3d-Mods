@@ -228,8 +228,9 @@ var cancelAction = () => { };
 
 // TODO: Handle undo & redo (haha yeah right)
 
-// TODO: Support rotation of multiple objects
-// Handle selecting objects
+// TODO: Support duplication and deletion
+// TODO: Add intermediary stage for finer object selection
+// Handle selecting objects via box selection
 addButton("Multiselect", () => {
     if (actionEnabled) return;
     actionEnabled = "multiselect";
