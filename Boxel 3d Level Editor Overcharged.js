@@ -38,6 +38,41 @@ function getCoords(object) {
         sz: object.scale.z
     };
 }
+function rotatePoint(x, y, z, rotation) {
+    let newX;
+    let newY;
+    let newZ;
+    let thetaX = rotation.x;
+    let thetaY = rotation.y;
+    let thetaZ = rotation.z;
+    let cos;
+    let sin;
+
+    // Tranform with rotation matrices
+    // Z
+    cos = Math.cos(thetaZ);
+    sin = Math.sin(thetaZ);
+    newX = cos * x - sin * y;
+    newY = sin * x + cos * y;
+    x = newX;
+    y = newY;
+    // Y
+    cos = Math.cos(thetaY);
+    sin = Math.sin(thetaY);
+    newX = cos * x + sin * z;
+    newZ = -sin * x + cos * z;
+    x = newX;
+    z = newZ;
+    // X
+    cos = Math.cos(thetaX);
+    sin = Math.sin(thetaX);
+    newY = cos * y - sin * z;
+    newZ = sin * y + cos * z;
+    y = newY;
+    z = newZ;
+
+    return [x, y, z];
+}
 
 function updateObject(obj) {
     app.levelEditor.updateRender();
@@ -72,8 +107,8 @@ function fullUpdateObject(obj) {
     let dx2 = v3.x - v1.x;
     let dy1 = v2.y - v1.y;
     let dy2 = v3.y - v1.y;
-    let sx = Math.sqrt(dx1*dx1+dy1*dy1);
-    let sy = Math.sqrt(dx2*dx2+dy2*dy2);
+    let sx = Math.sqrt(dx1 * dx1 + dy1 * dy1);
+    let sy = Math.sqrt(dx2 * dx2 + dy2 * dy2);
 
     // Set new body scale
     obj.setBodyScale(
@@ -300,11 +335,12 @@ function multiSelectStage2(smallBoiBlocks, clearObjects) {
     bigBoiBlock.shapes.setOpacities(.1);
     bigBoiBlock.material.transparent = true;
     app.levelEditor.updateRender();
-    window.addEventListener("setSelectedObject", () => {
+    let setTranslucent = () => {
         bigBoiBlock.shapes.setOpacities(.1);
         bigBoiBlock.material.transparent = true;
         app.levelEditor.updateRender();
-    });
+    };
+    window.addEventListener("setSelectedObject", setTranslucent);
 
     function updateSmallBoi(i) {
         smallBoi = smallBoiBlocks[i];
@@ -312,9 +348,18 @@ function multiSelectStage2(smallBoiBlocks, clearObjects) {
         let factorX = bigBoiBlock.scale.x / scaleX;
         let factorY = bigBoiBlock.scale.y / scaleY;
         let factorZ = bigBoiBlock.scale.z / scaleZ;
-        smallBoi.positionOrigin.x = smallBoi.position.x = factorX * (original.x - midX) + bigBoiBlock.position.x;
-        smallBoi.positionOrigin.y = smallBoi.position.y = factorY * (original.y - midY) + bigBoiBlock.position.y;
-        smallBoi.positionOrigin.z = smallBoi.position.z = factorZ * (original.z - midZ) + bigBoiBlock.position.z;
+        let posX = factorX * (original.x - midX);
+        let posY = factorY * (original.y - midY);
+        let posZ = factorZ * (original.z - midZ);
+        
+        [posX, posY, posZ] = rotatePoint(posX, posY, posZ, bigBoiBlock.rotation);
+        posX += bigBoiBlock.position.x;
+        posY += bigBoiBlock.position.y;
+        posZ += bigBoiBlock.position.z;
+
+        smallBoi.positionOrigin.x = smallBoi.position.x = posX;
+        smallBoi.positionOrigin.y = smallBoi.position.y = posY;
+        smallBoi.positionOrigin.z = smallBoi.position.z = posZ;
         smallBoi.scaleOrigin.x = smallBoi.scale.x = original.sx * factorX;
         smallBoi.scaleOrigin.y = smallBoi.scale.y = original.sy * factorY;
         smallBoi.scaleOrigin.z = smallBoi.scale.z = original.sz * factorZ;
@@ -324,14 +369,19 @@ function multiSelectStage2(smallBoiBlocks, clearObjects) {
         fullUpdateObject(smallBoi);
     }
 
-    let clearListener = listenForControlBlockUpdate(bigBoiBlock, () => {
+    function updateSmallBois() {
         for (let i = 0; i < smallBoiBlocks.length; i++) {
             updateSmallBoi(i);
         }
+    }
+
+    let clearListener = listenForControlBlockUpdate(bigBoiBlock, () => {
+        updateSmallBois();
     });
 
     confirmAction = () => {
         clearListener();
+        window.removeEventListener("setSelectedObject", setTranslucent);
         deleteControlBlock(bigBoiBlock);
         deselectObject();
         confirmAction = () => { };
@@ -342,15 +392,17 @@ function multiSelectStage2(smallBoiBlocks, clearObjects) {
 
     cancelAction = () => {
         clearListener();
+        window.removeEventListener("setSelectedObject", setTranslucent);
 
-        bigBoiBlock.positionOrigin = { x: midX, y: midY, z: midZ };
-        bigBoiBlock.setScale({ x: scaleX, y: scaleY, z: scaleZ });
-        bigBoiBlock.rotationOrigin = { x: 0, y: 0, z: 0 };
-        for (let i = 0; i < smallBoiBlocks.length; i++) {
-            updateSmallBoi(i);
-        }
+        let originalBigBoi = bigBoiBlock;
+        bigBoiBlock = {
+            position: { x: midX, y: midY, z: midZ },
+            scale: { x: scaleX, y: scaleY, z: scaleZ },
+            rotation: { x: 0, y: 0, z: 0 }
+        };
+        updateSmallBois();
 
-        deleteControlBlock(bigBoiBlock);
+        deleteControlBlock(originalBigBoi);
         deselectObject();
         confirmAction = () => { };
         cancelAction = () => { };
