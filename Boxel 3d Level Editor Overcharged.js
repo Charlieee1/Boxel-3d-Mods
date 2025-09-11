@@ -250,7 +250,7 @@ addButton("Multiselect", () => {
             if (colour) {
                 child.originalColour = child.color;
                 if (child.color == "#ffffff")
-                    child.setColors("#000000");
+                    child.setColors("#00ffff");
                 else
                     child.setColors("#ffffff");
                 updateObject(child);
