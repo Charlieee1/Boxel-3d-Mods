@@ -122,6 +122,16 @@ function deselectObject() {
     window.dispatchEvent(new CustomEvent("setSelectedObject"));
     app.mouse.mode = app.mouse.prevMode;
 }
+function resetObjectColour(obj) {
+    if (!obj.originalColour) return;
+    obj.setColors(obj.originalColour);
+    delete obj.originalColour;
+}
+function resetObjectsColours(objs) {
+    objs.forEach(obj => {
+        resetObjectColour(obj);
+    });
+}
 
 // Animate selection objects to make them easier to spot and also to look cool
 // Whether to animate control blocks or not
@@ -233,7 +243,7 @@ var cancelAction = () => { };
 // Handle selecting objects via box selection
 addButton("Multiselect", () => {
     if (actionEnabled) return;
-    actionEnabled = "multiselect";
+    actionEnabled = "multiselect-selection";
     deselectObject();
     let block1 = createControlBlock(app.camera.position.x - 16 * 5, app.camera.position.y - 16 * 5, -16);
     let block2 = createControlBlock(app.camera.position.x + 16 * 5, app.camera.position.y + 16 * 5, 16);
@@ -259,18 +269,10 @@ addButton("Multiselect", () => {
         });
         return objs;
     }
-    function clearObjects() {
-        selectedObjects.forEach(obj => {
-            if (!obj.originalColour) return;
-            obj.setColors(obj.originalColour);
-            delete obj.originalColour;
-        });
-        selectedObjects = [];
-    }
 
     selectedObjects = findSelectedObjects();
     let clearListener = listenForControlBlocksUpdate([block1, block2], () => {
-        clearObjects();
+        resetObjectsColours(selectedObjects);
         selectedObjects = findSelectedObjects();
     });
 
@@ -281,7 +283,7 @@ addButton("Multiselect", () => {
         deselectObject();
         confirmAction = () => { };
         cancelAction = () => { };
-        multiSelectStage2(selectedObjects, clearObjects); // Now it's getting serious
+        multiSelectStage2(selectedObjects); // Now it's getting serious
     };
 
     cancelAction = () => {
@@ -292,11 +294,55 @@ addButton("Multiselect", () => {
         confirmAction = () => { };
         cancelAction = () => { };
         actionEnabled = false;
-        clearObjects();
+        resetObjectsColours(selectedObjects);
     };
 });
+
+// Handle precise object selection
+function multiSelectStage2(selectedObjectsOriginal) {
+    let selectedObjects = selectedObjectsOriginal;
+    function objectSelected() {
+        let obj = app.selectedObject;
+        if (!obj) return;
+        if (selectedObjects.includes(obj)) {
+            selectedObjects.splice(selectedObjects.indexOf(obj), 1);
+            resetObjectColour(obj);
+        } else {
+            selectedObjects.push(obj);
+            obj.originalColour = obj.color;
+            if (obj.color == "#ffffff")
+                obj.setColors("#00ffff");
+            else
+                obj.setColors("#ffffff");
+            updateObject(obj);
+        }
+        deselectObject();
+    }
+    window.addEventListener("setSelectedObject", objectSelected);
+
+    confirmAction = () => {
+        window.removeEventListener("setSelectedObject", objectSelected);
+        deselectObject();
+        confirmAction = () => { };
+        cancelAction = () => { };
+        resetObjectsColours(selectedObjects);
+        multiSelectStage3(selectedObjects); // Now it's getting REALLY serious
+    };
+
+    cancelAction = () => {
+        window.removeEventListener("setSelectedObject", objectSelected);
+        deselectObject();
+        confirmAction = () => { };
+        cancelAction = () => { };
+        actionEnabled = false;
+        resetObjectsColours(selectedObjects);
+    };
+}
+
 // Handle modifying objects
-function multiSelectStage2(smallBoiBlocks, clearObjects) {
+function multiSelectStage3(smallBoiBlocks) {
+    actionEnabled = "multiselect-modification";
+
     let minX = Infinity;
     let maxX = -Infinity;
     let minY = Infinity;
@@ -351,7 +397,7 @@ function multiSelectStage2(smallBoiBlocks, clearObjects) {
         let posX = factorX * (original.x - midX);
         let posY = factorY * (original.y - midY);
         let posZ = factorZ * (original.z - midZ);
-        
+
         [posX, posY, posZ] = rotatePoint(posX, posY, posZ, bigBoiBlock.rotation);
         posX += bigBoiBlock.position.x;
         posY += bigBoiBlock.position.y;
@@ -387,7 +433,6 @@ function multiSelectStage2(smallBoiBlocks, clearObjects) {
         confirmAction = () => { };
         cancelAction = () => { };
         actionEnabled = false;
-        clearObjects();
     }
 
     cancelAction = () => {
@@ -407,7 +452,6 @@ function multiSelectStage2(smallBoiBlocks, clearObjects) {
         confirmAction = () => { };
         cancelAction = () => { };
         actionEnabled = false;
-        clearObjects();
     }
 }
 
@@ -415,8 +459,8 @@ function multiSelectStage2(smallBoiBlocks, clearObjects) {
 addButton("Single direction scaling", () => {
     let obj = app.selectedObject;
     if (!obj) return;
-    if (actionEnabled && actionEnabled != "multiselect") return;
-    let multiSelectEnabled = actionEnabled == "multiselect";
+    if (actionEnabled && actionEnabled != "multiselect-modification") return;
+    let multiSelectEnabled = actionEnabled == "multiselect-modification";
     actionEnabled = "singledirectionscaling";
     deselectObject();
     var original = {
