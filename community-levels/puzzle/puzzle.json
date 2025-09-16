@@ -16,6 +16,11 @@
       "path": "json/Limbo.json"
     },
     {
+      "title": "Match-up",
+      "author": "Ember",
+      "path": "json/Match-up.json"
+    },
+    {
       "title": "coaster downhill",
       "author": "CEO of Dislike",
       "path": "json/coaster downhill.json"

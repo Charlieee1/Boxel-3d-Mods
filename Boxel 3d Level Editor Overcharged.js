@@ -233,15 +233,16 @@ function listenForControlBlocksUpdate(blocks, callback) {
 // To ensure only one action is used at a time
 var actionEnabled = false;
 
-var confirmAction = () => { };
-var cancelAction = () => { };
+var actions = {
+    confirm: () => { },
+    cancel: () => { }
+};
 
 // TODO: Handle undo & redo (haha yeah right) (technically the game already handles it as single object modifications, and who cares about polished features anyways?)
 
 // TODO: Support duplication and deletion
-// TODO: Add intermediary stage for finer object selection
 // Handle selecting objects via box selection
-addButton("Multiselect", () => {
+function multiSelectStage1() {
     if (actionEnabled) return;
     actionEnabled = "multiselect-selection";
     deselectObject();
@@ -276,28 +277,27 @@ addButton("Multiselect", () => {
         selectedObjects = findSelectedObjects();
     });
 
-    confirmAction = () => {
+    actions.confirm = () => {
         clearListener();
         deleteControlBlock(block1);
         deleteControlBlock(block2);
         deselectObject();
-        confirmAction = () => { };
-        cancelAction = () => { };
+        actions.confirm = () => { };
+        actions.cancel = () => { };
         multiSelectStage2(selectedObjects); // Now it's getting serious
     };
 
-    cancelAction = () => {
+    actions.cancel = () => {
         clearListener();
         deleteControlBlock(block1);
         deleteControlBlock(block2);
         deselectObject();
-        confirmAction = () => { };
-        cancelAction = () => { };
+        actions.confirm = () => { };
+        actions.cancel = () => { };
         actionEnabled = false;
         resetObjectsColours(selectedObjects);
     };
-});
-
+}
 // Handle precise object selection
 function multiSelectStage2(selectedObjectsOriginal) {
     let selectedObjects = selectedObjectsOriginal;
@@ -320,25 +320,24 @@ function multiSelectStage2(selectedObjectsOriginal) {
     }
     window.addEventListener("setSelectedObject", objectSelected);
 
-    confirmAction = () => {
+    actions.confirm = () => {
         window.removeEventListener("setSelectedObject", objectSelected);
         deselectObject();
-        confirmAction = () => { };
-        cancelAction = () => { };
+        actions.confirm = () => { };
+        actions.cancel = () => { };
         resetObjectsColours(selectedObjects);
         multiSelectStage3(selectedObjects); // Now it's getting REALLY serious
     };
 
-    cancelAction = () => {
+    actions.cancel = () => {
         window.removeEventListener("setSelectedObject", objectSelected);
         deselectObject();
-        confirmAction = () => { };
-        cancelAction = () => { };
+        actions.confirm = () => { };
+        actions.cancel = () => { };
         actionEnabled = false;
         resetObjectsColours(selectedObjects);
     };
 }
-
 // Handle modifying objects
 function multiSelectStage3(smallBoiBlocks) {
     actionEnabled = "multiselect-modification";
@@ -425,17 +424,17 @@ function multiSelectStage3(smallBoiBlocks) {
         updateSmallBois();
     });
 
-    confirmAction = () => {
+    actions.confirm = () => {
         clearListener();
         window.removeEventListener("setSelectedObject", setTranslucent);
         deleteControlBlock(bigBoiBlock);
         deselectObject();
-        confirmAction = () => { };
-        cancelAction = () => { };
+        actions.confirm = () => { };
+        actions.cancel = () => { };
         actionEnabled = false;
     }
 
-    cancelAction = () => {
+    actions.cancel = () => {
         clearListener();
         window.removeEventListener("setSelectedObject", setTranslucent);
 
@@ -449,14 +448,14 @@ function multiSelectStage3(smallBoiBlocks) {
 
         deleteControlBlock(originalBigBoi);
         deselectObject();
-        confirmAction = () => { };
-        cancelAction = () => { };
+        actions.confirm = () => { };
+        actions.cancel = () => { };
         actionEnabled = false;
     }
 }
 
 // TODO: make this work with rotation
-addButton("Single direction scaling", () => {
+function singleDirectionScaling() {
     let obj = app.selectedObject;
     if (!obj) return;
     if (actionEnabled && actionEnabled != "multiselect-modification") return;
@@ -559,29 +558,29 @@ addButton("Single direction scaling", () => {
 
     let clearListener = listenForControlBlocksUpdate(controlBlocks, updateScale);
 
-    let prevConfirmAction = confirmAction;
-    let prevCancelAction = cancelAction;
+    let prevConfirmAction = actions.confirm;
+    let prevCancelAction = actions.cancel;
     if (!multiSelectEnabled) {
         delete prevConfirmAction;
         delete prevCancelAction;
     }
-    confirmAction = () => {
+    actions.confirm = () => {
         clearListener();
         Object.keys(controlBlocks).forEach(key => {
             deleteControlBlock(controlBlocks[key]);
         });
         deselectObject();
-        confirmAction = () => { };
-        cancelAction = () => { };
+        actions.confirm = () => { };
+        actions.cancel = () => { };
         actionEnabled = false;
         fullUpdateObject(obj);
         if (multiSelectEnabled) {
-            confirmAction = prevConfirmAction;
-            cancelAction = prevCancelAction;
+            actions.confirm = prevConfirmAction;
+            actions.cancel = prevCancelAction;
         }
     };
 
-    cancelAction = () => {
+    actions.cancel = () => {
         clearListener();
         Object.keys(controlBlocks).forEach(key => {
             let block = controlBlocks[key];
@@ -589,8 +588,8 @@ addButton("Single direction scaling", () => {
             app.level.removeObject(block, app, true);
         });
         deselectObject();
-        confirmAction = () => { };
-        cancelAction = () => { };
+        actions.confirm = prevConfirmAction;
+        actions.cancel = prevCancelAction;
         actionEnabled = false;
 
         obj.positionOrigin.x = original.position.x;
@@ -611,11 +610,11 @@ addButton("Single direction scaling", () => {
         fullUpdateObject(obj);
 
         if (multiSelectEnabled)
-            cancelAction = prevCancelAction;
+            actions.cancel = prevactions.cancel;
     };
-});
+}
 
-addButton("Toggle intagibility", () => {
+function toggleIntangibility() {
     let obj = app.selectedObject;
     if (!obj) return;
     if (obj.positionOrigin.z == 0) {
@@ -627,16 +626,45 @@ addButton("Toggle intagibility", () => {
     }
 
     updateObject(obj);
-});
+}
 
+addButton("Multiselect", multiSelectStage1);
+addButton("Single direction scaling", singleDirectionScaling);
+addButton("Toggle intagibility", toggleIntangibility);
 // TODO: Add buttons for plugins
 addButton("Confirm action", () => {
-    confirmAction();
+    actions.confirm();
 });
 addButton("Cancel action", () => {
-    cancelAction();
+    actions.cancel();
 });
 // TODO: Add keybinds
+window.addEventListener("keypress", e => {
+    let key = e.key;
+    switch (key) {
+        case "1":
+            multiSelectStage1();
+            break;
+        case "2":
+            multiSelectStage2([]);
+            break;
+        case "3":
+            toggleIntangibility();
+            break;
+        case "y": // "t" is already taken by TAS mod
+            singleDirectionScaling();
+            break;
+        case "c":
+            actions.confirm();
+            break;
+        case "v":
+            actions.cancel();
+            break;
+        default:
+            break;
+    }
+});
+
 // TODO: Add menu element for plugin input settings
 
 window.addEventListener("pageMounted", e => {
