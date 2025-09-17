@@ -24,6 +24,14 @@ function addButton(title, callback) {
     newButton.appendChild(icon);
     buttons.push(newButton);
 }
+function canDoAction() {
+    // It's tempting to forget about clean code and golf this function
+    if (app.state != "level-editor") return; // Make sure user has a level open in the editor
+    if (document.getElementsByClassName("dialog").length != 0) return; // Make sure user does not have a popup open
+    if (app.play) return; // Make sure user is not playing the level
+    return true;
+}
+
 function getCoords(object) {
     return {
         x: object.position.x,
@@ -244,6 +252,7 @@ var actions = {
 // Handle selecting objects via box selection
 function multiSelectStage1() {
     if (actionEnabled) return;
+    if (!canDoAction()) return;
     actionEnabled = "multiselect-selection";
     deselectObject();
     let block1 = createControlBlock(app.camera.position.x - 16 * 5, app.camera.position.y - 16 * 5, -16);
@@ -300,6 +309,8 @@ function multiSelectStage1() {
 }
 // Handle precise object selection
 function multiSelectStage2(selectedObjectsOriginal) {
+    if (actionEnabled && actionEnabled != "multiselect-selection") return;
+    if (!canDoAction()) return;
     let selectedObjects = selectedObjectsOriginal;
     function objectSelected() {
         let obj = app.selectedObject;
@@ -432,6 +443,7 @@ function multiSelectStage3(smallBoiBlocks) {
         actions.confirm = () => { };
         actions.cancel = () => { };
         actionEnabled = false;
+        app.level.refreshLevel(app);
     }
 
     actions.cancel = () => {
@@ -459,6 +471,8 @@ function singleDirectionScaling() {
     let obj = app.selectedObject;
     if (!obj) return;
     if (actionEnabled && actionEnabled != "multiselect-modification") return;
+    if (!canDoAction()) return;
+
     let multiSelectEnabled = actionEnabled == "multiselect-modification";
     actionEnabled = "singledirectionscaling";
     deselectObject();
@@ -617,17 +631,19 @@ function singleDirectionScaling() {
 function toggleIntangibility() {
     let obj = app.selectedObject;
     if (!obj) return;
+    if (!canDoAction()) return; // Technically this should never be true, it's just a safety measure
     if (obj.positionOrigin.z == 0) {
         obj.positionOrigin.z = -1e-6;
         obj.position.z = -1e-6;
     } else if (obj.positionOrigin.z == -1e-6) {
         obj.positionOrigin.z = 0;
         obj.position.z = 0;
-    }
+    } else return;
 
     updateObject(obj);
 }
 
+// TODO: Add icons for the buttons
 addButton("Multiselect", multiSelectStage1);
 addButton("Single direction scaling", singleDirectionScaling);
 addButton("Toggle intagibility", toggleIntangibility);
@@ -638,7 +654,6 @@ addButton("Confirm action", () => {
 addButton("Cancel action", () => {
     actions.cancel();
 });
-// TODO: Add keybinds
 window.addEventListener("keypress", e => {
     let key = e.key;
     switch (key) {
@@ -670,7 +685,7 @@ window.addEventListener("keypress", e => {
 window.addEventListener("pageMounted", e => {
     if (e.detail != "level-editor") return;
     setTimeout(() => {
-        if (document.getElementsByClassName("item")[0].title != "Draw cubes") return;
+        if (app.state != "level-editor") return;
 
         // Now the code confirmed the user is in the level editor
         let topBar = document.getElementsByClassName("options-level")[0];
@@ -682,3 +697,10 @@ window.addEventListener("pageMounted", e => {
         buttons.reverse();
     }, 0);
 });
+// Lock other vanilla actions while user is using a mod action
+// TODO: Prevent level from playing, prevent editing textboxes
+let originalExitLevel = app.levelEditor.exitLevel;
+app.levelEditor.exitLevel = () => {
+    if (actionEnabled) return;
+    originalExitLevel();
+}
