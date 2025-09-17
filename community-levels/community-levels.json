@@ -6,6 +6,11 @@
       "path": "json/The Boxel Library.json"
     },
     {
+      "title": "Momentous",
+      "author": "Unknown",
+      "path": "json/Momentous.json"
+    },
+    {
       "title": "faster than a bullet",
       "author": ".noobus",
       "path": "json/faster than a bullet.json"
@@ -14,6 +19,16 @@
       "title": "Tornado",
       "author": "Unknown",
       "path": "json/Tornado_2.json"
+    },
+    {
+      "title": "A Normal Day",
+      "author": "cloodiest",
+      "path": "json/A Normal Day.json"
+    },
+    {
+      "title": "Multiplier",
+      "author": "Unknown",
+      "path": "json/Multiplier.json"
     },
     {
       "title": "Break in",
@@ -214,6 +229,16 @@
       "title": "Green_Bud4623_lvl2",
       "author": "Green_Bud4623",
       "path": "json/Green_Bud4623_lvl2.json"
+    },
+    {
+      "title": "Bloxel Dropper: Level 1",
+      "author": "Norseman",
+      "path": "json/Bloxel Dropper_ Level 1.json"
+    },
+    {
+      "title": "Bloxel Dropper: Level 2",
+      "author": "Norseman",
+      "path": "json/Bloxel Dropper_ Level 2.json"
     },
     {
       "title": "Just don't move #1",
