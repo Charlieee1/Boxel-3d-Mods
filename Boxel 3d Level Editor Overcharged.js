@@ -682,6 +682,45 @@ window.addEventListener("keypress", e => {
 
 // TODO: Add menu element for plugin input settings
 
+// Lock other vanilla actions while user is using a mod action
+// I wish I could override the proper functions, but they are not accessible from the global scope
+// and I don't know the path to get to it with .bind
+// Prevent exiting level
+app.levelEditor.originalExitLevel = app.levelEditor.exitLevel;
+app.level.originalDeselectLevel = app.level.deselectLevel;
+app.levelEditor.controlsOrbit.originalReset = app.levelEditor.controlsOrbit.reset;
+app.levelEditor.controlsTransform.originalDetach = app.levelEditor.controlsTransform.detach;
+app.originalStartLevel = app.startLevel;
+app.levelEditor.exitLevel = () => {
+    if (actionEnabled) return;
+    app.levelEditor.originalExitLevel();
+};
+// Prevent playing level
+app.level.deselectLevel = (app) => {
+    if (actionEnabled) return;
+    app.level.originalDeselectLevel(app);
+};
+app.levelEditor.controlsOrbit.reset = () => {
+    if (actionEnabled) return;
+    app.levelEditor.controlsOrbit.originalReset();
+};
+app.levelEditor.controlsTransform.detach = () => {
+    if (actionEnabled) return;
+    app.levelEditor.controlsTransform.originalDetach();
+};
+app.startLevel = () => {
+    if (actionEnabled) {
+        // Doesn't work and I don't know what s is
+        // s.value = true;
+        // So I do this infinitely cursed alternative instead (which definitely makes some of my code redundant)
+        document.getElementsByClassName("item")[9].click(); // Pause the level
+        app.background.visible = false;
+        app.levelEditor.controlsOrbit.enabled = true;
+        return;
+    }
+    app.originalStartLevel();
+};
+
 window.addEventListener("pageMounted", e => {
     if (e.detail != "level-editor") return;
     setTimeout(() => {
@@ -697,10 +736,3 @@ window.addEventListener("pageMounted", e => {
         buttons.reverse();
     }, 0);
 });
-// Lock other vanilla actions while user is using a mod action
-// TODO: Prevent level from playing, prevent editing textboxes
-let originalExitLevel = app.levelEditor.exitLevel;
-app.levelEditor.exitLevel = () => {
-    if (actionEnabled) return;
-    originalExitLevel();
-}
