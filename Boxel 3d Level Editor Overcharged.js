@@ -128,7 +128,9 @@ function deselectObject() {
     app.level.deselectLevel(app);
     app.levelEditor.controlsTransform.detach();
     window.dispatchEvent(new CustomEvent("setSelectedObject"));
+    app.levelEditor.updateRender();
     app.mouse.mode = app.mouse.prevMode;
+    app.selectedObject = null;
 }
 function resetObjectColour(obj) {
     if (!obj.originalColour) return;
@@ -312,7 +314,7 @@ function multiSelectStage2(selectedObjectsOriginal) {
     if (actionEnabled && actionEnabled != "multiselect-selection") return;
     if (!canDoAction()) return;
     let selectedObjects = selectedObjectsOriginal;
-    function objectSelected() {
+    function objectSelected(e) {
         let obj = app.selectedObject;
         if (!obj) return;
         if (selectedObjects.includes(obj)) {
@@ -435,6 +437,22 @@ function multiSelectStage3(smallBoiBlocks) {
         updateSmallBois();
     });
 
+    // Listen for duplication
+    let originalDuplicateSelectedObject = app.levelEditor.duplicateSelectedObject;
+    app.levelEditor.duplicateSelectedObject = e => {
+        smallBoiBlocks.forEach(boi => {
+            app.level.duplicateObject(boi, app);
+        })
+    };
+    // Listen for deletion
+    let originalDeleteSelectedObject = app.levelEditor.deleteSelectedObject;
+    app.levelEditor.deleteSelectedObject = e => {
+        actions.cancel();
+        smallBoiBlocks.forEach(boi => {
+            app.level.removeObject(boi, app, true);
+        });
+    };
+
     actions.confirm = () => {
         clearListener();
         window.removeEventListener("setSelectedObject", setTranslucent);
@@ -444,8 +462,10 @@ function multiSelectStage3(smallBoiBlocks) {
         actions.cancel = () => { };
         actionEnabled = false;
         app.level.refreshLevel(app);
+        app.levelEditor.duplicateSelectedObject = originalDuplicateSelectedObject;
+        app.levelEditor.deleteSelectedObject = originalDeleteSelectedObject;
     }
-
+    
     actions.cancel = () => {
         clearListener();
         window.removeEventListener("setSelectedObject", setTranslucent);
@@ -463,6 +483,8 @@ function multiSelectStage3(smallBoiBlocks) {
         actions.confirm = () => { };
         actions.cancel = () => { };
         actionEnabled = false;
+        app.levelEditor.duplicateSelectedObject = originalDuplicateSelectedObject;
+        app.levelEditor.deleteSelectedObject = originalDeleteSelectedObject;
     }
 }
 
@@ -574,10 +596,10 @@ function singleDirectionScaling() {
 
     let prevConfirmAction = actions.confirm;
     let prevCancelAction = actions.cancel;
-    if (!multiSelectEnabled) {
-        delete prevConfirmAction;
-        delete prevCancelAction;
-    }
+    // if (!multiSelectEnabled) {
+    //     delete prevConfirmAction;
+    //     delete prevCancelAction;
+    // }
     actions.confirm = () => {
         clearListener();
         Object.keys(controlBlocks).forEach(key => {
@@ -696,17 +718,9 @@ app.levelEditor.exitLevel = () => {
     app.levelEditor.originalExitLevel();
 };
 // Prevent playing level
-app.level.deselectLevel = (app) => {
-    if (actionEnabled) return;
-    app.level.originalDeselectLevel(app);
-};
 app.levelEditor.controlsOrbit.reset = () => {
     if (actionEnabled) return;
     app.levelEditor.controlsOrbit.originalReset();
-};
-app.levelEditor.controlsTransform.detach = () => {
-    if (actionEnabled) return;
-    app.levelEditor.controlsTransform.originalDetach();
 };
 app.startLevel = () => {
     if (actionEnabled) {
