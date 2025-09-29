@@ -438,15 +438,48 @@ function multiSelectStage3(smallBoiBlocks) {
     });
 
     // Listen for duplication
+    let duplicated = false; // Whether the selection has been duplicated or not already
+    let initial; // The local origin for duplication
+    let delta = { x: 0, y: 0, z: 0 }; // How much to move the object by after duplication
     let originalDuplicateSelectedObject = app.levelEditor.duplicateSelectedObject;
     app.levelEditor.duplicateSelectedObject = e => {
+        if (app.selectedObject != bigBoiBlock) {
+            originalDuplicateSelectedObject(e);
+            return;
+        }
         smallBoiBlocks.forEach(boi => {
             app.level.duplicateObject(boi, app);
-        })
+        });
+        // Handle duplicating in a direction
+        if (duplicated) {
+            delta = {
+                x: bigBoiBlock.position.x - initial.x,
+                y: bigBoiBlock.position.y - initial.y,
+                z: bigBoiBlock.position.z - initial.z
+            };
+        }
+        initial = {
+            x: bigBoiBlock.position.x,
+            y: bigBoiBlock.position.y,
+            z: bigBoiBlock.position.z
+        };
+        bigBoiBlock.positionOrigin.x += delta.x;
+        bigBoiBlock.positionOrigin.y += delta.y;
+        bigBoiBlock.positionOrigin.z += delta.z;
+        bigBoiBlock.position.x += delta.x;
+        bigBoiBlock.position.y += delta.y;
+        bigBoiBlock.position.z += delta.z;
+        fullUpdateObject(bigBoiBlock);
+        updateSmallBois();
+        duplicated = true;
     };
     // Listen for deletion
     let originalDeleteSelectedObject = app.levelEditor.deleteSelectedObject;
     app.levelEditor.deleteSelectedObject = e => {
+        if (app.selectedObject != bigBoiBlock) {
+            originalDeleteSelectedObject(e);
+            return;
+        }
         actions.cancel();
         smallBoiBlocks.forEach(boi => {
             app.level.removeObject(boi, app, true);
@@ -465,7 +498,7 @@ function multiSelectStage3(smallBoiBlocks) {
         app.levelEditor.duplicateSelectedObject = originalDuplicateSelectedObject;
         app.levelEditor.deleteSelectedObject = originalDeleteSelectedObject;
     }
-    
+
     actions.cancel = () => {
         clearListener();
         window.removeEventListener("setSelectedObject", setTranslucent);
@@ -669,6 +702,7 @@ function toggleIntangibility() {
 addButton("Multiselect", multiSelectStage1);
 addButton("Single direction scaling", singleDirectionScaling);
 addButton("Toggle intagibility", toggleIntangibility);
+// TODO: Add button for multi-modify
 // TODO: Add buttons for plugins
 addButton("Confirm action", () => {
     actions.confirm();
