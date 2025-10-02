@@ -1,6 +1,11 @@
 {
   "levels": [
     {
+      "title": ".Charlie's Deco Test 1",
+      "author": "Charlieee1",
+      "path": "json/Charlie's Deco Test 1.json"
+    },
+    {
       "title": "Bokel playgrond",
       "author": "Unknown",
       "path": "json/Bokel playgrond.json"
@@ -54,6 +59,11 @@
       "title": "chaos theory",
       "author": "Unknown",
       "path": "json/chaos theory.json"
+    },
+    {
+      "title": "new level for game",
+      "author": "16BitPlayer",
+      "path": "json/new_level_for_game.json"
     },
     {
       "title": "Hardest level",

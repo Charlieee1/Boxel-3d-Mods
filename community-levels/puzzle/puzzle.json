@@ -6,6 +6,11 @@
       "path": "json/Blockage Decorated.json"
     },
     {
+      "title": ".My Newest Puzzle >:)",
+      "author": "Charlieee1",
+      "path": "json/My Newest Puzzle.json"
+    },
+    {
       "title": "bloopers",
       "author": "Ember",
       "path": "json/bloopers.json"
@@ -33,7 +38,12 @@
     {
       "title": "Beat this Charlie",
       "author": "Norseman",
-      "path": "json/Beat this Charlie (4).json"
+      "path": "json/Beat this Charlie (5).json"
+    },
+    {
+      "title": "Beat this Charlie v2: Zig Zag",
+      "author": "Norseman",
+      "path": "json/Beat this Charlie v2_ Zig Zag.json"
     },
     {
       "title": "Goal Kick",
@@ -44,6 +54,11 @@
       "title": "Glitch Fall",
       "author": "CEO of Dislike",
       "path": "json/Glitch Fall (2).json"
+    },
+    {
+      "title": "My Level by metal machine",
+      "author": "Metal Machine",
+      "path": "json/My_Level_1_1.json"
     },
     {
       "title": "jump to 3000 (deco)",

@@ -166,6 +166,11 @@
       "path": "json/FRSR.json"
     },
     {
+      "title": "My Level (1) (3) patched",
+      "author": "Zyliqx, modified by Charlieee1",
+      "path": "json/My Level (1) (3) patched.json"
+    },
+    {
       "title": "Easy model of Lightning",
       "author": "Zeta",
       "path": "json/Easy model of Lightning.json"
@@ -206,6 +211,11 @@
       "path": "json/Bird Hopper.json"
     },
     {
+      "title": "My first level",
+      "author": "Unknown",
+      "path": "json/My first level.json"
+    },
+    {
       "title": "Baby Steps",
       "author": "Charlieee1",
       "path": "json/Baby Steps.json"
@@ -234,6 +244,11 @@
       "title": "Bloxel Dropper: Level 1",
       "author": "Norseman",
       "path": "json/Bloxel Dropper_ Level 1.json"
+    },
+    {
+      "title": "Boxel Dropper: Level 3",
+      "author": "Norseman",
+      "path": "json/Boxel Dropper_ Level 3.json"
     },
     {
       "title": "Bloxel Dropper: Level 2",
@@ -276,9 +291,19 @@
       "path": "json/But..., But...json"
     },
     {
-      "title": "Gun",
-      "author": "Junsie",
-      "path": "json/Gun_1.json"
+      "title": "first propper level",
+      "author": "Unknown",
+      "path": "json/first propper level.json"
+    },
+    {
+      "title": "Jenga",
+      "author": "Norseman",
+      "path": "json/first propper level.json"
+    },
+    {
+      "title": "Jenga",
+      "author": "Norseman",
+      "path": "json/Jenga 3D.json"
     },
     {
       "title": "ang3ls cave",
@@ -294,6 +319,16 @@
       "title": "level 30",
       "author": "Ember",
       "path": "json/level 30 (1).json"
+    },
+    {
+      "title": "My Level by tobi",
+      "author": "tobi",
+      "path": "json/My Level by tobi.json"
+    },
+    {
+      "title": "My Level by 16BitPlayer",
+      "author": "16BitPlayer",
+      "path": "json/My Level by 16BitPlayer.json"
     },
     {
       "title": "Fae_old",
@@ -321,9 +356,24 @@
       "path": "json/Its Just Very Long.json"
     },
     {
+      "title": "My Level about taking a break",
+      "author": "Unknown",
+      "path": "json/My Level about taking a break.json"
+    },
+    {
       "title": "JP002FR",
       "author": "Unknown",
       "path": "json/JP002FR (1).json"
+    },
+    {
+      "title": "My Level 2",
+      "author": "Unknown",
+      "path": "json/My Level 2.json"
+    },
+    {
+      "title": "Gun",
+      "author": "Junsie",
+      "path": "json/Gun_1.json"
     },
     {
       "title": "ang3l1c",
@@ -334,6 +384,11 @@
       "title": "John Dark souls",
       "author": "Unknown",
       "path": "json/John Dark souls.json"
+    },
+    {
+      "title": "My Level #49",
+      "author": "Unknown",
+      "path": "json/My_Level_49.json"
     },
     {
       "title": "Course Of Stress",
