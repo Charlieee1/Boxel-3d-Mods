@@ -41,6 +41,11 @@
       "path": "json/Car chase.json"
     },
     {
+      "title": "Platformer Test",
+      "author": "Charlieee1",
+      "path": "json/Platformer Test.json"
+    },
+    {
       "title": "Bounce Block Goofiness",
       "author": "Charlieee1",
       "path": "json/Bounce Block Goofiness.json"
@@ -96,6 +101,11 @@
       "path": "json/antigrav test 3.json"
     },
     {
+      "title": "No skill",
+      "author": "Unknown",
+      "path": "json/No skill.json"
+    },
+    {
       "title": "Acidity by Kllixto -VERIFIED >8*",
       "author": "Kllixto",
       "path": "json/Acidity by Kllixto -VERIFIED 8 .json"
@@ -141,6 +151,16 @@
       "path": "json/everything (1).json"
     },
     {
+      "title": "OBRC - Outer's Plinko CLASSIC",
+      "author": "outerbound",
+      "path": "json/OBRC - Outer_s Plinko CLASSIC.json"
+    },
+    {
+      "title": "OBRC - Outer's Plinko",
+      "author": "outerbound",
+      "path": "json/OBRC - Outer_s Plinko.json"
+    },
+    {
       "title": "Mobile level",
       "author": "Charlieee1",
       "path": "json/Mobile_level.json"
@@ -179,6 +199,11 @@
       "title": "built diffrent",
       "author": "Unknown",
       "path": "json/built diffrent (2).json"
+    },
+    {
+      "title": "Over-under",
+      "author": "Unknown",
+      "path": "json/Over-under.json"
     },
     {
       "title": "Banana Jam",

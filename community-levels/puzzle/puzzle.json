@@ -16,14 +16,29 @@
       "path": "json/bloopers.json"
     },
     {
-      "title": "Limbo",
+      "title": "not that simple",
+      "author": "Unknown",
+      "path": "json/not that simple.json"
+    },
+    {
+      "title": "One at a time",
       "author": "Ember",
-      "path": "json/Limbo.json"
+      "path": "json/One at a time.json"
     },
     {
       "title": "Match-up",
       "author": "Ember",
       "path": "json/Match-up.json"
+    },
+    {
+      "title": "Norseman's Level",
+      "author": "Norseman",
+      "path": "json/Norseman's Level.json"
+    },
+    {
+      "title": "Limbo",
+      "author": "Ember",
+      "path": "json/Limbo.json"
     },
     {
       "title": "coaster downhill",
