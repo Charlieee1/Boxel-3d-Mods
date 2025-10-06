@@ -46,6 +46,27 @@
       "path": "json/Platformer Test.json"
     },
     {
+      "title": "Platformer 1 v1",
+      "author": "Unknown",
+      "path": "json/Platformer 1 v1.json"
+    },
+    {
+      "title": "Platformer 2 v2",
+      "author": "Unknown",
+      "path": "json/Platformer 2 v2.json"
+    },
+    {
+      "title": "Platformer 3 v3",
+      "author": "Unknown",
+      "path": "json/Platformer 3 v3.json"
+    },
+    {
+    {
+      "title": "Platforming Fun",
+      "author": "Charlieee1",
+      "path": "json/Platforming Fun.json"
+    },
+    {
       "title": "Bounce Block Goofiness",
       "author": "Charlieee1",
       "path": "json/Bounce Block Goofiness.json"
@@ -144,6 +165,11 @@
       "title": "Deathcore lvl.3",
       "author": "Unknown",
       "path": "json/Deathcore lvl (3).json"
+    },
+    {
+      "title": "Parkour Legacy",
+      "author": "cloodiest",
+      "path": "json/Parkour Legacy (2).json"
     },
     {
       "title": "everything",
@@ -286,6 +312,11 @@
       "path": "json/Just_dont_move_1.json"
     },
     {
+      "title": "Curves & Gravity",
+      "author": "Unknown",
+      "path": "json/Curves & Gravity.json"
+    },
+    {
       "title": "Jumperman Hard",
       "author": "Unknown",
       "path": "json/Jumperman Hard.json"
@@ -364,6 +395,11 @@
       "title": "Extranomadx - deco test",
       "author": "outerbound",
       "path": "json/Extranomadx - deco test.json"
+    },
+    {
+      "title": "Only Up",
+      "author": "Majesticcss",
+      "path": "json/Only Up (1).json"
     },
     {
       "title": "100 Seconds",

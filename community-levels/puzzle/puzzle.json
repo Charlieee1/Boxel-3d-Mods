@@ -1,6 +1,11 @@
 {
   "levels": [
     {
+      "title": "poozle",
+      "author": "Ember",
+      "path": "json/poozle.json"
+    },
+    {
       "title": "Blockage",
       "author": "Ember",
       "path": "json/Blockage Decorated.json"
