@@ -43,7 +43,8 @@
     {
       "title": "Platformer Test",
       "author": "Charlieee1",
-      "path": "json/Platformer Test.json"
+      "path": "json/Platformer Test.json",
+      "description": "The first ever platformer level!"
     },
     {
       "title": "Platformer 1 v1",
@@ -221,6 +222,16 @@
       "path": "json/Easy model of Lightning.json"
     },
     {
+      "title": "Prelude",
+      "author": "outerbound",
+      "path": "json/Prelude.json"
+    },
+    {
+      "title": "Prelude no deco",
+      "author": "outerbound with modification by Charlieee1",
+      "path": "json/Prelude no deco.json"
+    },
+    {
       "title": "built diffrent",
       "author": "Unknown",
       "path": "json/built diffrent (2).json"
@@ -254,6 +265,11 @@
       "title": "Easy???",
       "author": "Unknown",
       "path": "json/Easy___.json"
+    },
+    {
+      "title": "Pyramid",
+      "author": "Unknown",
+      "path": "json/Pyramid.json"
     },
     {
       "title": "Bird Hopper",
@@ -491,6 +507,11 @@
       "path": "json/Getting thru it.json"
     },
     {
+      "title": "Random demo level",
+      "author": "Charlieee1",
+      "path": "json/Random demo level.json"
+    },
+    {
       "title": "acent",
       "author": "Fisher",
       "path": "json/acent.json"
@@ -524,6 +545,16 @@
       "title": "Level 37",
       "author": "epicbobman",
       "path": "json/Modded Campaign Level 37.json"
+    },
+    {
+      "title": "Red",
+      "author": "iRhedd",
+      "path": "json/Red.json"
+    },
+    {
+      "title": "Red II",
+      "author": "iRhedd",
+      "path": "json/Red II.json"
     },
     {
       "title": "Modded Level 2",
