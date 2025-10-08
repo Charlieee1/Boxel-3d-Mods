@@ -752,5 +752,11 @@
       "Added level editor color shortcut: \"Shift\" + \"Click\" to copy color from selected cube",
       "Fixed level pack 404 errors"
     ]
+  },
+  {
+    "version": "2.7.8",
+    "revisions": [
+      "Added input buffer verification badge to thumbnail"
+    ]
   }
 ]
