@@ -367,6 +367,66 @@
       "path": "json/first propper level.json"
     },
     {
+      "title": "Sneaky",
+      "author": "Chester",
+      "path": "Levels/Sneaky.json"
+    },
+    {
+      "title": "Get Snailed",
+      "author": "Chester",
+      "path": "Levels/Get Snailed.json"
+    },
+    {
+      "title": "Pepsin",
+      "author": "Nate",
+      "path": "Levels/Pepsin.json"
+    },
+    {
+      "title": "GET COOKED",
+      "author": "Nate",
+      "path": "Levels/GET COOKED.json"
+    },
+    {
+      "title": "Double Jump Master!!!",
+      "author": "Chester",
+      "path": "Levels/Double Jump Master.json"
+    },
+    {
+      "title": "Compact Hell",
+      "author": "Chester",
+      "path": "Levels/Compact Hell.json"
+    },
+    {
+      "title": "Bomba Lester",
+      "author": "Nate",
+      "path": "Levels/Bomba Lester.json"
+    },
+    {
+      "title": "Bomba Lester Alpha",
+      "author": "Nate",
+      "path": "Levels/Bomba Lester Alpha.json"
+    },
+    {
+      "title": "Puzzle",
+      "author": "Chester",
+      "path": "Levels/Puzzle.json"
+    },
+    {
+      "title": "Reality Death",
+      "author": "Chester",
+      "path": "Levels/Reality Death.json"
+    },
+    {
+      "title": "Shake",
+      "author": "Chester",
+      "path": "Levels/Shake.json"
+    },
+    {
+      "title": "Autistique",
+      "author": "Chester",
+      "path": "Autistique.json"
+    }
+    {
       "title": "Jenga",
       "author": "Norseman",
       "path": "json/Jenga.json"
@@ -385,6 +445,11 @@
       "title": "3d",
       "author": "triptc",
       "path": "json/3d_1.json"
+    },
+    {
+      "title": "Portal basics",
+      "author": "CLASP the Protogen",
+      "path": "json/Portal basics (1).json"
     },
     {
       "title": "level 30",
