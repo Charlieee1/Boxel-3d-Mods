@@ -369,57 +369,57 @@
     {
       "title": "Sneaky",
       "author": "Chester",
-      "path": "Levels/Sneaky.json"
+      "path": "json/Sneaky.json"
     },
     {
       "title": "Get Snailed",
       "author": "Chester",
-      "path": "Levels/Get Snailed.json"
+      "path": "json/Get Snailed.json"
     },
     {
       "title": "Pepsin",
       "author": "Nate",
-      "path": "Levels/Pepsin.json"
+      "path": "json/Pepsin.json"
     },
     {
       "title": "GET COOKED",
       "author": "Nate",
-      "path": "Levels/GET COOKED.json"
+      "path": "json/GET COOKED.json"
     },
     {
-      "title": "Double Jump Master!!!",
+      "title": "Double Jump Master",
       "author": "Chester",
-      "path": "Levels/Double Jump Master.json"
+      "path": "json/Double Jump Master.json"
     },
     {
-      "title": "Compact Hell",
+      "title": "ver1",
       "author": "Chester",
-      "path": "Levels/Compact Hell.json"
+      "path": "json/Compact Hell.json"
     },
     {
       "title": "Bomba Lester",
       "author": "Nate",
-      "path": "Levels/Bomba Lester.json"
+      "path": "json/Bomba Lester.json"
     },
     {
       "title": "Bomba Lester Alpha",
       "author": "Nate",
-      "path": "Levels/Bomba Lester Alpha.json"
+      "path": "json/Bomba Lester Alpha.json"
     },
     {
       "title": "Puzzle",
       "author": "Chester",
-      "path": "Levels/Puzzle.json"
+      "path": "json/Puzzle.json"
     },
     {
       "title": "Reality Death",
       "author": "Chester",
-      "path": "Levels/Reality Death.json"
+      "path": "json/Reality Death.json"
     },
     {
       "title": "Shake",
       "author": "Chester",
-      "path": "Levels/Shake.json"
+      "path": "json/Shake.json"
     },
     {
       "title": "Autistique",
