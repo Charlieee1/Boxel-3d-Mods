@@ -16,6 +16,11 @@
       "path": "json/Cliff and Archway.json"
     },
     {
+      "title": ".Scavenger hunt v0_6",
+      "author": "Ember",
+      "path": "json/Scavenger hunt v0_7.json"
+    },
+    {
       "title": "Impossible Level v3 Solution",
       "author": "Charlieee1",
       "path": "json/Impossible Level v3 Solution.json"
@@ -74,6 +79,11 @@
       "title": "chaos theory",
       "author": "Unknown",
       "path": "json/chaos theory.json"
+    },
+    {
+      "title": "Rotation Bug",
+      "author": "Unknown",
+      "path": "json/Rotation_Bug.json"
     },
     {
       "title": "new level for game",

@@ -217,6 +217,11 @@
       "path": "json/My Level (1) (3) patched.json"
     },
     {
+      "title": "Boxel Auto",
+      "author": "lil_loser",
+      "path": "json/Boxel Auto.json"
+    },
+    {
       "title": "Easy model of Lightning",
       "author": "Zeta",
       "path": "json/Easy model of Lightning.json"
@@ -305,6 +310,11 @@
       "title": "Green_Bud4623_lvl2",
       "author": "Green_Bud4623",
       "path": "json/Green_Bud4623_lvl2.json"
+    },
+    {
+      "title": "Rylan McCrae",
+      "author": "Rylan McCrae",
+      "path": "json/Rylan McCrae.json"
     },
     {
       "title": "Bloxel Dropper: Level 1",
@@ -424,7 +434,7 @@
     {
       "title": "Autistique",
       "author": "Chester",
-      "path": "Autistique.json"
+      "path": "json/Autistique.json"
     },
     {
       "title": "Jenga",
@@ -510,6 +520,11 @@
       "title": "My Level 2",
       "author": "Unknown",
       "path": "json/My Level 2.json"
+    },
+    {
+      "title": "right 2",
+      "author": "Unknown",
+      "path": "json/right 2.json"
     },
     {
       "title": "Gun",
@@ -640,6 +655,11 @@
       "title": "Charlie cube",
       "author": "Unknown",
       "path": "json/Charlie cube.json"
+    },
+    {
+      "title": "rise up",
+      "author": "Ember",
+      "path": "json/rise up.json"
     },
     {
       "title": "loopy",

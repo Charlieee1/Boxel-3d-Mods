@@ -71,6 +71,11 @@
       "path": "json/Goal Kick.json"
     },
     {
+      "title": "shortcut city",
+      "author": "Ember",
+      "path": "json/shortcut city.json"
+    },
+    {
       "title": "Puzzle #10: Glider",
       "author": "Ember",
       "path": "json/Puzzle #10_ Glider.json"
