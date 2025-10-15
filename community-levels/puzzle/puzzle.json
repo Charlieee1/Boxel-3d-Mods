@@ -11,6 +11,16 @@
       "path": "json/Blockage Decorated.json"
     },
     {
+      "title": "Speed requirement",
+      "author": "Charlieee1",
+      "path": "json/Speed requirement.json"
+    },
+    {
+      "title": "Snake",
+      "author": "Ember",
+      "path": "json/Snake.json"
+    },
+    {
       "title": ".My Newest Puzzle >:)",
       "author": "Charlieee1",
       "path": "json/My Newest Puzzle.json"
@@ -49,6 +59,11 @@
       "title": "coaster downhill",
       "author": "CEO of Dislike",
       "path": "json/coaster downhill.json"
+    },
+    {
+      "title": "Sisyphus",
+      "author": "Norseman",
+      "path": "json/Sisyphus (2).json"
     },
     {
       "title": "Damp Caves",

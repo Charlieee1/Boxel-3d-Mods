@@ -337,6 +337,11 @@
       "path": "json/Bloxel Dropper_ Level 2.json"
     },
     {
+      "title": "space hopper",
+      "author": "Green-is-sam",
+      "path": "json/space hopper.json"
+    },
+    {
       "title": "Just don't move #1",
       "author": "Unknown",
       "path": "json/Just_dont_move_1.json"
@@ -350,6 +355,11 @@
       "title": "Jumperman Hard",
       "author": "Unknown",
       "path": "json/Jumperman Hard.json"
+    },
+    {
+      "title": "Slip to death",
+      "author": "Unknown",
+      "path": "json/Slip to death.json"
     },
     {
       "title": "Jump Park",
@@ -370,6 +380,11 @@
       "title": "Halfpipe Hopper",
       "author": "Green",
       "path": "json/Halfpipe Hopper.json"
+    },
+    {
+      "title": "Small Hard Level",
+      "author": "Unknown",
+      "path": "json/Small Hard Level (4).json"
     },
     {
       "title": "But..., But..., Chicken Butt",
@@ -450,6 +465,16 @@
       "title": "Jenga 3D",
       "author": "Norseman",
       "path": "json/Jenga 3D.json"
+    },
+    {
+      "title": "Snowboard Surfing",
+      "author": "outerbound",
+      "path": "json/Snowboard Surfing (3).json"
+    },
+    {
+      "title": "Sky Platforms",
+      "author": "(Github?) Copilot with Doppler's prompting",
+      "path": "json/Sky Platforms.json"
     },
     {
       "title": "ang3ls cave",
@@ -535,6 +560,11 @@
       "title": "Gun",
       "author": "Junsie",
       "path": "json/Gun_1.json"
+    },
+    {
+      "title": "Skittle-chan game",
+      "author": "Skittle-chan",
+      "path": "json/Skittle-chan game.json"
     },
     {
       "title": "ang3l1c",
@@ -660,11 +690,6 @@
       "title": "Charlie cube",
       "author": "Unknown",
       "path": "json/Charlie cube.json"
-    },
-    {
-      "title": "rise up",
-      "author": "Ember",
-      "path": "json/rise up.json"
     },
     {
       "title": "loopy",
