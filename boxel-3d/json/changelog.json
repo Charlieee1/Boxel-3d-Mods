@@ -758,5 +758,11 @@
     "revisions": [
       "Added input buffer verification badge to thumbnail"
     ]
+  },
+  {
+    "version": "2.7.9",
+    "revisions": [
+      "Added custom events for modding"
+    ]
   }
 ]
