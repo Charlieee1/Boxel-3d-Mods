@@ -1,4 +1,15 @@
 {
+  "theme": "classic",
+  "description": "Join <a href=\"https://discord.gg/MvT3SFkBvE\">the Discord</a>",
+  "links": [
+    {
+      "class":"discord",
+      "icon":"../svg/discord.svg",
+      "target":"_blank",
+      "text":"Join the Discord",
+      "url":"https://discord.gg/MvT3SFkBvE"
+    }
+  ],
   "levels": [
     {
       "title": "The Boxel Library",
