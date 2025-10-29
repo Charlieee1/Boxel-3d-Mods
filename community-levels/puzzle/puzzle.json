@@ -46,6 +46,11 @@
       "path": "json/Match-up.json"
     },
     {
+      "title": "Boost",
+      "author": "Ember",
+      "path": "json/Boost.json"
+    },
+    {
       "title": "Norseman's Level",
       "author": "Norseman",
       "path": "json/Norseman's Level.json"
