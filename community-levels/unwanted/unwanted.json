@@ -2,7 +2,7 @@
   "levels": [
     {
       "title": "Blender",
-      "author": "Unknown",
+      "author": "Majesticcss",
       "path": "json/Blender.json"
     },
     {
@@ -32,7 +32,7 @@
     },
     {
       "title": "Coil",
-      "author": "Unknown",
+      "author": "Majesticcss",
       "path": "json/Coil.json"
     },
     {
@@ -57,7 +57,7 @@
     },
     {
       "title": "Blind V2",
-      "author": "Unknown",
+      "author": "Powerdodododo",
       "path": "json/Blind V2.json"
     },
     {
@@ -67,7 +67,7 @@
     },
     {
       "title": "Blind",
-      "author": "Unknown",
+      "author": "Powerdodododo",
       "path": "json/Blind.json"
     }
   ]
