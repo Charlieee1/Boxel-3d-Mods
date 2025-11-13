@@ -41,6 +41,11 @@
       "path": "json/One at a time.json"
     },
     {
+      "title": "Two at a time",
+      "author": "Ember",
+      "path": "json/Two at a time.json"
+    },
+    {
       "title": "Match-up",
       "author": "Ember",
       "path": "json/Match-up.json"
@@ -49,6 +54,21 @@
       "title": "Boost",
       "author": "Ember",
       "path": "json/Boost.json"
+    },
+    {
+      "title": "Speed Stacker",
+      "author": "Ember",
+      "path": "json/Speed Stacker.json"
+    },
+    {
+      "title": "Speed Stacker (patched)",
+      "author": "Ember",
+      "path": "json/Speed Stacker (patched).json"
+    },
+    {
+      "title": "Speed Stacker (patched 2)",
+      "author": "Ember",
+      "path": "json/Speed Stacker (patched 2).json"
     },
     {
       "title": "Norseman's Level",

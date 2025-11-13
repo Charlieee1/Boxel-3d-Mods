@@ -1,0 +1,29 @@
+{
+  "levels": [
+    {
+      "title": "Flips and Bounces",
+      "author": "Charlieee1",
+      "path": "json/Flips and Bounces.json"
+    },
+    {
+      "title": "Marble Mania",
+      "author": "Ember",
+      "path": "json/Marble Mania.json"
+    },
+    {
+      "title": "Dont Move ",
+      "author": "Majesticcss",
+      "path": "json/Dont Move Complete.json"
+    },
+    {
+      "title": "afk by Aclossic",
+      "author": "Aclossic",
+      "path": "json/afk by Aclossic.json"
+    },
+    {
+      "title": "Boxel Auto",
+      "author": "lil_loser",
+      "path": "json/Boxel Auto.json"
+    }
+  ]
+}
