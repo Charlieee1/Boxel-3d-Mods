@@ -22,7 +22,7 @@ var getPlayer = () => {return app.player};
 var getPlayerBody = () => {return app.player.body};
 var getPlayerSpeed = () => {return getPlayerBody().speed};
 var isDead = app.player.isFrozen();
-var canJump = () => {return app.player.allowJump};
+var canJump = () => {return app.player.jumpReady};
 var getLevel = () => {return app.level};
 var getEngine = () => {return app.engine};
 var getWorld = () => {return app.engine.world};
