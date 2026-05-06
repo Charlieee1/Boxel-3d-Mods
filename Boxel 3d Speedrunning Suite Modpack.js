@@ -200,10 +200,10 @@ var addModToList;
 // ==UserScript==
 // @name         Boxel 3d Time Manipulator
 // @namespace    http://tampermonkey.net/
-// @version      v1.2.1
+// @version      v1.2.2
 // @description  Time manipulator library for boxel 3d
 // @author       Charlieee1
-// @match        *dopplercreative.com/boxel-3d/play/*
+// @match        *charlieee1.github.io/Boxel-3d-Mods/boxel-3d/v1/index.html*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
@@ -253,7 +253,9 @@ function resetTime() {
         var e = Date.now();
         app.timer.startTime = e,
         app.timer.pauseTime = e,
-        app.timer.playTime = 0
+        app.timer.playTime = 0,
+        app.timer.lastTime = 0,
+        app.timer.isPaused = !0
         // END Doppler's code
 
         afterLevelStart.forEach((func) => func());
