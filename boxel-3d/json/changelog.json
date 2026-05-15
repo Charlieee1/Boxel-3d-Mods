@@ -772,5 +772,72 @@
       "Fixed level editor file bug",
       "Updated libraries"
     ]
+  },
+  {
+    "version": "2.8.1",
+    "revisions": [
+      "Added more mod support"
+    ]
+  },
+  {
+    "version": "2.8.2",
+    "revisions": [
+      "Added Discord links",
+      "Updated libraries"
+    ]
+  },
+  {
+    "version": "2.8.3",
+    "revisions": [
+      "Added Level Pack Button",
+      "Update level editor shortcuts (credit: Charlieee1)",
+      "Removed Steam Workshop"
+    ]
+  },
+  {
+    "version": "2.8.4",
+    "revisions": [
+      "Fixed level picker shortcut bug"
+    ]
+  },
+  {
+    "version": "2.8.5",
+    "revisions": [
+      "Optimized game performance (credit: Charlieee1)",
+      "Updated game libraries",
+      "Fixed level editor bugs",
+      "Fixed missing workshop theme"
+    ]
+  },
+  {
+    "version": "2.8.6",
+    "revisions": [
+      "Added Speedrun links to Community Pack",
+      "Added unlimited local storage",
+      "Fixed pause timer bug",
+      "Fixed grapple restart bug"
+    ]
+  },
+  {
+    "version": "2.8.7",
+    "revisions": [
+      "Added \"Putty\" tool to level editor",
+      "Fixed timer UI bugs",
+      "Fixed rotation bug in level editor",
+      "Fixed duplication bug in level editor"
+    ]
+  },
+  {
+    "version": "2.8.8",
+    "revisions": [
+      "Added \"Putty\" rotation lock (ex: Hold Shift)",
+      "Added \"Putty\" draggable line"
+    ]
+  },
+  {
+    "version": "2.8.9",
+    "revisions": [
+      "Added camera zoom option (Settings > Graphics > Zoom)"
+    ]
   }
 ]

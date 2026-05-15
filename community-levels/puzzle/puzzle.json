@@ -21,9 +21,9 @@
       "path": "json/Snake.json"
     },
     {
-      "title": ".My Newest Puzzle >:)",
-      "author": "Charlieee1",
-      "path": "json/My Newest Puzzle.json"
+      "title": "Floodgates",
+      "author": "Ember",
+      "path": "json/Floodgates.json"
     },
     {
       "title": "bloopers",
@@ -76,14 +76,29 @@
       "path": "json/Norseman's Level.json"
     },
     {
+      "title": "...A hard level",
+      "author": "Swan",
+      "path": "json/A hard level.json"
+    },
+    {
       "title": "Limbo",
       "author": "Ember",
       "path": "json/Limbo.json"
     },
     {
+      "title": ".Bring the block!",
+      "author": "Swan",
+      "path": "json/Bring the block! (1).json"
+    },
+    {
       "title": "coaster downhill",
       "author": "CEO of Dislike",
       "path": "json/coaster downhill.json"
+    },
+    {
+      "title": "confusion 2 garbage",
+      "author": "Unknown",
+      "path": "json/confusion 2.json"
     },
     {
       "title": "Sisyphus",
@@ -116,9 +131,24 @@
       "path": "json/shortcut city.json"
     },
     {
+      "title": "...........................My Level",
+      "author": "Unknown",
+      "path": "json/My Level (1).json"
+    },
+    {
       "title": "Puzzle #10: Glider",
       "author": "Ember",
       "path": "json/Puzzle #10_ Glider.json"
+    },
+    {
+      "title": "guesser",
+      "author": "Unknown",
+      "path": "json/guesser (1).json"
+    },
+    {
+      "title": "((((((((((Escape Room 2",
+      "author": "Unknown",
+      "path": "json/((((((((((Escape Room 2.json"
     },
     {
       "title": "Glitch Fall",

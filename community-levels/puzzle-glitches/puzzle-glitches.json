@@ -1,0 +1,24 @@
+{
+  "levels": [
+    {
+      "title": ".Adam's Event Hard Level 1",
+      "author": "Charlieee1",
+      "path": "json/Adam's Event Hard Level 1.json"
+    },
+    {
+      "title": "Impossible Level v3",
+      "author": "Charlieee1",
+      "path": "json/Impossible Level v3.json"
+    },
+    {
+      "title": ".My Newest Puzzle >:)",
+      "author": "Charlieee1",
+      "path": "json/My Newest Puzzle.json"
+    },
+    {
+      "title": "My Level by metal machine",
+      "author": "Metal Machine",
+      "path": "json/My_Level_1_1.json"
+    }
+  ]
+}

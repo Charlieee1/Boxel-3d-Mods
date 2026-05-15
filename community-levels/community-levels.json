@@ -22,6 +22,16 @@
       "path": "json/theMostannoying level.json"
     },
     {
+      "title": "Don't fall",
+      "author": "Green-is-sam",
+      "path": "json/Don't fall.json"
+    },
+    {
+      "title": "Colors",
+      "author": "Green-is-sam",
+      "path": "json/Colors.json"
+    },
+    {
       "title": "Momentous",
       "author": "Ember",
       "path": "json/Momentous.json"
@@ -32,24 +42,9 @@
       "path": "json/faster than a bullet.json"
     },
     {
-      "title": "Tornado",
-      "author": "Unknown",
-      "path": "json/Tornado_2.json"
-    },
-    {
-      "title": "A Normal Day",
-      "author": "cloodiest",
-      "path": "json/A Normal Day.json"
-    },
-    {
-      "title": "Multiplier",
-      "author": "Majesticcss",
-      "path": "json/Multiplier.json"
-    },
-    {
-      "title": "Fire Ritual",
-      "author": "Charlieee1 & .noobus",
-      "path": "json/Fire Ritual.json"
+      "title": "halfpipe hopper 2",
+      "author": "Green-is-sam",
+      "path": "json/halfpipe hopper .json"
     },
     {
       "title": "Deep Dip Floor",
@@ -67,6 +62,31 @@
       "path": "json/A hint of nostalgia final.json"
     },
     {
+      "title": "Knock Knock",
+      "author": "Green-is-sam",
+      "path": "json/Knock Knock FINAL.json"
+    },
+    {
+      "title": "Fire Ritual",
+      "author": "Charlieee1 & .noobus",
+      "path": "json/Fire Ritual.json"
+    },
+    {
+      "title": "A Normal Day",
+      "author": "cloodiest",
+      "path": "json/A Normal Day.json"
+    },
+    {
+      "title": "Multiplier",
+      "author": "Majesticcss",
+      "path": "json/Multiplier.json"
+    },
+    {
+      "title": "Boxelcraft2",
+      "author": "Winderthedrone",
+      "path": "json/boxelcraft.json"
+    },
+    {
       "title": "Break in",
       "author": "Green-is-sam",
       "path": "json/Break in FINAL.json"
@@ -80,6 +100,11 @@
       "title": "Car chase",
       "author": "SwapSpace",
       "path": "json/Car chase.json"
+    },
+    {
+      "title": "afk 3",
+      "author": "Max",
+      "path": "json/afk 3 (2).json"
     },
     {
       "title": "Platformer Test",
@@ -118,19 +143,24 @@
       "path": "json/boxel level.json"
     },
     {
-      "title": "Floodgates",
-      "author": "Ember",
-      "path": "json/Floodgates.json"
-    },
-    {
       "title": "Inclement Weather",
       "author": "Ember",
       "path": "json/Inclement Weather.json"
     },
     {
+      "title": "Tornado",
+      "author": "Unknown",
+      "path": "json/Tornado_2.json"
+    },
+    {
       "title": "Collapse",
       "author": "Green-is-sam",
       "path": "json/Collapse.json"
+    },
+    {
+      "title": "desktop1",
+      "author": "DesktopDocs",
+      "path": "json/desktop1.json"
     },
     {
       "title": "antigrav test 3",
@@ -191,6 +221,11 @@
       "title": "everything",
       "author": "Unknown",
       "path": "json/everything (1).json"
+    },
+    {
+      "title": "...........(not flappy bird)",
+      "author": "Unknown",
+      "path": "json/(not flappy bird).json"
     },
     {
       "title": "OBRC - Outer's Plinko CLASSIC",
@@ -323,6 +358,16 @@
       "path": "json/Green_Bud4623_lvl2.json"
     },
     {
+      "title": "High Jump!",
+      "author": "Unknown",
+      "path": "json/High Jump! (1).json"
+    },
+    {
+      "title": "First Steps",
+      "author": "Green-is-sam",
+      "path": "json/First Steps.json"
+    },
+    {
       "title": "Rylan McCrae",
       "author": "Rylan McCrae",
       "path": "json/Rylan McCrae.json"
@@ -351,6 +396,11 @@
       "title": "Just don't move #1",
       "author": "Unknown",
       "path": "json/Just_dont_move_1.json"
+    },
+    {
+      "title": "Only Up",
+      "author": "Majesticcss",
+      "path": "json/Only Up (1).json"
     },
     {
       "title": "Curves & Gravity",
@@ -483,6 +533,11 @@
       "path": "json/Sky Platforms.json"
     },
     {
+      "title": "Climb before it falls",
+      "author": "Swan",
+      "path": "json/Climb before it falls.json"
+    },
+    {
       "title": "ang3ls cave",
       "author": "Ang3l",
       "path": "json/ang3ls cave.json"
@@ -526,11 +581,6 @@
       "title": "Extranomadx - deco test",
       "author": "outerbound",
       "path": "json/Extranomadx - deco test.json"
-    },
-    {
-      "title": "Only Up",
-      "author": "Majesticcss",
-      "path": "json/Only Up (1).json"
     },
     {
       "title": "100 Seconds",
@@ -618,11 +668,6 @@
       "path": "json/7465737431.json"
     },
     {
-      "title": "Chain reactions",
-      "author": "Majesticcss",
-      "path": "json/Chain reactions.json"
-    },
-    {
       "title": "High Contrast",
       "author": "Green-is-sam",
       "path": "json/High Contrast.json"
@@ -636,6 +681,11 @@
       "title": "acent",
       "author": "Fisher",
       "path": "json/acent.json"
+    },
+    {
+      "title": "hello",
+      "author": "Unknown",
+      "path": "json/hello.json"
     },
     {
       "title": "Random demo level",

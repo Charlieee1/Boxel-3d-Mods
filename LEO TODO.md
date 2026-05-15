@@ -1,0 +1,26 @@
+- Autosave
+- Saved object groups
+- Different fast build, dragging to create thin blocks
+- Duplicate block during translation
+- Hover controls transform mode
+- Offset building plane (different z value)
+- Flip multiselect selections
+- Default block colour config
+- Reset camera z position and rotation
+- Set camera XY position
+- UI panel to show current action
+- Cut out blocks (perpendicular/parallel cuts only)
+- Force build (not select block)
+- Keybind to deselect block
+
+- Invisible blocks
+- Better multiselect (drag to select)
+- Plugins
+- Group modify (be able to change many models at once)
+- Snap blocks to each others':
+  - Vertices
+  - Centres of ends of blocks
+- Physics simulation for chains
+- Rotation around offset point
+- Gameplay/deco layers
+

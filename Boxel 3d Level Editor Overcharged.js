@@ -10,6 +10,72 @@ function deepEqual(x, y) {
     ) : (x === y);
 }
 
+function getCanvas() {
+    return document.getElementById("app").children[0];
+}
+
+// Listen for pure clicks without drags
+const mouseClickEvents = new Map();
+function addMouseClickEventListener(func, element) {
+    if (!mouseClickEvents.get(element))
+        mouseClickEvents.set(element, []);
+    mouseClickEvents.get(element).push(func);
+}
+function removeMouseClickEventListener(func, element) {
+    if (!mouseClickEvents.get(element)) return;
+    if (mouseClickEvents.get(element).includes(func)) {
+        mouseClickEvents.get(element).splice(mouseClickEvents.get(element).indexOf(func), 1);
+    }
+}
+const eventListener = {
+    mouseDownPos: { x: 0, y: 0 },
+    mouseMoved: false,
+
+    mousedown(e) {
+        this.mouseDownPos = {
+            x: e.clientX,
+            y: e.clientY
+        };
+        this.mouseMoved = false;
+        e.currentTarget.addEventListener("pointermove", this.boundMouseMove);
+    },
+
+    mousemove(e) {
+        if (this.mouseMoved) return;
+        if (
+            Math.abs(e.clientX - this.mouseDownPos.x) > 5 ||
+            Math.abs(e.clientY - this.mouseDownPos.y) > 5
+        ) {
+            this.mouseMoved = true;
+        }
+    },
+
+    mouseup(e) {
+        e.currentTarget.removeEventListener("pointermove", this.boundMouseMove);
+        if (this.mouseMoved) return;
+        mouseClickEvents.get(e.currentTarget).forEach(func => { func(e); });
+    }
+};
+eventListener.boundMouseDown = eventListener.mousedown.bind(eventListener);
+eventListener.boundMouseMove = eventListener.mousemove.bind(eventListener);
+eventListener.boundMouseUp = eventListener.mouseup.bind(eventListener);
+function startMouseClickListener(element) {
+    element.addEventListener("pointerdown", eventListener.boundMouseDown);
+    element.addEventListener("pointerup", eventListener.boundMouseUp);
+}
+function stopMouseClickListener(element) {
+    element.removeEventListener("pointerdown", eventListener.boundMouseDown);
+    element.removeEventListener("pointerup", eventListener.boundMouseUp);
+}
+function setupMouseClickListener(func, element) {
+    addMouseClickEventListener(func, element);
+    startMouseClickListener(element);
+}
+function setdownMouseClickListener(func, element) {
+    removeMouseClickEventListener(func, element);
+    stopMouseClickListener(element);
+}
+
 var buttons = [];
 
 function addButton(title, callback) {
@@ -29,6 +95,7 @@ function canDoAction() {
     if (app.state != "level-editor") return; // Make sure user has a level open in the editor
     if (document.getElementsByClassName("dialog").length != 0) return; // Make sure user does not have a popup open
     if (app.play) return; // Make sure user is not playing the level
+    if (strongDisableAction) return;
     return true;
 }
 
@@ -80,16 +147,60 @@ function rotatePoint(x, y, z, rotation) {
 
     return [x, y, z];
 }
+// Projects a ray from the camera to the mouse to the z=0 plane and returns the intersection point
+function getCoordsFromMouse(e, snap = true) {
+    let pos = app.mouse.getPosition(e, app);
+    if (snap) {
+        pos.x = app.mouse.snapToValue(pos.x, app.mouse.snap);
+        pos.y = app.mouse.snapToValue(pos.y, app.mouse.snap);
+    }
+    return pos;
+}
+// Same thing but an arbitrary z-offset for the plane
+function getCoordsFromMouseZ(e, zOffset, snap = true) {
+    app.camera.position.z -= zOffset;
+    let pos = getCoordsFromMouse(e, snap);
+    app.camera.position.z += zOffset;
+    return pos;
+}
+// Same thing but finding the block the user is clicking on instead
+function getBlockPointedAt(e) {
+    return app.mouse.clickObject(e, app);
+}
+
+// Disables vanilla mouse clicking functionality
+const originalMouseDown = app.mouse.mouseDown;
+const originalMouseUp = app.mouse.mouseUp;
+function disableVanillaClicking() {
+    app.mouse.mouseDown =
+    app.mouse.mouseUp = () => {};
+}
+function enableVanillaClicking() {
+    app.mouse.mouseDown = originalMouseDown;
+    app.mouse.mouseUp = originalMouseUp;
+}
+
+// Disables vanilla camera movement functionality
+function disableVanillaCamMove() {
+    app.levelEditor.controlsOrbit.enablePan = false;
+    app.levelEditor.controlsOrbit.enableRotate = false;
+    app.levelEditor.controlsOrbit.enableZoom = false;
+}
+function enableVanillaCamMove() {
+    app.levelEditor.controlsOrbit.enablePan = true;
+    app.levelEditor.controlsOrbit.enableRotate = true;
+    app.levelEditor.controlsOrbit.enableZoom = true;
+}
 
 function updateObject(obj) {
     app.levelEditor.updateRender();
 
-    // START Modified Doppler's code
-    var e = obj;
-    app.levelEditor.keys.ShiftLeft ? app.levelEditor.controlsTransform.offset.copy(e.position).sub(e.position0) : app.levelEditor.controlsTransform.offset.set(0, 0, 0), e.position.z == 0 ? e.body.collisionFilter.mask = -1 : e.body.collisionFilter.mask = 0, e.setPosition(e.getPosition());
-    var t = e.rotation.z;
-    e.setRotation(0, false), e.setBodyScale(e.scale.x / e.scale0?.x || 1, e.scale.y / e.scale0?.y || 1), e.setRotation(t, false), e.setScale(e.getScale()), e.setRotation(e.getRotation()), app.levelHistory.save("Object updated", app);
-    // END Modified Doppler's code
+    let tempSelectedObject = app.selectedObject;
+    app.selectedObject = obj;
+    // app.levelEditor.updateSelectedObject();
+    app.levelEditor.updateRender();
+    app.selectedObject = tempSelectedObject;
+    // obj.updateMatrixWorld();
 
     window.dispatchEvent(new CustomEvent("objectChange", { detail: obj }));
     app.levelEditor.controlsTransform.dispatchEvent(new CustomEvent("change"));
@@ -242,6 +353,7 @@ function listenForControlBlocksUpdate(blocks, callback) {
 
 // To ensure only one action is used at a time
 var actionEnabled = false;
+var strongDisableAction = false;
 
 var actions = {
     confirm: () => { },
@@ -521,172 +633,283 @@ function multiSelectStage3(smallBoiBlocks) {
     }
 }
 
-// TODO: make this work with rotation
-function singleDirectionScaling() {
-    let obj = app.selectedObject;
-    if (!obj) return;
-    if (actionEnabled && actionEnabled != "multiselect-modification") return;
-    if (!canDoAction()) return;
-
-    let multiSelectEnabled = actionEnabled == "multiselect-modification";
-    actionEnabled = "singledirectionscaling";
-    deselectObject();
-    var original = {
-        scale: {
-            x: obj.scaleOrigin.x,
-            y: obj.scaleOrigin.y,
-            z: obj.scaleOrigin.z
-        },
-        position: {
-            x: obj.positionOrigin.x,
-            y: obj.positionOrigin.y,
-            z: obj.positionOrigin.z
-        }
+async function fbCreate(saved) {
+    let resolve;
+    let originalCancel = actions.cancel;
+    let canvas = getCanvas();
+    let eventFunc = e => {
+        let pos = getCoordsFromMouse(e);
+        saved.block = app.level.entityFactory.createObject(app.levelEditor.selectedObjectType, null);
+        app.level.setObjectProperties(saved.block,
+            {
+                class: app.levelEditor.selectedObjectType,
+                isStatic: true,
+                position: pos,
+                rotation: { x: 0, y: 0, z: 0 },
+                scale: { x: app.BOX_SIZE, y: app.BOX_SIZE, z: app.BOX_SIZE }
+            }
+        );
+        saved.origin = pos;
+        actions.cancel = originalCancel;
+        setdownMouseClickListener(eventFunc, canvas);
+        app.level.addObject(saved.block, app);
+        updateObject(saved.block);
+        resolve(1);
     };
 
-    let controlBlocks = {
-        left: createControlBlock(obj.position.x - obj.scale.x * .5, obj.position.y, obj.position.z),
-        right: createControlBlock(obj.position.x + obj.scale.x * .5, obj.position.y, obj.position.z),
-        top: createControlBlock(obj.position.x, obj.position.y + obj.scale.y * .5, obj.position.z),
-        bottom: createControlBlock(obj.position.x, obj.position.y - obj.scale.y * .5, obj.position.z),
-        front: createControlBlock(obj.position.x, obj.position.y, obj.position.z + obj.scale.z * .5),
-        back: createControlBlock(obj.position.x, obj.position.y, obj.position.z - obj.scale.z * .5)
+    let finish = () => {
+        actions.cancel = originalCancel;
+        setdownMouseClickListener(eventFunc, canvas);
+        resolve(-1);
     };
+    actions.cancel = finish;
 
-    function getCoords() {
-        return {
-            left: controlBlocks.left.position.x,
-            right: controlBlocks.right.position.x,
-            top: controlBlocks.top.position.y,
-            bottom: controlBlocks.bottom.position.y,
-            front: controlBlocks.front.position.z,
-            back: controlBlocks.back.position.z,
+    setupMouseClickListener(eventFunc, canvas);
+    return new Promise(r => {
+        resolve = r;
+    });
+}
+async function fbScaleXY(saved) {
+    let resolve;
+    let originalCancel = actions.cancel;
+    let canvas = getCanvas();
+    let block = saved.block;
+    let origin = saved.origin;
+
+    let eventFunc1 = e => {
+        let pos2 = getCoordsFromMouse(e);
+        let pos = {
+            x: .5 * (origin.x + pos2.x),
+            y: .5 * (origin.y + pos2.y),
+            z: 0
         };
-    }
+        let scale = {
+            x: Math.abs(origin.x - pos2.x),
+            y: Math.abs(origin.y - pos2.y),
+            z: app.BOX_SIZE
+        };
+        app.level.setObjectProperties(block,
+            {
+                position: pos,
+                rotation: { x: 0, y: 0, z: 0 },
+                scale: scale
+            }
+        );
+        updateObject(block);
+    };
+    let eventFunc2 = () => {
+        actions.cancel = originalCancel;
+        canvas.removeEventListener("mousemove", eventFunc1);
+        setdownMouseClickListener(eventFunc2, canvas);
+        updateObject(block);
+        resolve(2);
+    };
 
-    function updateScale() {
-        let coords = getCoords();
+    let finish = () => {
+        actions.cancel = originalCancel;
+        canvas.removeEventListener("mousemove", eventFunc1);
+        setdownMouseClickListener(eventFunc2, canvas);
+        app.level.removeObject(block, app, true);
+        updateObject(block);
+        resolve(-1);
+    };
+    actions.cancel = finish;
 
-        let width = coords.right - coords.left;
-        let height = coords.top - coords.bottom;
-        let depth = coords.front - coords.back;
-        let x = .5 * (coords.left + coords.right);
-        let y = .5 * (coords.top + coords.bottom);
-        let z = .5 * (coords.front + coords.back);
-
-        obj.positionOrigin.x = x;
-        obj.position.x = x;
-        obj.scaleOrigin.x = width;
-        obj.scale.x = width;
-
-        obj.positionOrigin.y = y;
-        obj.position.y = y;
-        obj.scaleOrigin.y = height;
-        obj.scale.y = height;
-
-        obj.positionOrigin.z = z;
-        obj.position.z = z;
-        obj.scaleOrigin.z = depth;
-        obj.scale.z = depth;
-
-        updateObject(obj);
-
-        // Update the control block positions
-        (() => {
-            controlBlocks.left.positionOrigin.y = y;
-            controlBlocks.left.positionOrigin.z = z;
-            controlBlocks.left.position.y = y;
-            controlBlocks.left.position.z = z;
-
-            controlBlocks.right.positionOrigin.y = y;
-            controlBlocks.right.positionOrigin.z = z;
-            controlBlocks.right.position.y = y;
-            controlBlocks.right.position.z = z;
-
-            controlBlocks.top.positionOrigin.x = x;
-            controlBlocks.top.positionOrigin.z = z;
-            controlBlocks.top.position.x = x;
-            controlBlocks.top.position.z = z;
-
-            controlBlocks.bottom.positionOrigin.x = x;
-            controlBlocks.bottom.positionOrigin.z = z;
-            controlBlocks.bottom.position.x = x;
-            controlBlocks.bottom.position.z = z;
-
-            controlBlocks.front.positionOrigin.x = x;
-            controlBlocks.front.positionOrigin.y = y;
-            controlBlocks.front.position.x = x;
-            controlBlocks.front.position.y = y;
-
-            controlBlocks.back.positionOrigin.x = x;
-            controlBlocks.back.positionOrigin.y = y;
-            controlBlocks.back.position.x = x;
-            controlBlocks.back.position.y = y;
-        })();
-    }
-
-    let clearListener = listenForControlBlocksUpdate(controlBlocks, updateScale);
-
-    let prevConfirmAction = actions.confirm;
-    let prevCancelAction = actions.cancel;
-    // if (!multiSelectEnabled) {
-    //     delete prevConfirmAction;
-    //     delete prevCancelAction;
-    // }
-    actions.confirm = () => {
-        clearListener();
-        Object.keys(controlBlocks).forEach(key => {
-            deleteControlBlock(controlBlocks[key]);
-        });
-        deselectObject();
-        actions.confirm = () => { };
-        actions.cancel = () => { };
-        actionEnabled = false;
-        fullUpdateObject(obj);
-        if (multiSelectEnabled) {
-            actions.confirm = prevConfirmAction;
-            actions.cancel = prevCancelAction;
+    canvas.addEventListener("mousemove", eventFunc1);
+    setupMouseClickListener(eventFunc2, canvas);
+    return new Promise(r => {
+        resolve = r;
+    });
+}
+async function fbRotateXY(saved) {
+    let resolve;
+    let originalCancel = actions.cancel;
+    let canvas = getCanvas();
+    let block = saved.block;
+    let origin = block.position;
+    let rotationSnap = app.mouse.snap > 1 ? Math.PI / 12 : null; // Taken straight from doppler's code
+    let snapFunc = rotationSnap
+        ? (angle) => {
+            return Math.round(angle / rotationSnap) * rotationSnap;
         }
+        : (angle) => {
+            return angle;
+        };
+
+    let eventFunc1 = e => {
+        let pos2 = getCoordsFromMouse(e, false);
+        let angle = Math.atan2(pos2.y - origin.y, pos2.x - origin.x);
+        angle = snapFunc(angle)
+        block.setRotation({ x: 0, y: 0, z: angle });
+        updateObject(block);
+    };
+    let eventFunc2 = () => {
+        actions.cancel = originalCancel;
+        canvas.removeEventListener("mousemove", eventFunc1);
+        setdownMouseClickListener(eventFunc2, canvas);
+        updateObject(block);
+        resolve(3);
     };
 
-    actions.cancel = () => {
-        clearListener();
-        Object.keys(controlBlocks).forEach(key => {
-            let block = controlBlocks[key];
-            removeAnimatedObject(block);
-            app.level.removeObject(block, app, true);
-        });
-        deselectObject();
-        actions.confirm = prevConfirmAction;
-        actions.cancel = prevCancelAction;
+    let finish = () => {
+        actions.cancel = originalCancel;
+        canvas.removeEventListener("mousemove", eventFunc1);
+        setdownMouseClickListener(eventFunc2, canvas);
+        app.level.removeObject(block, app, true);
+        updateObject(block);
+        resolve(-1);
+    };
+    actions.cancel = finish;
+
+    canvas.addEventListener("mousemove", eventFunc1);
+    setupMouseClickListener(eventFunc2, canvas);
+    return new Promise(r => {
+        resolve = r;
+    });
+}
+async function fbMoveXY(saved) {
+    let resolve;
+    let originalCancel = actions.cancel;
+    let canvas = getCanvas();
+    let block = saved.block;
+
+    let eventFunc1 = e => {
+        let pos = getCoordsFromMouse(e);
+        block.setPosition(pos);
+        updateObject(block);
+    };
+    let eventFunc2 = () => {
+        actions.cancel = originalCancel;
+        canvas.removeEventListener("mousemove", eventFunc1);
+        setdownMouseClickListener(eventFunc2, canvas);
+        updateObject(block);
+        resolve(0);
+    };
+
+    let finish = () => {
+        actions.cancel = originalCancel;
+        canvas.removeEventListener("mousemove", eventFunc1);
+        setdownMouseClickListener(eventFunc2, canvas);
+        app.level.removeObject(block, app, true);
+        updateObject(block);
+        resolve(-1);
+    };
+    actions.cancel = finish;
+
+    canvas.addEventListener("mousemove", eventFunc1);
+    setupMouseClickListener(eventFunc2, canvas);
+    return new Promise(r => {
+        resolve = r;
+    });
+}
+
+var fastBuildState = "disabled"; // Also can be "enabled" or "shutdown"
+async function fastBuild() {
+    if (actionEnabled) return;
+    if (!canDoAction()) return;
+    if (fastBuildState == "disabled") {
+        fastBuildState = "enabled";
+        actionEnabled = "fastbuild";
+    } else if (fastBuildState == "enabled") {
+        fastBuildState = "shutdown";
+        actions.cancel();
+        return;
+    } else if (fastBuildState == "shutdown") return;
+
+    disableVanillaClicking();
+
+    let finish = () => {
+        fastBuildState = "disabled";
+        actions.confirm = actions.cancel = () => { };
         actionEnabled = false;
+        enableVanillaClicking();
+    }
+    actions.cancel = finish;
 
-        obj.positionOrigin.x = original.position.x;
-        obj.position.x = original.position.x;
-        obj.scaleOrigin.x = original.scale.x;
-        obj.scale.x = original.scale.x;
+    const stages = [fbCreate, fbScaleXY, fbRotateXY, fbMoveXY];
+    let state = 0;
+    let saved = { block: undefined, origin: undefined }
+    while (state != -1) {
+        if (state == 0 && fastBuildState == "shutdown") break;
+        state = await stages[state](saved);
+    }
+    finish();
+}
 
-        obj.positionOrigin.y = original.position.y;
-        obj.position.y = original.position.y;
-        obj.scaleOrigin.y = original.scale.y;
-        obj.scale.y = original.scale.y;
-
-        obj.positionOrigin.z = original.position.z;
-        obj.position.z = original.position.z;
-        obj.scaleOrigin.z = original.scale.z;
-        obj.scale.z = original.scale.z;
-
-        fullUpdateObject(obj);
-
-        if (multiSelectEnabled)
-            actions.cancel = prevactions.cancel;
+const dragMove = {
+    enabled: false,
+    state: "static",
+    offset: {x: 0, y: 0},
+    mousedown: () => {},
+    mousemove: () => {},
+    mouseup: () => {}
+};
+dragMove.mousedown = e => {
+    if (dragMove.state == "moving") return;
+    let block = getBlockPointedAt(e);
+    if (!block) return;
+    dragMove.state = "moving"
+    app.selectedObject = block;
+    let grabPos = getCoordsFromMouseZ(e, block.position.z);
+    dragMove.offset = {
+        x: grabPos.x - block.position.x,
+        y: grabPos.y - block.position.y
     };
+};
+dragMove.mousemove = e => {
+    if (dragMove.state == "static") return;
+    if (!app.selectedObject) return;
+    let block = app.selectedObject;
+    let pos = getCoordsFromMouseZ(e, block.position.z);
+    app.selectedObject.setPosition({
+        x: pos.x - dragMove.offset.x,
+        y: pos.y - dragMove.offset.y,
+        z: block.position.z
+    });
+    updateObject(block);
+};
+dragMove.mouseup = e => {
+    if (dragMove.state == "static") return;
+    dragMove.state = "static";
+    app.selectedObject = undefined;
+};
+
+function enableDragMove() {
+    if (!dragMove.enabled) {
+        dragMove.enabled = true;
+        actionEnabled = true;
+    } else return;
+    
+    disableVanillaClicking();
+    disableVanillaCamMove();
+
+    let canvas = getCanvas();
+    canvas.addEventListener("pointerdown", dragMove.mousedown);
+    canvas.addEventListener("pointerup", dragMove.mouseup);
+    canvas.addEventListener("pointermove", dragMove.mousemove);
+}
+function disableDragMove() {
+    if (dragMove.enabled) {
+        let canvas = getCanvas();
+        canvas.removeEventListener("pointerdown", dragMove.mousedown);
+        canvas.removeEventListener("pointerup", dragMove.mouseup);
+        canvas.removeEventListener("pointermove", dragMove.mousemove);
+        
+        if (dragMove.state == "moving") {
+            dragMove.mouseup();
+        }
+
+        enableVanillaClicking();
+        enableVanillaCamMove();
+        dragMove.enabled = false;
+        actionEnabled = false;
+    }
 }
 
 function toggleIntangibility() {
     let obj = app.selectedObject;
     if (!obj) return;
-    if (!canDoAction()) return; // Technically this should never be true, it's just a safety measure
+    if (!canDoAction()) return;
     if (obj.positionOrigin.z == 0) {
         obj.positionOrigin.z = -1e-6;
         obj.position.z = -1e-6;
@@ -698,11 +921,50 @@ function toggleIntangibility() {
     updateObject(obj);
 }
 
+function selectBlockType() {
+    if (!canDoAction()) return;
+    strongDisableAction = true;
+    let originalResetZAxis = app.levelEditor.resetZAxis;
+    app.levelEditor.resetZAxis = () => { };
+    let eventFunc = e => {
+        let key = e.key.toLowerCase();
+        let selectionComplete = true;
+        if (key == "`") { // Basic block
+            document.getElementsByClassName("level-editor")[0].children[1].children[0].children[0].click();
+        }
+        // All 13 other blocks
+        else if ("123456789".split("").includes(key)) {
+            document.getElementsByClassName("level-editor")[0].children[1].children[0].children[Number(key)].click();
+        } else if (key == "0") {
+            document.getElementsByClassName("level-editor")[0].children[1].children[0].children[10].click();
+        } else if (key == "-") {
+            document.getElementsByClassName("level-editor")[0].children[1].children[0].children[11].click();
+        } else if (key == "=") {
+            document.getElementsByClassName("level-editor")[0].children[1].children[0].children[12].click();
+        } else if (key == "\\") {
+            document.getElementsByClassName("level-editor")[0].children[1].children[0].children[13].click();
+        } else selectionComplete = false;
+        if (selectionComplete) finish();
+    };
+    let prevConfirmAction = actions.confirm;
+    let prevCancelAction = actions.cancel;
+    let finish = () => {
+        actions.confirm = prevConfirmAction;
+        actions.cancel = prevCancelAction;
+        strongDisableAction = false;
+        app.levelEditor.resetZAxis = originalResetZAxis;
+        window.removeEventListener("keypress", eventFunc);
+    };
+    actions.confirm = actions.cancel = finish;
+
+    window.addEventListener("keypress", eventFunc);
+}
+
 // TODO: Add icons for the buttons
 addButton("Multiselect", multiSelectStage1);
-addButton("Single direction scaling", singleDirectionScaling);
 addButton("Toggle intagibility", toggleIntangibility);
 // TODO: Add button for multi-modify
+addButton("Fast build", fastBuild);
 // TODO: Add buttons for plugins
 addButton("Confirm action", () => {
     actions.confirm();
@@ -710,20 +972,34 @@ addButton("Confirm action", () => {
 addButton("Cancel action", () => {
     actions.cancel();
 });
+/*
+Vanill keybinds:
+e/esc: exit
+0: set block z position to 0
+g/t: set control mode to translate
+s: set control mode to scale
+r: set control mode to rotate
+q: set control mode to putty
+shift+drag in putty mode: single direction scaling
+d: duplicate
+x: delete
+shift+click: copy colour
+shift+translate: duplicate
+ctrl+s: save level
+ctrl+z: undo
+ctrl+shift+z: redo
+*/
 window.addEventListener("keypress", e => {
-    let key = e.key;
+    let key = e.key.toLowerCase();
     switch (key) {
-        case "1":
+        case "4":
             multiSelectStage1();
             break;
         case "2":
             multiSelectStage2([]);
             break;
-        case "3":
+        case "i":
             toggleIntangibility();
-            break;
-        case "y": // "t" is already taken by TAS mod
-            singleDirectionScaling();
             break;
         case "c":
             actions.confirm();
@@ -731,16 +1007,39 @@ window.addEventListener("keypress", e => {
         case "v":
             actions.cancel();
             break;
+        case "a":
+            selectBlockType();
+            break;
+        case "k":
+            fastBuild();
+            break;
+        default:
+            break;
+    }
+});
+window.addEventListener("keydown", e => {
+    let key = e.key.toLowerCase();
+    switch (key) {
+        case "q":
+            enableDragMove();
+            break;
+        default:
+            break;
+    }
+});
+window.addEventListener("keyup", e => {
+    let key = e.key.toLowerCase();
+    switch (key) {
+        case "q":
+            disableDragMove();
+            break;
         default:
             break;
     }
 });
 
-// TODO: Add menu element for plugin input settings
-
 // Lock other vanilla actions while user is using a mod action
 // I wish I could override the proper functions, but they are not accessible from the global scope
-// and I don't know the path to get to it with .bind
 // Prevent exiting level
 app.levelEditor.originalExitLevel = app.levelEditor.exitLevel;
 app.level.originalDeselectLevel = app.level.deselectLevel;

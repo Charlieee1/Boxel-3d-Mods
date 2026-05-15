@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="24px" height="24px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-4,-4)">
+        <rect id="Artboard1" x="0" y="0" width="32" height="32" style="fill:none;"/>
+        <g id="Artboard11" serif:id="Artboard1">
+            <g id="putty.svg" transform="matrix(1,0,0,1,-32,-256)">
+                <g transform="matrix(0.947836,0,0,1.024099,18.958202,-5.215191)">
+                    <rect x="35.915" y="259.951" width="6.33" height="5.859" style="fill:none;stroke:white;stroke-width:2.03px;"/>
+                </g>
+                <g transform="matrix(0.947836,0,0,1.024099,2.958202,10.784809)">
+                    <rect x="35.915" y="259.951" width="6.33" height="5.859" style="fill:none;stroke:white;stroke-width:2.03px;"/>
+                </g>
+                <g transform="matrix(0.8125,0.1875,0.1875,0.8125,-42,42)">
+                    <path d="M40,280L56,264" style="fill:none;stroke:white;stroke-width:2px;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

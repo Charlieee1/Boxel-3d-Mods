@@ -1,11 +1,6 @@
 {
   "levels": [
     {
-      "title": "Impossible Level v3",
-      "author": "Charlieee1",
-      "path": "json/Impossible Level v3.json"
-    },
-    {
       "title": "I am Death's Master",
       "author": "rubymaster13",
       "path": "json/I am Death_s Master.json"
@@ -14,11 +9,6 @@
       "title": "rise up",
       "author": "Ember",
       "path": "json/rise up.json"
-    },
-    {
-      "title": "My Level by metal machine",
-      "author": "Metal Machine",
-      "path": "json/My_Level_1_1.json"
     },
     {
       "title": "Spam",
