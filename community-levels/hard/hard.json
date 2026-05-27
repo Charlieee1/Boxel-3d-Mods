@@ -11,9 +11,19 @@
       "path": "json/Creation Tiles Ultimate.json"
     },
     {
+      "title": "Up and up",
+      "author": "Unknown",
+      "path": "json/Up and up.json"
+    },
+    {
       "title": "claustrophobia",
       "author": "CEO of Dislike",
       "path": "json/claustrophobia.json"
+    },
+    {
+      "title": "stravick",
+      "author": "Ember",
+      "path": "json/stravick.json"
     },
     {
       "title": "My Level lol",
@@ -34,6 +44,16 @@
       "title": "Precision Spider",
       "author": "Charlieee1",
       "path": "json/Precision Spider.json"
+    },
+    {
+      "title": "Unstable Sentry",
+      "author": "Unknown",
+      "path": "json/Unstable_Sentry.json"
+    },
+    {
+      "title": "Hard",
+      "author": "Swan",
+      "path": "json/Hard.json"
     },
     {
       "title": "My Level #50",

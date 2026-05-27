@@ -12,6 +12,7 @@
 - Cut out blocks (perpendicular/parallel cuts only)
 - Force build (not select block)
 - Keybind to deselect block
+- Maintain XY(Z) scale ratio
 
 - Invisible blocks
 - Better multiselect (drag to select)

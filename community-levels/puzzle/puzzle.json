@@ -86,6 +86,16 @@
       "path": "json/Limbo.json"
     },
     {
+      "title": "tip the scale",
+      "author": "Ember",
+      "path": "json/tip the scale.json"
+    },
+    {
+      "title": "Trust Fall",
+      "author": "Ember",
+      "path": "json/Trust Fall.json"
+    },
+    {
       "title": ".Bring the block!",
       "author": "Swan",
       "path": "json/Bring the block! (1).json"
@@ -101,14 +111,39 @@
       "path": "json/confusion 2.json"
     },
     {
+      "title": "Tight squeeze",
+      "author": "Charlieee1",
+      "path": "json/Tight squeeze.json"
+    },
+    {
+      "title": "Spider puzzle",
+      "author": "Charlieee1",
+      "path": "json/Spider puzzle.json"
+    },
+    {
+      "title": "Spider puzzle 2",
+      "author": "Charlieee1",
+      "path": "json/Spider puzzle 2.json"
+    },
+    {
       "title": "Sisyphus",
       "author": "Norseman",
       "path": "json/Sisyphus (2).json"
     },
     {
+      "title": "Unswingable",
+      "author": "Unknown",
+      "path": "json/Unswingable (2).json"
+    },
+    {
       "title": "Damp Caves",
       "author": "Fisher & Jerry",
       "path": "json/Damp Caves.json"
+    },
+    {
+      "title": "Thyro 1",
+      "author": "Unknown",
+      "path": "json/Thyro 1.json"
     },
     {
       "title": "Beat this Charlie",
@@ -139,6 +174,11 @@
       "title": "Puzzle #10: Glider",
       "author": "Ember",
       "path": "json/Puzzle #10_ Glider.json"
+    },
+    {
+      "title": ".Perfect Jumps",
+      "author": "Unknown",
+      "path": "json/Perfect Jumps (2).json"
     },
     {
       "title": "guesser",

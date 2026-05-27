@@ -51,6 +51,11 @@
       "path": "json/One way out.json"
     },
     {
+      "title": "spiky bouncy thing",
+      "author": "Unknown",
+      "path": "json/spiky_bouncy_thing.json"
+    },
+    {
       "title": "~~~~~~~~~~~~~Glitch physics",
       "author": "Unknown",
       "path": "json/_~~~~~~~~~~~~Glitch physics.json"
@@ -61,9 +66,19 @@
       "path": "json/Frame Perfect__.json"
     },
     {
+      "title": "Spike Hurdles - Ultimate Randomness",
+      "author": "Unknown",
+      "path": "json/Spike Hurdles - Ultimate Randomness.json"
+    },
+    {
       "title": "My First Level by Crystal League",
       "author": "Crystal League",
       "path": "json/My First Level by Crystal League.json"
+    },
+    {
+      "title": "The Boncier House",
+      "author": "Rubymaster13",
+      "path": "json/The Boncier House.json"
     },
     {
       "title": "나락코스터 :0",

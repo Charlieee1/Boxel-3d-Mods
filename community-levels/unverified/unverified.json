@@ -1,14 +1,29 @@
 {
   "levels": [
     {
+      "title": ".Rock Climber 3",
+      "author": "Defenders",
+      "path": "json/Rock Climber 3.json"
+    },
+    {
+      "title": "......There And Back Again",
+      "author": "Swan",
+      "path": "json/There And Back Again (26).json"
+    },
+    {
+      "title": "TAS Precision",
+      "author": "Charlieee1",
+      "path": "json/TAS Precision.json"
+    },
+    {
       "title": "Crumbling Temple v2",
       "author": "Unknown",
       "path": "json/Crumbling Temple v2.json"
     },
     {
-      "title": ".Rock Climber 3",
-      "author": "Defenders",
-      "path": "json/Rock Climber 3.json"
+      "title": "worst level I ever made",
+      "author": "Unknown",
+      "path": "json/worst level I ever made.json"
     },
     {
       "title": "Pooshy Sqooshy",

@@ -22,6 +22,11 @@
       "path": "json/theMostannoying level.json"
     },
     {
+      "title": "The mountans edge",
+      "author": "Green-is-sam & outerbound",
+      "path": "json/The mountans edge.json"
+    },
+    {
       "title": "Don't fall",
       "author": "Green-is-sam",
       "path": "json/Don't fall.json"
@@ -42,11 +47,6 @@
       "path": "json/faster than a bullet.json"
     },
     {
-      "title": "halfpipe hopper 2",
-      "author": "Green-is-sam",
-      "path": "json/halfpipe hopper 2.json"
-    },
-    {
       "title": "Deep Dip Floor",
       "author": "Charlieee1",
       "path": "json/Deep Dip Floor.json"
@@ -55,6 +55,11 @@
       "title": "Bloxes",
       "author": "Green-is-sam",
       "path": "json/Bloxes.json"
+    },
+    {
+      "title": "Pirate Ship",
+      "author": "Max",
+      "path": "json/Pirate Ship.json"
     },
     {
       "title": "A hint of nostalgia",
@@ -67,6 +72,11 @@
       "path": "json/Knock Knock FINAL.json"
     },
     {
+      "title": "santa's workshop",
+      "author": "jeppe",
+      "path": "json/santa's workshop (2) (1).json"
+    },
+    {
       "title": "Fire Ritual",
       "author": "Charlieee1 & .noobus",
       "path": "json/Fire Ritual.json"
@@ -75,6 +85,11 @@
       "title": "A Normal Day",
       "author": "cloodiest",
       "path": "json/A Normal Day.json"
+    },
+    {
+      "title": "halfpipe hopper 2",
+      "author": "Green-is-sam",
+      "path": "json/halfpipe hopper 2.json"
     },
     {
       "title": "Multiplier",
@@ -92,6 +107,11 @@
       "path": "json/Break in FINAL.json"
     },
     {
+      "title": "SuperBoxel3DWorldXmasEdition 2",
+      "author": "Winderthedrone",
+      "path": "json/SuperBoxel3DWorldXmasEdition 4.json"
+    },
+    {
       "title": "Dark and Damp",
       "author": "cloodiest",
       "path": "json/Dark and Damp (1).json"
@@ -102,9 +122,24 @@
       "path": "json/Car chase.json"
     },
     {
+      "title": "Tennis",
+      "author": "SupremeKirb",
+      "path": "json/Tennis.json"
+    },
+    {
+      "title": "World Hunger",
+      "author": "Unknown",
+      "path": "json/World Hunger.json"
+    },
+    {
       "title": "afk 3",
       "author": "Max",
       "path": "json/afk 3 (2).json"
+    },
+    {
+      "title": "Thunder",
+      "author": "Thisisadam",
+      "path": "json/Thunder (1).json"
     },
     {
       "title": "Platformer Test",
@@ -153,9 +188,34 @@
       "path": "json/Tornado_2.json"
     },
     {
+      "title": "Spider catastrobox",
+      "author": "Unknown",
+      "path": "json/Spider catastrobox.json"
+    },
+    {
+      "title": "The compound - finished",
+      "author": "Unknown",
+      "path": "json/The_compound.json"
+    },
+    {
+      "title": "Spider Curtains",
+      "author": "Unknown",
+      "path": "json/Spider Curtains (3).json"
+    },
+    {
+      "title": "Tech Attempt No. 1",
+      "author": "Charlieee1",
+      "path": "json/Tech Attempt No. 1.json"
+    },
+    {
       "title": "Collapse",
       "author": "Green-is-sam",
       "path": "json/Collapse.json"
+    },
+    {
+      "title": "spider man",
+      "author": "Unknown",
+      "path": "json/spider man.json"
     },
     {
       "title": "desktop1",
@@ -168,9 +228,19 @@
       "path": "json/antigrav test 3.json"
     },
     {
+      "title": "Time trial",
+      "author": "Unknown",
+      "path": "json/Time trial (1).json"
+    },
+    {
       "title": "No skill",
       "author": "AMiner",
       "path": "json/No skill.json"
+    },
+    {
+      "title": "TheTrueGoo",
+      "author": "TheTrueGoo",
+      "path": "json/TheTrueGoo.json"
     },
     {
       "title": "Acidity by Kllixto -VERIFIED >8*",
@@ -196,6 +266,16 @@
       "title": "be a stick",
       "author": "shouts outs tos umis",
       "path": "json/be a stick.json"
+    },
+    {
+      "title": "stickness",
+      "author": "shouts outs tos umis",
+      "path": "json/stickness.json"
+    },
+    {
+      "title": "Up & Up",
+      "author": "Unknown",
+      "path": "json/Up & Up.json"
     },
     {
       "title": "Deathcore lvl.1",
@@ -258,6 +338,11 @@
       "path": "json/Mini level 3.json"
     },
     {
+      "title": "Spiral",
+      "author": "Unknown",
+      "path": "json/Spiral.json"
+    },
+    {
       "title": "FRSR",
       "author": "Charlieee1",
       "path": "json/FRSR.json"
@@ -281,6 +366,11 @@
       "title": "Prelude no deco",
       "author": "outerbound with modification by Charlieee1",
       "path": "json/Prelude no deco.json"
+    },
+    {
+      "title": "Trust (1)",
+      "author": "Unknown with modification by Charlieee1",
+      "path": "json/Trust (1).json"
     },
     {
       "title": "built diffrent",
@@ -308,6 +398,11 @@
       "path": "json/Finished (1).json"
     },
     {
+      "title": "Splash Park",
+      "author": "Unknown",
+      "path": "json/Splash Park (1).json"
+    },
+    {
       "title": "Experiments in Plider",
       "author": "Charlieee1",
       "path": "json/Experiments in Plider.json"
@@ -323,9 +418,19 @@
       "path": "json/Pyramid.json"
     },
     {
+      "title": "zipline",
+      "author": "Unknown",
+      "path": "json/zipline.json"
+    },
+    {
       "title": "Bird Hopper",
       "author": "Green-is-sam",
       "path": "json/Bird Hopper.json"
+    },
+    {
+      "title": "Timed Spider",
+      "author": "Unknown",
+      "path": "json/Timed Spider.json"
     },
     {
       "title": "My first level",
@@ -373,6 +478,16 @@
       "path": "json/Rylan McCrae.json"
     },
     {
+      "title": "Uphill Battle",
+      "author": "Doppler",
+      "path": "json/Uphill Battle.json"
+    },
+    {
+      "title": "Tower of doom",
+      "author": "Unknown",
+      "path": "json/Tower of doom.json"
+    },
+    {
       "title": "Bloxel Dropper: Level 1",
       "author": "Norseman",
       "path": "json/Bloxel Dropper_ Level 1.json"
@@ -418,6 +533,11 @@
       "path": "json/Jump Park.json"
     },
     {
+      "title": "The dropper",
+      "author": "Unknown",
+      "path": "json/The dropper.json"
+    },
+    {
       "title": "Jumper 3,000",
       "author": "Unknown",
       "path": "json/Jumper 3,000 (1).json"
@@ -428,9 +548,19 @@
       "path": "json/Infinite speed.json"
     },
     {
+      "title": "The together prodject me and my brother",
+      "author": "Unknown & brother",
+      "path": "json/The_together_prodject_me_and_my_brother_2.json"
+    },
+    {
       "title": "Halfpipe Hopper",
       "author": "Green-is-sam",
       "path": "json/Halfpipe Hopper.json"
+    },
+    {
+      "title": "The Teleporter",
+      "author": "Unknown",
+      "path": "json/The Teleporter.json"
     },
     {
       "title": "Small Hard Level",
@@ -508,6 +638,16 @@
       "path": "json/Autistique.json"
     },
     {
+      "title": "Trapped",
+      "author": "Unknown",
+      "path": "json/Trapped.json"
+    },
+    {
+      "title": "Timing Trials",
+      "author": "Unknown using ChatGPT",
+      "path": "json/Timing Trials.json"
+    },
+    {
       "title": "Jenga",
       "author": "Norseman",
       "path": "json/Jenga.json"
@@ -516,6 +656,16 @@
       "title": "Jenga 3D",
       "author": "Norseman",
       "path": "json/Jenga 3D.json"
+    },
+    {
+      "title": "The Needler",
+      "author": "Unknown",
+      "path": "json/The Needler.json"
+    },
+    {
+      "title": "Turny Boyyo",
+      "author": "XdBility",
+      "path": "json/Turny Boyyo.json"
     },
     {
       "title": "Snowboard Surfing",
@@ -543,6 +693,16 @@
       "path": "json/3d_1.json"
     },
     {
+      "title": "The rock grinder",
+      "author": "Unknown",
+      "path": "json/The rock grinder.json"
+    },
+    {
+      "title": "Tubes",
+      "author": "Unknown",
+      "path": "json/Tubes_1.json"
+    },
+    {
       "title": "Portal basics",
       "author": "CLASP the Protogen",
       "path": "json/Portal basics (1).json"
@@ -558,9 +718,19 @@
       "path": "json/level 30 (1).json"
     },
     {
+      "title": "unc's playground",
+      "author": "Unknown",
+      "path": "json/unc_s playground.json"
+    },
+    {
       "title": "My Level by tobi",
       "author": "tobi",
       "path": "json/My Level by tobi.json"
+    },
+    {
+      "title": "AFTERRESTORATION",
+      "author": "shouts outs tos umis",
+      "path": "json/AFTERRESTORATION.json"
     },
     {
       "title": "My Level by 16BitPlayer",
@@ -603,6 +773,11 @@
       "path": "json/JP002FR (1).json"
     },
     {
+      "title": "Unorthodox stairing",
+      "author": "Unknown",
+      "path": "json/Unorthodox stairing.json"
+    },
+    {
       "title": "My Level 2",
       "author": "Unknown",
       "path": "json/My Level 2.json"
@@ -611,6 +786,11 @@
       "title": "right 2",
       "author": "Unknown",
       "path": "json/right 2.json"
+    },
+    {
+      "title": "w",
+      "author": "Unknown",
+      "path": "json/w.json"
     },
     {
       "title": "Gun",
@@ -631,6 +811,16 @@
       "title": "John Dark souls",
       "author": "Unknown",
       "path": "json/John Dark souls.json"
+    },
+    {
+      "title": "wavemachine",
+      "author": "Ember",
+      "path": "json/wavemachine.json"
+    },
+    {
+      "title": "wavemachine optimized",
+      "author": "Ember",
+      "path": "json/wavemachine optimized.json"
     },
     {
       "title": "My Level #49",
@@ -678,6 +868,11 @@
       "path": "json/acent.json"
     },
     {
+      "title": "The Tower",
+      "author": "outerbound",
+      "path": "json/The Tower.json"
+    },
+    {
       "title": "hello",
       "author": "Unknown",
       "path": "json/hello.json"
@@ -693,6 +888,11 @@
       "path": "json/A dusty block.json"
     },
     {
+      "title": "Z1",
+      "author": "Unknown",
+      "path": "json/Z1.json"
+    },
+    {
       "title": "MatToImport.json",
       "author": "A where A is the person in the set of all people such that outerbound is their biggest fan AND they play(ed) Boxel 3d",
       "path": "json/MatToImport.json"
@@ -706,6 +906,16 @@
       "title": "Cheese",
       "author": "Unknown",
       "path": "json/Cheese.json"
+    },
+    {
+      "title": "Up Up And Away",
+      "author": "Unknown",
+      "path": "json/Up Up And Away.json"
+    },
+    {
+      "title": ".Thumbnail",
+      "author": "Charlieee1",
+      "path": "json/Thumbnail.json"
     },
     {
       "title": "Level 37",
@@ -796,6 +1006,11 @@
       "title": "Let Bro Cook",
       "author": "Unknown",
       "path": "json/Let Bro Cook.json"
+    },
+    {
+      "title": "Wait... SIDEWAYS!?!",
+      "author": "Unknown",
+      "path": "json/Wait...json"
     },
     {
       "title": "Love Your Enemies",

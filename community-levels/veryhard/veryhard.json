@@ -1,6 +1,11 @@
 {
   "levels": [
     {
+      "title": "The Tower of Hell",
+      "author": "outerbound",
+      "path": "json/The Tower of Hell.json"
+    },
+    {
       "title": "Bounce Spider",
       "author": "Unknown",
       "path": "json/Bounce Spider.json"

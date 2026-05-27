@@ -1,6 +1,11 @@
 {
   "levels": [
     {
+      "title": "Swinging over it",
+      "author": "Unknown",
+      "path": "json/Swinging over it (1).json"
+    },
+    {
       "title": ".Charlie's Deco Test 1",
       "author": "Charlieee1",
       "path": "json/Charlie's Deco Test 1.json"
@@ -14,6 +19,11 @@
       "title": "Cliff and Archway",
       "author": "Charlieee1",
       "path": "json/Cliff and Archway.json"
+    },
+    {
+      "title": "Starry Cliff and Archway",
+      "author": "Charlieee1",
+      "path": "json/Starry Cliff and Archway.json"
     },
     {
       "title": "Creation Obstacles",
@@ -46,9 +56,19 @@
       "path": "json/Beans.json"
     },
     {
+      "title": ".THROUGH",
+      "author": "Unknown",
+      "path": "json/THROUGH (1).json"
+    },
+    {
       "title": "Linux_Dev2766",
       "author": "Linux_Dev2766",
       "path": "json/Linux_Dev2766 (3).json"
+    },
+    {
+      "title": "Potential clockwork tests",
+      "author": "Defenders",
+      "path": "json/Potential clockwork designs.json"
     },
     {
       "title": "BREAD",
