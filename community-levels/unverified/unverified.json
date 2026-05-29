@@ -21,6 +21,11 @@
       "path": "json/Crumbling Temple v2.json"
     },
     {
+      "title": "Hard",
+      "author": "Swan",
+      "path": "json/Hard.json"
+    },
+    {
       "title": "worst level I ever made",
       "author": "Unknown",
       "path": "json/worst level I ever made.json"
