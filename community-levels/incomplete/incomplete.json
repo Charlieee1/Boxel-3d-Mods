@@ -126,6 +126,11 @@
       "path": "json/An Attempt... Nothing More.json"
     },
     {
+      "title": "My Level by metal machine",
+      "author": "Metal Machine",
+      "path": "json/My_Level_1_1.json"
+    },
+    {
       "title": "Rotation Bug",
       "author": "Unknown",
       "path": "json/Rotation_Bug.json"
