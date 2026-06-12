@@ -733,11 +733,6 @@
       "path": "json/AFTERRESTORATION.json"
     },
     {
-      "title": "My Level by 16BitPlayer",
-      "author": "16BitPlayer",
-      "path": "json/My Level by 16BitPlayer.json"
-    },
-    {
       "title": "Fae_old",
       "author": "Fae",
       "path": "json/Fae_old.json"
@@ -781,6 +776,11 @@
       "title": "My Level 2",
       "author": "Unknown",
       "path": "json/My Level 2.json"
+    },
+    {
+      "title": "The hall of spikes",
+      "author": "Unknown",
+      "path": "json/The_hall_of_spikes_2.json"
     },
     {
       "title": "right 2",
