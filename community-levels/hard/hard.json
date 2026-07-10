@@ -51,6 +51,11 @@
       "path": "json/Unstable_Sentry.json"
     },
     {
+      "title": "Level 1 Superbuffed",
+      "author": "Swan",
+      "path": "json/Level 1 Superbuffed.json"
+    },
+    {
       "title": "My Level #50",
       "author": "Unknown",
       "path": "json/My_Level_50.json"
