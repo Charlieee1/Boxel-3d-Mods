@@ -488,6 +488,11 @@
       "path": "json/Tower of doom.json"
     },
     {
+      "title": "Operation Hop",
+      "author": "Terrific",
+      "path": "json/Operation Hop.json"
+    },
+    {
       "title": "Bloxel Dropper: Level 1",
       "author": "Norseman",
       "path": "json/Bloxel Dropper_ Level 1.json"
@@ -671,6 +676,11 @@
       "title": "Snowboard Surfing",
       "author": "outerbound",
       "path": "json/Snowboard Surfing (3).json"
+    },
+    {
+      "title": "Dippings ",
+      "author": "Witticism.io",
+      "path": "json/Dippings_.json"
     },
     {
       "title": "Sky Platforms",

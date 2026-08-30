@@ -52,8 +52,18 @@
     },
     {
       "title": "Beans",
-      "author": "Unknown",
+      "author": "Witticism.io",
       "path": "json/Beans.json"
+    },
+    {
+      "title": "zcale",
+      "author": "Witticism.io",
+      "path": "json/zcale.json"
+    },
+    {
+      "title": "Ingadabilbe",
+      "author": "Witticism.io",
+      "path": "json/Ingadabilbe.json"
     },
     {
       "title": "Linux_Dev2766",

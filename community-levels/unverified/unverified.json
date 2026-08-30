@@ -1,6 +1,21 @@
 {
   "levels": [
     {
+      "title": "(((((((((((The Shrouded Ascent",
+      "author": "Swan",
+      "path": "json/(((((((((((The Shrouded Ascent (81).json"
+    },
+    {
+      "title": "Teleporty HARD",
+      "author": "Swan & Lord Poginstine",
+      "path": "json/Teleporty HARD (7).json"
+    },
+    {
+      "title": "Crumbling Temple v2",
+      "author": "Unknown",
+      "path": "json/Crumbling Temple v2.json"
+    },
+    {
       "title": ".Rock Climber 3",
       "author": "Defenders",
       "path": "json/Rock Climber 3.json"
