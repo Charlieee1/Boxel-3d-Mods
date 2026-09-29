@@ -1,0 +1,24 @@
+{
+  "levels": [
+    {
+      "title": "Timing Trials",
+      "author": "ChatGPT with Unknown's prompting",
+      "path": "json/Timing Trials.json"
+    },
+    {
+      "title": "Sky Platforms",
+      "author": "(Github?) Copilot with Doppler's prompting",
+      "path": "json/Sky Platforms.json"
+    },
+    {
+      "title": "Neon Descent",
+      "author": "Claude with Adam's prompting",
+      "path": "json/Neon_Descent_v2.json"
+    },
+    {
+      "title": "Prism Ascent",
+      "author": "Claude with Adam's prompting",
+      "path": "json/Prism_Ascent.json"
+    }
+  ]
+}

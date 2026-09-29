@@ -648,11 +648,6 @@
       "path": "json/Trapped.json"
     },
     {
-      "title": "Timing Trials",
-      "author": "Unknown using ChatGPT",
-      "path": "json/Timing Trials.json"
-    },
-    {
       "title": "Jenga",
       "author": "Norseman",
       "path": "json/Jenga.json"
@@ -681,11 +676,6 @@
       "title": "Dippings ",
       "author": "Witticism.io",
       "path": "json/Dippings_.json"
-    },
-    {
-      "title": "Sky Platforms",
-      "author": "(Github?) Copilot with Doppler's prompting",
-      "path": "json/Sky Platforms.json"
     },
     {
       "title": "Climb before it falls",
