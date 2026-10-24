@@ -19,13 +19,13 @@ var createPlayer;
         newPlayer.setStatic(isStatic);
         newPlayer.addTexture({url: skinUrl});
         newPlayer.setPositionLib = function(pos) {
-            if (!pos.x) {
+            if (pos.x == null) {
                 pos.x = newPlayer.position.x;
             }
-            if (!pos.y) {
+            if (pos.y == null) {
                 pos.y = newPlayer.position.y;
             }
-            if (!pos.z) {
+            if (pos.z == null) {
                 pos.z = newPlayer.position.z;
             }
             newPlayer.setPosition(pos);
@@ -33,6 +33,11 @@ var createPlayer;
         }
         newPlayer.addToGame = function(x=0, y=0, tangible=false) {
             app.level.addObject(newPlayer, app);
+            // addObject refuses extra players, so put the ghost straight into the scene
+            if (!app.level.children.includes(newPlayer)) {
+                app.level.add(newPlayer);
+                newPlayer.updateMatrixWorld();
+            }
             if (!tangible) {
                 newPlayer.body.collisionFilter.category = 0;
             }

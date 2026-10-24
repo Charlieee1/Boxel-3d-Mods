@@ -40,20 +40,22 @@ var getReplays;
         replayBeingWatched = replay;
         watchingReplay = true;
         app.level.children.forEach((child) => {
-            Matter.Body.setStatic(child.body, true);
+            // Static bodies are skipped: Matter's setStatic(true) on a static body overwrites its saved mass/inertia
+            if (child.body && !child.body.isStatic) Matter.Body.setStatic(child.body, true);
         });
         let playReplayBack;
         playReplayBack = () => {
             if (getFrameCount() == replayBeingWatched.positions.length - 1) {
                 removeUpdateFunction(playReplayBack);
                 app.level.children.forEach((child) => {
-                    Matter.Body.setStatic(child.body, child.isStaticOrigin);
+                    if (child.body && child.body.isStatic !== child.isStaticOrigin) Matter.Body.setStatic(child.body, child.isStaticOrigin);
                 });
                 return;
             }
             let currPosition = replayBeingWatched.positions[getFrameCount() + 1];
             Object.keys(currPosition).forEach((key) => {
                 let num = Number(key);
+                if (!app.level.children[num] || !app.level.children[num].body) return;
                 if (currPosition[key].hasOwnProperty("scale"))
                     app.level.children[num].setScale(currPosition[key].scale, false);
                 Matter.Body.setPosition(app.level.children[num].body, {x: currPosition[key].x, y: currPosition[key].y});
@@ -68,7 +70,7 @@ var getReplays;
         // Discard everything but the player's position, rotation, and scale
         let newReplay = {positions: {}};
         for (let i = 0; i < replay.positions.length; i++) {
-            newReplay.positions[i] = replay.positions[i][0];
+            newReplay.positions[i] = replay.positions[i][0] || replay.positions[i - 1 < 0 ? 0 : i - 1][0];
         }
         replays[currReplayIndex] = newReplay;
 
@@ -77,6 +79,7 @@ var getReplays;
         newReplay.player.addToGame(0, 0, false);
         newReplay.player.light.visible = false;
         newReplay.player.setPositionLib({z: -1});
+        newReplay.player.body.collisionFilter.category = 0;
         return currReplayIndex++;
     };
 
@@ -181,6 +184,8 @@ var getReplays;
             if (position.hasOwnProperty("angle")) {
                 replay.player.setRotation(-position.angle, false);
             }
+            // Static objects are skipped by the game's render update, so refresh the matrix here
+            replay.player.updateMatrixWorld();
         });
     });
 
