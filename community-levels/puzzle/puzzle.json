@@ -76,6 +76,11 @@
       "path": "json/Norseman's Level.json"
     },
     {
+      "title": "Pooshy Sqooshy",
+      "author": "Adam",
+      "path": "json/Pooshy Sqooshy.json"
+    },
+    {
       "title": "...A hard level",
       "author": "Swan",
       "path": "json/A hard level.json"

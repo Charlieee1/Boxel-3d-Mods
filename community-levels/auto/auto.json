@@ -21,6 +21,11 @@
       "path": "json/Dont Move Complete.json"
     },
     {
+      "title": "Don't Move ",
+      "author": "GHOUL",
+      "path": "json/Don't Move.json"
+    },
+    {
       "title": "Patience ",
       "author": "Unknown",
       "path": "json/Patience.json"
@@ -44,6 +49,11 @@
       "title": "afk by Aclossic",
       "author": "Aclossic",
       "path": "json/afk by Aclossic.json"
+    },
+    {
+      "title": "ARGHHHHHH",
+      "author": "Unknown",
+      "path": "json/ARGHHHHHH.json"
     },
     {
       "title": "bugmania",

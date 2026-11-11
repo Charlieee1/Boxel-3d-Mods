@@ -66,6 +66,11 @@
       "path": "json/My_Level_50.json"
     },
     {
+      "title": "Bounce Snake",
+      "author": "Adam",
+      "path": "json/Bounce Snake.json"
+    },
+    {
       "title": "Climb and slide",
       "author": "Majesticcss",
       "path": "json/Climb and slide.json"

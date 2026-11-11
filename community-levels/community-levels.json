@@ -218,6 +218,11 @@
       "path": "json/spider man.json"
     },
     {
+      "title": "Skyscraper Jumps",
+      "author": "Noseman",
+      "path": "json/Skyscraper Jumps.json"
+    },
+    {
       "title": "desktop1",
       "author": "DesktopDocs",
       "path": "json/desktop1.json"
@@ -369,7 +374,7 @@
     },
     {
       "title": "Trust (1)",
-      "author": "Unknown with modification by Charlieee1",
+      "author": "Bread with modification by Charlieee1",
       "path": "json/Trust (1).json"
     },
     {
@@ -399,7 +404,7 @@
     },
     {
       "title": "Splash Park",
-      "author": "Unknown",
+      "author": "Ember",
       "path": "json/Splash Park (1).json"
     },
     {
@@ -429,13 +434,18 @@
     },
     {
       "title": "Timed Spider",
-      "author": "Unknown",
+      "author": "Majesticcss",
       "path": "json/Timed Spider.json"
     },
     {
       "title": "My first level",
       "author": "Unknown",
       "path": "json/My first level.json"
+    },
+    {
+      "title": "Hopefully Uploaded Level",
+      "author": "cone_rbxl",
+      "path": "json/Hopefully_Uploaded_Level.json"
     },
     {
       "title": "Baby Steps",
@@ -824,7 +834,7 @@
     },
     {
       "title": "wavemachine optimized",
-      "author": "Ember",
+      "author": "Ember with modifications by Charlieee1",
       "path": "json/wavemachine optimized.json"
     },
     {
@@ -986,6 +996,11 @@
       "title": "Gravity Switch",
       "author": "CEO of Dislike",
       "path": "json/Gravity Switch.json"
+    },
+    {
+      "title": "torontostadiums",
+      "author": "torontostadiums",
+      "path": "json/torontostadiums (1).json"
     },
     {
       "title": "3 minute platformer level",
