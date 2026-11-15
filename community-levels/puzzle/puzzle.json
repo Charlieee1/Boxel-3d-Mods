@@ -46,6 +46,11 @@
       "path": "json/Two at a time.json"
     },
     {
+      "title": "Three at a time",
+      "author": "Ember",
+      "path": "json/Three at a time COMPLETE.json"
+    },
+    {
       "title": "Match-up",
       "author": "Ember",
       "path": "json/Match-up.json"
@@ -99,6 +104,11 @@
       "title": "Trust Fall",
       "author": "Ember",
       "path": "json/Trust Fall.json"
+    },
+    {
+      "title": "Hops",
+      "author": "Ember",
+      "path": "json/Hops.json"
     },
     {
       "title": ".Bring the block!",
