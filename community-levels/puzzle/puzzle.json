@@ -1,6 +1,11 @@
 {
   "levels": [
     {
+      "title": "Scavenger Hunt: Halloween Edition",
+      "author": "Ember",
+      "path": "json/Scavenger Hunt_ Halloween Edition.json"
+    },
+    {
       "title": "poozle",
       "author": "Ember",
       "path": "json/poozle.json"
