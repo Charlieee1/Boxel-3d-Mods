@@ -4,6 +4,11 @@
       "title": "All Levels",
       "author": "Claude with Charlieee1's prompting",
       "path": "json/All Levels.json"
+    },
+    {
+      "title": "Campaign Levels",
+      "author": "Claude with Charlieee1's prompting",
+      "path": "json/Campaign Levels.json"
     }
   ]
 }
