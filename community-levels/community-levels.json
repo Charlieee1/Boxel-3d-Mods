@@ -323,6 +323,16 @@
       "path": "json/OBRC - Outer_s Plinko.json"
     },
     {
+      "title": "Adam+Charlie",
+      "author": "Charlieee1 & Adam",
+      "path": "json/Adam+Charlie.json"
+    },
+    {
+      "title": "Charlie+Adam",
+      "author": "Adam & Charlieee1",
+      "path": "json/Charlie+Adam.json"
+    },
+    {
       "title": "Mobile level",
       "author": "Charlieee1",
       "path": "json/Mobile_level.json"
@@ -411,6 +421,21 @@
       "title": "Easy???",
       "author": "BoxelBug",
       "path": "json/Easy___.json"
+    },
+    {
+      "title": "Fudge.....",
+      "author": "Wood Born Behemoth",
+      "path": "json/Fudge......json"
+    },
+    {
+      "title": "Skull Island",
+      "author": "Wood Born Behemoth",
+      "path": "json/Skull_Island1.json"
+    },
+    {
+      "title": "Imma Flying",
+      "author": "Wood Born Behemoth",
+      "path": "json/Imma_Flying1.json"
     },
     {
       "title": "Pyramid",
